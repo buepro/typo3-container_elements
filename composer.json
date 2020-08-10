@@ -1,0 +1,45 @@
+{
+    "name": "buepro/typo3-container-elements",
+    "type": "typo3-cms-extension",
+    "description": "TYPO3 extension providing content elements powered by container and bootstrap. Available elements: container, columns, tabs, accordion, tile unit and card.",
+    "keywords": [
+        "TYPO3 CMS",
+        "container",
+        "grid",
+        "structure",
+        "element",
+        "pizpalue"
+    ],
+    "homepage": "https://github.com/buepro/typo3-container_elements",
+    "authors": [
+        {
+            "name": "Roman Büchler",
+            "email": "rb@buechler.pro",
+            "homepage": "https://www.buechler.pro/",
+            "role": "Developer"
+        }
+    ],
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+        "typo3/cms-core": "^10.4",
+        "b13/container": "^1.1.1",
+        "fluidtypo3/vhs": "^6.0 || dev-master"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Buepro\\ContainerElements\\": "Classes/"
+        }
+    },
+    "replace": {
+        "buepro/typo3-container-elements": "self.version",
+        "typo3-ter/container-elements": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "container_elements"
+        }
+    }
+}

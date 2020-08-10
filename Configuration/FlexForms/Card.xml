@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:text</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <titleText>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:title</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </titleText>
+                    <titleLayout>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titleLayout</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>h3</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">H1</numIndex>
+                                        <numIndex index="1">h1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">H2</numIndex>
+                                        <numIndex index="1">h2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">H3</numIndex>
+                                        <numIndex index="1">h3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">H4</numIndex>
+                                        <numIndex index="1">h4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">H5</numIndex>
+                                        <numIndex index="1">h5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">H6</numIndex>
+                                        <numIndex index="1">h6</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </titleLayout>
+                    <titlePosition>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titlePosition</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default></default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:left</numIndex>
+                                        <numIndex index="1">left</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:center</numIndex>
+                                        <numIndex index="1">center</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:right</numIndex>
+                                        <numIndex index="1">right</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </titlePosition>
+                    <titleLink>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titleLink</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>inputLink</renderType>
+                            </config>
+                        </TCEforms>
+                    </titleLink>
+                    <bodyText>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.bodyText</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>true</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </bodyText>
+                    <borderType>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.borderType</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default></default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:none</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:header</numIndex>
+                                        <numIndex index="1">header</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:footer</numIndex>
+                                        <numIndex index="1">footer</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </borderType>
+                    <borderText>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.borderText</label>
+                            <displayCond>FIELD:borderType:REQ:true</displayCond>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>true</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </borderText>
+                </el>
+            </ROOT>
+        </sDEF>
+        <imageSheet>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:image</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <imageReference>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:image</label>
+                            <config>
+                                <type>inline</type>
+                                <foreign_table>sys_file_reference</foreign_table>
+                                <foreign_field>uid_foreign</foreign_field>
+                                <foreign_sortby>sorting_foreign</foreign_sortby>
+                                <foreign_table_field>tablenames</foreign_table_field>
+                                <foreign_match_fields>
+                                    <fieldname>flexform_imageReference</fieldname>
+                                </foreign_match_fields>
+                                <foreign_label>uid_local</foreign_label>
+                                <foreign_selector>uid_local</foreign_selector>
+                                <maxitems>1</maxitems>
+                                <overrideChildTca>
+                                    <columns>
+                                        <uid_local>
+                                            <config>
+                                                <appearance>
+                                                    <elementBrowserType>file</elementBrowserType>
+                                                    <elementBrowserAllowed>gif,jpg,jpeg,bmp,png,pdf,svg,ai</elementBrowserAllowed>
+                                                </appearance>
+                                            </config>
+                                        </uid_local>
+                                    </columns>
+                                    <types type="array">
+                                        <numIndex index="0" type="array">
+                                            <showitem>--palette--;;imageoverlayPalette, --palette--;;filePalette</showitem>
+                                        </numIndex>
+                                        <numIndex index="1" type="array">
+                                            <showitem>--palette--;;imageoverlayPalette, --palette--;;filePalette</showitem>
+                                        </numIndex>
+                                        <numIndex index="2" type="array">
+                                            <showitem>--palette--;;imageoverlayPalette, --palette--;;filePalette</showitem>
+                                        </numIndex>
+                                        <numIndex index="3" type="array">
+                                            <showitem>--palette--;;audioOverlayPalette, --palette--;;filePalette</showitem>
+                                        </numIndex>
+                                        <numIndex index="4" type="array">
+                                            <showitem>--palette--;;videoOverlayPalette, --palette--;;filePalette</showitem>
+                                        </numIndex>
+                                        <numIndex index="5" type="array">
+                                            <showitem>--palette--;;imageoverlayPalette, --palette--;;filePalette</showitem>
+                                        </numIndex>
+                                    </types>
+                                </overrideChildTca>
+                                <filter type="array">
+                                    <numIndex index="0" type="array">
+                                        <userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren</userFunc>
+                                        <parameters>
+                                            <allowedFileExtension>gif,jpg,jpeg,bmp,png,pdf,svg,ai</allowedFileExtension>
+                                        </parameters>
+                                    </numIndex>
+                                </filter>
+                                <appearance>
+                                    <useSortable>1</useSortable>
+                                    <headerThumbnail>
+                                        <field>uid_local</field>
+                                        <width>45</width>
+                                        <height>45c</height>
+                                    </headerThumbnail>
+                                    <showPossibleLocalizationRecords>0</showPossibleLocalizationRecords>
+                                    <showRemovedLocalizationRecords>0</showRemovedLocalizationRecords>
+                                    <showSynchronizationLink>0</showSynchronizationLink>
+                                    <showAllLocalizationLink>0</showAllLocalizationLink>
+                                    <enabledControls>
+                                        <info>1</info>
+                                        <new>0</new>
+                                        <dragdrop>1</dragdrop>
+                                        <sort>0</sort>
+                                        <hide>1</hide>
+                                        <delete>1</delete>
+                                        <localize>1</localize>
+                                    </enabledControls>
+                                </appearance>
+                            </config>
+                        </TCEforms>
+                    </imageReference>
+                    <imageWidth>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:width</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                            </config>
+                        </TCEforms>
+                    </imageWidth>
+                    <imagePosition>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:position</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>top</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:top</numIndex>
+                                        <numIndex index="1">top</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:bottom</numIndex>
+                                        <numIndex index="1">bottom</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:left</numIndex>
+                                        <numIndex index="1">left</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:right</numIndex>
+                                        <numIndex index="1">right</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:below</numIndex>
+                                        <numIndex index="1">below</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </imagePosition>
+                </el>
+            </ROOT>
+        </imageSheet>
+        <customSheet>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:custom</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <cardClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.classes</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </cardClasses>
+                    <bodyClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.bodyClasses</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </bodyClasses>
+                    <borderClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.borderClasses</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </borderClasses>
+                    <titleClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titleClasses</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </titleClasses>
+                    <imageClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageClasses</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </imageClasses>
+                </el>
+            </ROOT>
+        </customSheet>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,8 @@
+lib.containerContentElement {
+    templateRootPaths {
+        6 = EXT:container_elements/Resources/Private/Templates/Pizpalue
+    }
+    partialRootPaths {
+        6 = EXT:container_elements/Resources/Private/Partials/Pizpalue
+    }
+}

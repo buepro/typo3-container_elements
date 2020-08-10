@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+{f:variable(name: 'class', value: 'col')}
+{f:variable(name: 'class', value: '{class}-{breakpoint}') -> f:if(condition: '{breakpoint} != "none"')}
+{f:variable(name: 'class', value: '{class}-{column.width}') -> f:if(condition: '{column.width} != "equal"')}
+{f:variable(name: 'class', value: '') -> f:if(condition: '{column.width} == "none"')}
+
+{f:variable(name: 'class', value: '{class} {column.class}') -> f:if(condition: column.class)}
+{f:variable(name: 'class', value: '{class} ce-col-collapse') -> f:if(condition: collapse)}
+
+<pp:render.bootstrap.column class="ce-col {class}" count="{colCount}">
+    <f:for each="{content}" as="record">
+        <v:content.render contentUids="{0: record.uid}"/>
+    </f:for>
+</pp:render.bootstrap.column>
+</html>

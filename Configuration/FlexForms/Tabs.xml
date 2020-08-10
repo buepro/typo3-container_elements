@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:style</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <style type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:style</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default></default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:primary</numIndex>
+                                        <numIndex index="1">pp-tabs-primary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:secondary</numIndex>
+                                        <numIndex index="1">pp-tabs-secondary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:complementary</numIndex>
+                                        <numIndex index="1">pp-tabs-complementary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:custom</numIndex>
+                                        <numIndex index="1">pp-tabs-custom</numIndex>
+                                    </numIndex>
+                                    <numIndex index="21" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:legacy</numIndex>
+                                        <numIndex index="1">tab-v1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </style>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

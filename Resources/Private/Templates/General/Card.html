@@ -1,0 +1,33 @@
+<html lang="en" data-namespace-typo3-fluid="true"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="https://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    {f:variable(name: '_cardClasses', value: ' {data.pi_flexform.cardClasses}') -> f:if(condition: data.pi_flexform.cardClasses)}
+    {f:variable(name: '_borderClasses', value: ' {data.pi_flexform.borderClasses}') -> f:if(condition: data.pi_flexform.borderClasses)}
+    <div class="ce-card cec-{data.pi_flexform.imagePosition} card{_cardClasses}">
+        <f:if condition="{data.pi_flexform.borderType} == 'header'">
+            <div class="card-header{_borderClasses}">
+                <f:format.html>{data.pi_flexform.borderText}</f:format.html>
+            </div>
+        </f:if>
+        <f:if condition="{data.pi_flexform.imagePosition} == 'top' || {data.pi_flexform.imagePosition} == 'bottom'">
+            <f:render partial="Card/Vertical" arguments="{_all}" />
+        </f:if>
+        <f:if condition="{data.pi_flexform.imagePosition} == 'left' || {data.pi_flexform.imagePosition} == 'right'">
+            <f:render partial="Card/Horizontal" arguments="{_all}" />
+        </f:if>
+        <f:if condition="{data.pi_flexform.imagePosition} == 'below'">
+            <f:render partial="Card/Stack" arguments="{_all}" />
+        </f:if>
+        <f:if condition="{data.pi_flexform.borderType} == 'footer'">
+            <div class="card-footer{_borderClasses}">
+                <f:format.html>{data.pi_flexform.borderText}</f:format.html>
+            </div>
+        </f:if>
+    </div>
+</f:section>
+
+</html>

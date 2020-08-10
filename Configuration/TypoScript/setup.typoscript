@@ -1,0 +1,32 @@
+lib.containerContentElement =< lib.contentElement
+lib.containerContentElement {
+    templateRootPaths {
+        4 = EXT:container_elements/Resources/Private/Templates/General
+    }
+    partialRootPaths {
+        4 = EXT:container_elements/Resources/Private/Partials/General
+    }
+    dataProcessing {
+        1597060000 = B13\Container\DataProcessing\ContainerProcessor
+        1597060100 = Buepro\ContainerElements\DataProcessing\FlexFormProcessor
+        1597060100 {
+            fieldName = pi_flexform
+        }
+    }
+}
+tt_content.ce_container =< lib.containerContentElement
+tt_content.ce_container.templateName = Container
+tt_content.ce_columns2 =< lib.containerContentElement
+tt_content.ce_columns2.templateName = Columns2
+tt_content.ce_columns3 =< lib.containerContentElement
+tt_content.ce_columns3.templateName = Columns3
+tt_content.ce_columns4 =< lib.containerContentElement
+tt_content.ce_columns4.templateName = Columns4
+tt_content.ce_tabs =< lib.containerContentElement
+tt_content.ce_tabs.templateName = Tabs
+tt_content.ce_accordion =< lib.containerContentElement
+tt_content.ce_accordion.templateName = Accordion
+tt_content.ce_tile_unit =< lib.containerContentElement
+tt_content.ce_tile_unit.templateName = TileUnit
+tt_content.ce_card =< lib.containerContentElement
+tt_content.ce_card.templateName = Card

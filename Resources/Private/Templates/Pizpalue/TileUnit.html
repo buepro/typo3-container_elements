@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    {f:variable(name: 'breakpoint', value: '-{data.pi_flexform.columnsBreakpoint}')
+        -> f:if(condition: data.pi_flexform.columnsBreakpoint)}
+    {data.pi_flexform.customColumn1 -> v:format.trim() -> f:variable(name: 'col1Class')}
+    {data.pi_flexform.customColumn2 -> v:format.trim() -> f:variable(name: 'col2Class')}
+    <f:if condition="{data.pi_flexform.columnsDistribution} != 0">
+        {f:variable(name: 'col1Class', value: ' {col1Class}') -> f:if(condition: col1Class)}
+        {f:variable(name: 'col2Class', value: ' {col2Class}') -> f:if(condition: col2Class)}
+        <f:switch expression="{data.pi_flexform.columnsDistribution}">
+            <f:case value="12">
+                {f:variable(name: 'col1Class', value: 'col{breakpoint}-4{col1Class}')}
+                {f:variable(name: 'col2Class', value: 'col{breakpoint}-8{col2Class}')}
+            </f:case>
+            <f:case value="11">
+                {f:variable(name: 'col1Class', value: 'col{breakpoint}-6{col1Class}')}
+                {f:variable(name: 'col2Class', value: 'col{breakpoint}-6{col2Class}')}
+            </f:case>
+            <f:case value="21">
+                {f:variable(name: 'col1Class', value: 'col{breakpoint}-8{col1Class}')}
+                {f:variable(name: 'col2Class', value: 'col{breakpoint}-4{col2Class}')}
+            </f:case>
+        </f:switch>
+    </f:if>
+    <div class="ce-tile-row row no-gutters">
+        <pp:render.bootstrap.column class="ce-tile-col {col1Class}" count="2">
+            <f:for each="{children_101}" as="record">
+                <v:content.render contentUids="{0: record.uid}"/>
+            </f:for>
+        </pp:render.bootstrap.column>
+        <pp:render.bootstrap.column class="ce-tile-col {col2Class}" count="2">
+            <f:for each="{children_102}" as="record">
+                <v:content.render contentUids="{0: record.uid}"/>
+            </f:for>
+        </pp:render.bootstrap.column>
+    </div>
+</f:section>
+</html>

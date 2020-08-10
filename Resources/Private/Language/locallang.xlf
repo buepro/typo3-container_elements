@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-08-10T09:11:39Z"
+		  product-name="container_elements">
+		<header/>
+		<body>
+			<trans-unit id="content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="textLayout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="textPosition">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="textLink">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="left">
+				<source>Left</source>
+			</trans-unit>
+			<trans-unit id="center">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="right">
+				<source>Right</source>
+			</trans-unit>
+			<trans-unit id="top">
+				<source>Top</source>
+			</trans-unit>
+			<trans-unit id="bottom">
+				<source>Bottom</source>
+			</trans-unit>
+			<trans-unit id="below">
+				<source>Below</source>
+			</trans-unit>
+			<trans-unit id="none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="equal">
+				<source>Equal</source>
+			</trans-unit>
+			<trans-unit id="header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="footer">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="position">
+				<source>Position</source>
+			</trans-unit>
+
+			<trans-unit id="general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="custom">
+				<source>Custom</source>
+			</trans-unit>
+			<trans-unit id="adjustment">
+				<source>Adjustment</source>
+			</trans-unit>
+			<trans-unit id="options">
+				<source>Options</source>
+			</trans-unit>
+			<trans-unit id="style">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="primary">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="secondary">
+				<source>Secondary</source>
+			</trans-unit>
+			<trans-unit id="complementary">
+				<source>Complementary</source>
+			</trans-unit>
+			<trans-unit id="legacy">
+				<source>Legacy</source>
+			</trans-unit>
+			<trans-unit id="extrasmall">
+				<source>Extra small</source>
+			</trans-unit>
+			<trans-unit id="small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="medium">
+				<source>Medium</source>
+			</trans-unit>
+			<trans-unit id="large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="extralarge">
+				<source>Extra large</source>
+			</trans-unit>
+			<trans-unit id="row">
+				<source>Row</source>
+			</trans-unit>
+			<trans-unit id="column">
+				<source>Column</source>
+			</trans-unit>
+			<trans-unit id="columns">
+				<source>Columns</source>
+			</trans-unit>
+			<trans-unit id="breakpoint">
+				<source>Breakpoint</source>
+			</trans-unit>
+
+			<trans-unit id="containerFixed.title">
+				<source>Content container (depreciated)</source>
+			</trans-unit>
+			<trans-unit id="containerFixed.description">
+				<source>Provides a container covering the content width.</source>
+			</trans-unit>
+
+			<trans-unit id="container.title">
+				<source>Page container</source>
+			</trans-unit>
+			<trans-unit id="container.description">
+				<source>Container covering the entire page or screen width.</source>
+			</trans-unit>
+			<trans-unit id="container.class">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="container.class.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="container.class.cardGroup">
+				<source>Card group</source>
+			</trans-unit>
+			<trans-unit id="container.class.cardDeck">
+				<source>Card deck</source>
+			</trans-unit>
+			<trans-unit id="container.class.cardColumns">
+				<source>Card columns</source>
+			</trans-unit>
+			<trans-unit id="container.attribute">
+				<source>Attributes</source>
+			</trans-unit>
+			<trans-unit id="container.sectionClass">
+				<source>Section class</source>
+			</trans-unit>
+			<trans-unit id="container.wrapSection">
+				<source>Wrap section</source>
+			</trans-unit>
+			<trans-unit id="container.isContainerFluid">
+				<source>Is bootstrap fluid container</source>
+			</trans-unit>
+
+			<trans-unit id="columns.twoColumnTitle">
+				<source>2 Columns</source>
+			</trans-unit>
+			<trans-unit id="columns.twoColumnDescription">
+				<source>Two columns with customized width</source>
+			</trans-unit>
+			<trans-unit id="columns.threeColumnTitle">
+				<source>3 Columns</source>
+			</trans-unit>
+			<trans-unit id="columns.threeColumnDescription">
+				<source>Three columns with customized width</source>
+			</trans-unit>
+			<trans-unit id="columns.fourColumnTitle">
+				<source>4 Columns</source>
+			</trans-unit>
+			<trans-unit id="columns.fourColumnDescription">
+				<source>Four columns with customized width</source>
+			</trans-unit>
+			<trans-unit id="columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="columns.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="columns.column4">
+				<source>Column 4</source>
+			</trans-unit>
+			<trans-unit id="columns.column1Class">
+				<source>Column 1 classes</source>
+			</trans-unit>
+			<trans-unit id="columns.column2Class">
+				<source>Column 2 classes</source>
+			</trans-unit>
+			<trans-unit id="columns.column3Class">
+				<source>Column 3 classes</source>
+			</trans-unit>
+			<trans-unit id="columns.column4Class">
+				<source>Column 4 classes</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth1">
+				<source>1/12 (8.3%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth2">
+				<source>2/12 (16.7%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth3">
+				<source>3/12 (25%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth4">
+				<source>4/12 (33%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth5">
+				<source>5/12 (41.7%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth6">
+				<source>6/12 (50%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth7">
+				<source>7/12 (58.3%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth8">
+				<source>8/12 (66.7%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth9">
+				<source>9/12 (75%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth10">
+				<source>10/12 (83.3%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth11">
+				<source>11/12 (91.7%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidth12">
+				<source>12/12 (100%)</source>
+			</trans-unit>
+			<trans-unit id="columns.columnWidthNone">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="columns.columnAuto">
+				<source>Auto</source>
+			</trans-unit>
+
+			<trans-unit id="columns.rowClass">
+				<source>Row classes</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.alignItemsStart">
+				<source>Align columns on top</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.alignItemsCenter">
+				<source>Align columns in center</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.alignItemsEnd">
+				<source>Align columns on bottom</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.justifyContentStart">
+				<source>Justify columns at start</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.justifyContentCenter">
+				<source>Justify columns in center</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.justifyContentEnd">
+				<source>Justify columns at end</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.justifyContentAround">
+				<source>Justify columns with space around</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.justifyContentBetween">
+				<source>Justify columns with space between</source>
+			</trans-unit>
+			<trans-unit id="columns.rowClass.noGutters">
+				<source>No gutters</source>
+			</trans-unit>
+
+			<trans-unit id="columns.collapseContentElement">
+				<source>Collapse elements</source>
+			</trans-unit>
+			<trans-unit id="columns.collapseContentElement">
+				<source>Collapse content elements</source>
+			</trans-unit>
+			<trans-unit id="columns.collapseRow">
+				<source>Collapse row</source>
+			</trans-unit>
+
+			<trans-unit id="tabs.title">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="tabs.description">
+				<source>The content elements are accessible through tabs.</source>
+			</trans-unit>
+
+			<trans-unit id="accordion.title">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="accordion.description">
+				<source>The content elements are accessible in an accordion.</source>
+			</trans-unit>
+
+			<trans-unit id="tileUnit.title">
+				<source>Tile unit</source>
+			</trans-unit>
+			<trans-unit id="tileUnit.description">
+				<source>A tile unit consists of a left and a right column. Each column can hold content elements or other tile units.</source>
+			</trans-unit>
+			<trans-unit id="tileUnit.left">
+				<source>Tile unit left</source>
+			</trans-unit>
+			<trans-unit id="tileUnit.right">
+				<source>Tile unit right</source>
+			</trans-unit>
+			<trans-unit id="tileUnit.columnDistribution">
+				<source>Column distribution</source>
+			</trans-unit>
+			<trans-unit id="tileUnit.customClassColumn1">
+				<source>Custom classes column 1</source>
+			</trans-unit>
+			<trans-unit id="tileUnit.customClassColumn2">
+				<source>Custom classes column 2</source>
+			</trans-unit>
+
+			<trans-unit id="card.title">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="card.description">
+				<source>Card with image and text or any type of content elements.</source>
+			</trans-unit>
+			<trans-unit id="card.content">
+				<source>Content (optional)</source>
+			</trans-unit>
+			<trans-unit id="card.imageContent">
+				<source>Image content (optional)</source>
+			</trans-unit>
+			<trans-unit id="card.titleLayout">
+				<source>Title type</source>
+			</trans-unit>
+			<trans-unit id="card.titlePosition">
+				<source>Title alignment</source>
+			</trans-unit>
+			<trans-unit id="card.titleLink">
+				<source>Title link</source>
+			</trans-unit>
+			<trans-unit id="card.bodyText">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="card.borderType">
+				<source>Border type</source>
+			</trans-unit>
+			<trans-unit id="card.borderText">
+				<source>Border text</source>
+			</trans-unit>
+			<trans-unit id="card.classes">
+				<source>Card classes</source>
+			</trans-unit>
+			<trans-unit id="card.bodyClasses">
+				<source>Body classes</source>
+			</trans-unit>
+			<trans-unit id="card.borderClasses">
+				<source>Border classes</source>
+			</trans-unit>
+			<trans-unit id="card.titleClasses">
+				<source>Title classes</source>
+			</trans-unit>
+			<trans-unit id="card.imageClasses">
+				<source>Image classes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

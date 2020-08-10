@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <containerClass type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                                <valuePicker>
+                                    <mode>append</mode>
+                                    <items type="array">
+                                        <numIndex index="0" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.content</numIndex>
+                                            <numIndex index="1">container </numIndex>
+                                        </numIndex>
+                                        <numIndex index="1" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardGroup</numIndex>
+                                            <numIndex index="1">card-group </numIndex>
+                                        </numIndex>
+                                        <numIndex index="2" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardDeck</numIndex>
+                                            <numIndex index="1">card-deck </numIndex>
+                                        </numIndex>
+                                        <numIndex index="3" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardColumns</numIndex>
+                                            <numIndex index="1">card-columns </numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                            </config>
+                        </TCEforms>
+                    </containerClass>
+                    <containerAttribute type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.attribute</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </containerAttribute>
+                    <isContainerFluid type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.isContainerFluid</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </isContainerFluid>
+                    <wrapSection type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.wrapSection</label>
+                            <config type="array">
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </wrapSection>
+                    <sectionClass type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.sectionClass</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </sectionClass>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
