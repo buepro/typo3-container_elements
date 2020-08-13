@@ -13,7 +13,10 @@
 
 <pp:render.bootstrap.column class="ce-col {class}" count="{colCount}">
     <f:for each="{content}" as="record">
-        <v:content.render contentUids="{0: record.uid}"/>
+        {f:variable(name: '_vhsContentUid', value: record.uid)}
+        {f:variable(name: '_vhsContentUid', value: record.l18n_parent)
+            -> f:if(condition: '{record.l18n_parent} != 0')}
+        <v:content.render contentUids="{0: _vhsContentUid}"/>
     </f:for>
 </pp:render.bootstrap.column>
 </html>
