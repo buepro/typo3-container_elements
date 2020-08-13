@@ -47,10 +47,4 @@ defined('TYPO3_MODE') || die('Access denied.');
         'FILE:EXT:container_elements/Configuration/FlexForms/Columns3.xml',
         'ce_columns3'
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tt_content',
-        'pi_flexform',
-        'ce_columns3',
-        'after:header'
-    );
 })();

@@ -46,10 +46,4 @@ defined('TYPO3_MODE') || die('Access denied.');
         'FILE:EXT:container_elements/Configuration/FlexForms/Card.xml',
         'ce_card'
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tt_content',
-        'pi_flexform',
-        'ce_card',
-        'after:header'
-    );
 })();
