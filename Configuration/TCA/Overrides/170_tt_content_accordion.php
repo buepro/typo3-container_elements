@@ -25,7 +25,7 @@ defined('TYPO3_MODE') || die('Access denied.');
                 ]
             ]
         ],
-        'EXT:container_elements/Resources/Public/Icons/Accordion.svg',
+        'container-elements-accordion',
         'EXT:container/Resources/Private/Templates/Container.html',
         'EXT:container/Resources/Private/Templates/Grid.html',
         false

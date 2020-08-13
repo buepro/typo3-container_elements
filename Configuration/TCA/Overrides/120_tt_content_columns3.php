@@ -33,7 +33,7 @@ defined('TYPO3_MODE') || die('Access denied.');
                 ],
             ]
         ],
-        'EXT:container_elements/Resources/Public/Icons/Columns3.svg',
+        'container-elements-columns3',
         'EXT:container/Resources/Private/Templates/Container.html',
         'EXT:container/Resources/Private/Templates/Grid.html',
         false

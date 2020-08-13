@@ -10,7 +10,23 @@
 defined('TYPO3_MODE') || die('Access denied.');
 
 (function () {
+    /**
+     * Load default TS
+     */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
         '@import "EXT:container_elements/Configuration/TypoScript/setup.typoscript"'
     );
+
+    /**
+     * Register icons
+     */
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $icons = ['Container', 'Columns2', 'Columns3', 'Columns4', 'Tabs', 'Accordion', 'TileUnit', 'Card'];
+    foreach ($icons as $icon) {
+        $iconRegistry->registerIcon(
+            'container-elements-' . strtolower($icon),
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:container_elements/Resources/Public/Icons/' . $icon . '.svg']
+        );
+    }
 })();
