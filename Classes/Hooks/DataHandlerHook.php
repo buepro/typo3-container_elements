@@ -17,7 +17,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class DataHandlerHook
 {
     /**
-     * Set default flex form values.
+     * Sets fields `pi_flexform` and `frame_class`:
+     * - Default values for `pi_flexform`
+     * - No frame for nested container elements
      *
      * ATTENTION: Other extensions like `gridelements` might overwrite it in case their hooks are called after this one.
      * (the hook sequence depends on the extension installation order. This extension might be installed as last one.)
@@ -32,7 +34,8 @@ class DataHandlerHook
         $table,
         $id,
         DataHandler $dataHandler
-    ): void {
+    ): void
+    {
         $cTypes = [
             'ce_container',
             'ce_columns2',
@@ -45,7 +48,8 @@ class DataHandlerHook
         ];
         if (is_string($id) && false !== strpos($id, 'NEW') && !isset($incomingFieldArray['pi_flexform'])
             && in_array($incomingFieldArray['CType'], $cTypes, true)) {
-            // Get default pi_flexform value
+
+            // Set default pi_flexform values
             $formDataGroup = GeneralUtility::makeInstance(TcaDatabaseRecord::class);
             $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class, $formDataGroup);
             $formDataCompilerInput = [
@@ -60,6 +64,11 @@ class DataHandlerHook
             ];
             $formData = $formDataCompiler->compile($formDataCompilerInput);
             $incomingFieldArray['pi_flexform'] = $formData['databaseRow']['pi_flexform'];
+
+            // Set frame_class to `none` in case this element is nested into an other container element
+            if ($incomingFieldArray['tx_container_parent'] !== 0) {
+                $incomingFieldArray['frame_class'] = 'none';
+            }
         }
     }
 }
