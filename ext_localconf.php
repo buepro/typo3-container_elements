@@ -29,4 +29,12 @@ defined('TYPO3_MODE') || die('Access denied.');
             ['source' => 'EXT:container_elements/Resources/Public/Icons/' . $icon . '.svg']
         );
     }
+
+    /**
+     * Hooks
+     */
+    if (1) {
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
+        ['container_elements'] = \Buepro\ContainerElements\Hooks\DataHandlerHook::class;
+    }
 })();
