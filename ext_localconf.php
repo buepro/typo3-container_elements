@@ -21,7 +21,17 @@ defined('TYPO3_MODE') || die('Access denied.');
      * Register icons
      */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    // Content elements
     $icons = ['Container', 'Columns2', 'Columns3', 'Columns4', 'Tabs', 'Accordion', 'TileUnit', 'Card'];
+    foreach ($icons as $icon) {
+        $iconRegistry->registerIcon(
+            'container-elements-' . strtolower($icon),
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:container_elements/Resources/Public/Icons/' . $icon . '.svg']
+        );
+    }
+    // Other icons
+    $icons = ['Frame', 'NoFrame'];
     foreach ($icons as $icon) {
         $iconRegistry->registerIcon(
             'container-elements-' . strtolower($icon),

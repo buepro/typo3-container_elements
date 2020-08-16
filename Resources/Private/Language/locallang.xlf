@@ -4,6 +4,12 @@
 		  product-name="container_elements">
 		<header/>
 		<body>
+			<trans-unit id="with_frame">
+				<source>With frame</source>
+			</trans-unit>
+			<trans-unit id="without_frame">
+				<source>Without frame</source>
+			</trans-unit>
 			<trans-unit id="content">
 				<source>Content</source>
 			</trans-unit>

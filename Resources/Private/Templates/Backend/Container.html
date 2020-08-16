@@ -1,0 +1,30 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<div class="bg-info ce-content-element-info">
+    <f:if condition="{frame_class} == 'none'">
+        <f:then>
+            <core:icon identifier="container-elements-noframe" /> {f:translate(key: 'without_frame', extensionName: 'container_elements')}
+        </f:then>
+        <f:else>
+            <core:icon identifier="container-elements-frame" /> {f:translate(key: 'with_frame', extensionName: 'container_elements')}
+        </f:else>
+    </f:if>
+</div>
+<f:format.raw>{tx_container_grid}</f:format.raw>
+<f:asset.css identifier="ce-container">
+    .ce-content-element-info {
+        margin: 0 -10px;
+        padding: 5px 10px;
+    }
+    .t3-ctype-identifier a {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .t3-ctype-identifier br {
+        display: none;
+    }
+</f:asset.css>
+
+</html>

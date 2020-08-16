@@ -26,7 +26,7 @@ defined('TYPO3_MODE') || die('Access denied.');
             ]
         ],
         'container-elements-accordion',
-        'EXT:container/Resources/Private/Templates/Container.html',
+        'EXT:container_elements/Resources/Private/Templates/Backend/Container.html',
         'EXT:container/Resources/Private/Templates/Grid.html',
         true
     );
