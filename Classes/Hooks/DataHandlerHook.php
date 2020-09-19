@@ -34,8 +34,7 @@ class DataHandlerHook
         $table,
         $id,
         DataHandler $dataHandler
-    ): void
-    {
+    ): void {
         $cTypes = [
             'ce_container',
             'ce_columns2',
