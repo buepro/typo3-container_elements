@@ -344,6 +344,9 @@
 			<trans-unit id="card.titleLayout">
 				<source>Title type</source>
 			</trans-unit>
+			<trans-unit id="card.titleClass">
+				<source>Title class</source>
+			</trans-unit>
 			<trans-unit id="card.titlePosition">
 				<source>Title alignment</source>
 			</trans-unit>
@@ -362,6 +365,9 @@
 			<trans-unit id="card.classes">
 				<source>Card classes</source>
 			</trans-unit>
+			<trans-unit id="card.wrapClasses">
+				<source>Card wrap classes</source>
+			</trans-unit>
 			<trans-unit id="card.bodyClasses">
 				<source>Body classes</source>
 			</trans-unit>
@@ -370,6 +376,9 @@
 			</trans-unit>
 			<trans-unit id="card.titleClasses">
 				<source>Title classes</source>
+			</trans-unit>
+			<trans-unit id="card.imageWrapClasses">
+				<source>Image wrap classes</source>
 			</trans-unit>
 			<trans-unit id="card.imageClasses">
 				<source>Image classes</source>

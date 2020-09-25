@@ -39,6 +39,7 @@
 
 <f:section name="TitleText">
     {f:variable(name: '_position', value: ' text-{data.pi_flexform.titlePosition}') -> f:if(condition: data.pi_flexform.titlePosition)}
+    {f:variable(name: '_titleClasses', value: ' {data.pi_flexform.titleClass}') -> f:if(condition: data.pi_flexform.titleClass)}
     {f:variable(name: '_titleClasses', value: ' {data.pi_flexform.titleClasses}') -> f:if(condition: data.pi_flexform.titleClasses)}
     <{data.pi_flexform.titleLayout} class="card-title{_position}{_titleClasses}">{data.pi_flexform.titleText}</{data.pi_flexform.titleLayout}>
 </f:section>

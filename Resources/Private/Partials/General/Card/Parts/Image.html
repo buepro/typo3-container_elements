@@ -14,11 +14,24 @@
     <f:if condition="{data.pi_flexform.imageClasses}">
         {f:variable(name: '_imageClasses', value: '{_imageClasses} {data.pi_flexform.imageClasses}')}
     </f:if>
-    <f:image class="{_imageClasses}" treatIdAsReference="1" src="{_image.id}" crop="{_image.crop}"
-             title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
+    <f:if condition="{data.pi_flexform.imageWrapClasses}">
+        <f:then>
+            <div class="{data.pi_flexform.imageWrapClasses}">
+                <f:image class="{_imageClasses}" treatIdAsReference="1" src="{_image.id}" crop="{_image.crop}"
+                         title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
+            </div>
+        </f:then>
+        <f:else>
+            <f:image class="{_imageClasses}" treatIdAsReference="1" src="{_image.id}" crop="{_image.crop}"
+                     title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
+        </f:else>
+    </f:if>
 </f:if>
 <f:if condition="{children_201}">
-    <div class="cec-image-wrap">
+    {f:variable(name:'_imageWrapClasses', value: 'cec-image-wrap')}
+    {f:variable(name:'_imageWrapClasses', value: '{_imageWrapClasses} {data.pi_flexform.imageWrapClasses}')
+        -> f:if(condition: data.pi_flexform.imageWrapClasses)}
+    <div class="{_imageWrapClasses}">
         <f:for each="{children_201}" as="record">
             <f:format.raw>{record.renderedContent}</f:format.raw>
         </f:for>

@@ -55,6 +55,46 @@
                             </config>
                         </TCEforms>
                     </titleLayout>
+                    <titleClass>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titleClass</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default></default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:none</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">H1</numIndex>
+                                        <numIndex index="1">h1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">H2</numIndex>
+                                        <numIndex index="1">h2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">H3</numIndex>
+                                        <numIndex index="1">h3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">H4</numIndex>
+                                        <numIndex index="1">h4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">H5</numIndex>
+                                        <numIndex index="1">h5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">H6</numIndex>
+                                        <numIndex index="1">h6</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </titleClass>
                     <titlePosition>
                         <TCEforms>
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titlePosition</label>
@@ -276,6 +316,14 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <cardWrapClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.wrapClasses</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </cardWrapClasses>
                     <cardClasses>
                         <TCEforms>
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.classes</label>
@@ -308,6 +356,14 @@
                             </config>
                         </TCEforms>
                     </titleClasses>
+                    <imageWrapClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageWrapClasses</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </imageWrapClasses>
                     <imageClasses>
                         <TCEforms>
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageClasses</label>

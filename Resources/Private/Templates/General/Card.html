@@ -5,6 +5,19 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
+    <f:if condition="{data.pi_flexform.cardWrapClasses}">
+        <f:then>
+            <div class="{data.pi_flexform.cardWrapClasses}">
+                <f:render section="Internal" arguments="{_all}" />
+            </div>
+        </f:then>
+        <f:else>
+            <f:render section="Internal" arguments="{_all}" />
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="Internal">
     {f:variable(name: '_cardClasses', value: ' {data.pi_flexform.cardClasses}') -> f:if(condition: data.pi_flexform.cardClasses)}
     {f:variable(name: '_borderClasses', value: ' {data.pi_flexform.borderClasses}') -> f:if(condition: data.pi_flexform.borderClasses)}
     <div class="ce-card cec-{data.pi_flexform.imagePosition} card{_cardClasses}">
