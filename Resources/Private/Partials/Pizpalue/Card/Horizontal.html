@@ -1,0 +1,28 @@
+<html lang="en" data-namespace-typo3-fluid="true"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="https://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:pp="https://typo3.org/ns/Buepro/ContainerElements/ViewHelpers">
+
+{f:variable(name: '_textColumnClasses', value: 'col-md-8')}
+{f:variable(name: '_textColumnClasses', value: data.pi_flexform.textColumnClasses) -> f:if(condition: data.pi_flexform.textColumnClasses)}
+{f:variable(name: '_imageColumnClasses', value: 'col-md-4')}
+{f:variable(name: '_imageColumnClasses', value: data.pi_flexform.imageColumnClasses) -> f:if(condition: data.pi_flexform.imageColumnClasses)}
+<div class="row no-gutters">
+    <f:if condition="{data.pi_flexform.imagePosition} == left">
+        <pp:render.bootstrap.column class="{_imageColumnClasses} cec-image-col" count="2">
+            <f:render partial="Card/Parts/Image" arguments="{_all}" />
+        </pp:render.bootstrap.column>
+        <pp:render.bootstrap.column class="{_textColumnClasses} cec-content-col" count="2">
+            <f:render partial="Card/Parts/Body" arguments="{_all}" />
+        </pp:render.bootstrap.column>
+    </f:if>
+    <f:if condition="{data.pi_flexform.imagePosition} == right">
+        <pp:render.bootstrap.column class="{_textColumnClasses} cec-content-col" count="2">
+            <f:render partial="Card/Parts/Body" arguments="{_all}" />
+        </pp:render.bootstrap.column>
+        <pp:render.bootstrap.column class="{_imageColumnClasses} cec-image-col" count="2">
+            <f:render partial="Card/Parts/Image" arguments="{_all}" />
+        </pp:render.bootstrap.column>
+    </f:if>
+</div>
+</html>

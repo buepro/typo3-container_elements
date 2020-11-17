@@ -33,7 +33,10 @@
         -> f:if(condition: data.pi_flexform.imageWrapClasses)}
     <div class="{_imageWrapClasses}">
         <f:for each="{children_201}" as="record">
-            <f:format.raw>{record.renderedContent}</f:format.raw>
+            {f:variable(name: '_vhsContentUid', value: record.uid)}
+            {f:variable(name: '_vhsContentUid', value: record.l18n_parent)
+                -> f:if(condition: '{record.l18n_parent} != 0')}
+            <v:content.render contentUids="{0: _vhsContentUid}"/>
         </f:for>
     </div>
 </f:if>
