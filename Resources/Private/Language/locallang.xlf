@@ -383,6 +383,12 @@
 			<trans-unit id="card.imageClasses">
 				<source>Image classes</source>
 			</trans-unit>
+			<trans-unit id="card.textColumnClasses">
+				<source>Text column classes</source>
+			</trans-unit>
+			<trans-unit id="card.imageColumnClasses">
+				<source>Image column classes</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -277,6 +277,7 @@
                     <imagePosition>
                         <TCEforms>
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:position</label>
+                            <onChange>reload</onChange>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -372,6 +373,36 @@
                             </config>
                         </TCEforms>
                     </imageClasses>
+                    <textColumnClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.textColumnClasses</label>
+                            <displayCond>
+                                <or>
+                                    <value1>FIELD:imageSheet.imagePosition:=:left</value1>
+                                    <value2>FIELD:imageSheet.imagePosition:=:right</value2>
+                                </or>
+                            </displayCond>
+                            <config>
+                                <type>input</type>
+                                <default>col-md-8</default>
+                            </config>
+                        </TCEforms>
+                    </textColumnClasses>
+                    <imageColumnClasses>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageColumnClasses</label>
+                            <displayCond>
+                                <or>
+                                    <value1>FIELD:imageSheet.imagePosition:=:left</value1>
+                                    <value2>FIELD:imageSheet.imagePosition:=:right</value2>
+                                </or>
+                            </displayCond>
+                            <config>
+                                <type>input</type>
+                                <default>col-md-4</default>
+                            </config>
+                        </TCEforms>
+                    </imageColumnClasses>
                 </el>
             </ROOT>
         </customSheet>

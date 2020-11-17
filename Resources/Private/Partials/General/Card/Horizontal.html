@@ -2,20 +2,24 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="https://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
+{f:variable(name: '_textColumnClasses', value: 'col-md-8')}
+{f:variable(name: '_textColumnClasses', value: data.pi_flexform.textColumnClasses) -> f:if(condition: data.pi_flexform.textColumnClasses)}
+{f:variable(name: '_imageColumnClasses', value: 'col-md-4')}
+{f:variable(name: '_imageColumnClasses', value: data.pi_flexform.imageColumnClasses) -> f:if(condition: data.pi_flexform.imageColumnClasses)}
 <div class="row no-gutters">
     <f:if condition="{data.pi_flexform.imagePosition} == left">
-        <div class="col-md-4 cec-image-col">
+        <div class="{_imageColumnClasses} cec-image-col">
             <f:render partial="Card/Parts/Image" arguments="{_all}" />
         </div>
-        <div class="col-md-8 cec-content-col">
+        <div class="{_textColumnClasses} cec-content-col">
             <f:render partial="Card/Parts/Body" arguments="{_all}" />
         </div>
     </f:if>
     <f:if condition="{data.pi_flexform.imagePosition} == right">
-        <div class="col-md-8 cec-content-col">
+        <div class="{_textColumnClasses} cec-content-col">
             <f:render partial="Card/Parts/Body" arguments="{_all}" />
         </div>
-        <div class="col-md-4 cec-image-col">
+        <div class="{_imageColumnClasses} cec-image-col">
             <f:render partial="Card/Parts/Image" arguments="{_all}" />
         </div>
     </f:if>
