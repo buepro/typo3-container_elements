@@ -17,15 +17,17 @@
 </f:if>
 
 <f:section name="BodyContent">
-    <f:if condition="{data.pi_flexform.titleLink}">
-        <f:then>
-            <f:link.typolink parameter="{data.pi_flexform.titleLink}">
+    <f:if condition="{data.pi_flexform.titleText}">
+        <f:if condition="{data.pi_flexform.titleLink}">
+            <f:then>
+                <f:link.typolink parameter="{data.pi_flexform.titleLink}">
+                    <f:render section="TitleText" arguments="{_all}" />
+                </f:link.typolink>
+            </f:then>
+            <f:else>
                 <f:render section="TitleText" arguments="{_all}" />
-            </f:link.typolink>
-        </f:then>
-        <f:else>
-            <f:render section="TitleText" arguments="{_all}" />
-        </f:else>
+            </f:else>
+        </f:if>
     </f:if>
     {data.pi_flexform.bodyText -> f:format.html()}
     <f:if condition="{children_101}">
