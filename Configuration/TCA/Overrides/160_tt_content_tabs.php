@@ -13,22 +13,25 @@ defined('TYPO3_MODE') || die('Access denied.');
     /**
      * Register tabs
      */
-    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-        'ce_tabs',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tabs.title',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tabs.description',
-        [
-            [
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'ce_tabs',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tabs.title',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tabs.description',
                 [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:content',
-                    'colPos' => 101
+                    [
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:content',
+                            'colPos' => 101
+                        ]
+                    ]
                 ]
-            ]
-        ],
-        'container-elements-tabs',
-        'EXT:container_elements/Resources/Private/Templates/Backend/Container.html',
-        'EXT:container/Resources/Private/Templates/Grid.html',
-        true
+            )
+        )
+        ->setIcon('container-elements-tabs')
+        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
+        ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
     /**

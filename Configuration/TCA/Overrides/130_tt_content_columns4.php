@@ -13,34 +13,37 @@ defined('TYPO3_MODE') || die('Access denied.');
     /**
      * Register columns4
      */
-    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-        'ce_columns4',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.fourColumnTitle',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.fourColumnDescription',
-        [
-            [
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'ce_columns4',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.fourColumnTitle',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.fourColumnDescription',
                 [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column1',
-                    'colPos' => 101
-                ],
-                [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column2',
-                    'colPos' => 102
-                ],
-                [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column3',
-                    'colPos' => 103
-                ],
-                [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column4',
-                    'colPos' => 104
-                ],
-            ]
-        ],
-        'container-elements-columns4',
-        'EXT:container_elements/Resources/Private/Templates/Backend/Container.html',
-        'EXT:container/Resources/Private/Templates/Grid.html',
-        true
+                    [
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column1',
+                            'colPos' => 101
+                        ],
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column2',
+                            'colPos' => 102
+                        ],
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column3',
+                            'colPos' => 103
+                        ],
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column4',
+                            'colPos' => 104
+                        ],
+                    ]
+                ]
+            )
+        )
+        ->setIcon('container-elements-columns4')
+        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
+        ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
     /**

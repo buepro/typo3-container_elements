@@ -13,29 +13,32 @@ defined('TYPO3_MODE') || die('Access denied.');
     /**
      * Register card
      */
-    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-        'ce_card',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.title',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.description',
-        [
-            [
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'ce_card',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.title',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.description',
                 [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.content',
-                    'colPos' => 101
-                ],
+                    [
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.content',
+                            'colPos' => 101
+                        ],
 
-            ],
-            [
-                [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageContent',
-                    'colPos' => 201
-                ],
-            ],
-        ],
-        'container-elements-card',
-        'EXT:container_elements/Resources/Private/Templates/Backend/Container.html',
-        'EXT:container/Resources/Private/Templates/Grid.html',
-        true
+                    ],
+                    [
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageContent',
+                            'colPos' => 201
+                        ],
+                    ],
+                ]
+            )
+        )
+        ->setIcon('container-elements-card')
+        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
+        ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
     /**

@@ -13,26 +13,29 @@ defined('TYPO3_MODE') || die('Access denied.');
     /**
      * Register tileUnit
      */
-    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-        'ce_tile_unit',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.title',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.description',
-        [
-            [
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'ce_tile_unit',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.title',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.description',
                 [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.left',
-                    'colPos' => 101
-                ],
-                [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.right',
-                    'colPos' => 102
-                ],
-            ]
-        ],
-        'container-elements-tileunit',
-        'EXT:container_elements/Resources/Private/Templates/Backend/Container.html',
-        'EXT:container/Resources/Private/Templates/Grid.html',
-        true
+                    [
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.left',
+                            'colPos' => 101
+                        ],
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.right',
+                            'colPos' => 102
+                        ],
+                    ]
+                ]
+            )
+        )
+        ->setIcon('container-elements-tileunit')
+        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
+        ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
     /**

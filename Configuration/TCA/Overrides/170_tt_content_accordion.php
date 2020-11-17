@@ -13,22 +13,25 @@ defined('TYPO3_MODE') || die('Access denied.');
     /**
      * Register accordion
      */
-    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-        'ce_accordion',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:accordion.title',
-        'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:accordion.description',
-        [
-            [
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'ce_accordion',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:accordion.title',
+                'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:accordion.description',
                 [
-                    'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:content',
-                    'colPos' => 101
+                    [
+                        [
+                            'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:content',
+                            'colPos' => 101
+                        ]
+                    ]
                 ]
-            ]
-        ],
-        'container-elements-accordion',
-        'EXT:container_elements/Resources/Private/Templates/Backend/Container.html',
-        'EXT:container/Resources/Private/Templates/Grid.html',
-        true
+            )
+        )
+        ->setIcon('container-elements-accordion')
+        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
+        ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
     /**
