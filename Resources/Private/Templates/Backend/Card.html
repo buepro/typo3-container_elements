@@ -11,6 +11,16 @@
         </f:else>
     </f:if>
 </div>
+{f:variable(name: '_title', value: pi_flexform_transformed.titleText)}
+{pi_flexform_transformed.bodyText -> f:format.stripTags() -> f:format.crop(maxCharacters: 300, append: '...') -> f:variable(name: '_text')}
+<f:if condition="{_title} || {_text}">
+    <div class="tx-containerelements-preview">
+        <div class="t3-ctype-identifier">
+            <f:if condition="{_title}"><strong>{_title}</strong><br /></f:if>
+        </div>
+        <f:if condition="{_text}"><span class="exampleContent">{_text}</span></f:if>
+    </div>
+</f:if>
 <f:format.raw>{tx_container_grid}</f:format.raw>
 <f:asset.css identifier="ce-container" href="EXT:container_elements/Resources/Public/Css/backend.css" />
 

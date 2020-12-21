@@ -37,7 +37,7 @@ defined('TYPO3_MODE') || die('Access denied.');
             )
         )
         ->setIcon('container-elements-card')
-        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
+        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Card.html')
         ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
