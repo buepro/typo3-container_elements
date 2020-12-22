@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<div class="bg-info ce-content-element-info">
+<div class="bg-info ce-content-element-info{f:if(condition: header, then: ' cec-my')}">
     <f:if condition="{frame_class} == 'none'">
         <f:then>
             <core:icon identifier="container-elements-noframe" /> {f:translate(key: 'without_frame', extensionName: 'container_elements')}

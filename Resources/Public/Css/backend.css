@@ -2,6 +2,9 @@
     margin: -10px -10px 0;
     padding: 5px 10px;
 }
+.ce-content-element-info.cec-my {
+    margin: 10px -10px;
+}
 .t3-ctype-identifier a {
     display: block;
     margin-bottom: 5px;
