@@ -306,6 +306,12 @@
 			<trans-unit id="accordion.description">
 				<source>The content elements are accessible in an accordion.</source>
 			</trans-unit>
+			<trans-unit id="accordion.activeItemIndex">
+				<source>Active item index</source>
+			</trans-unit>
+			<trans-unit id="accordion.activeItemIndex.description">
+				<source>Set to 0 to have all items closed.</source>
+			</trans-unit>
 
 			<trans-unit id="tileUnit.title">
 				<source>Tile unit</source>

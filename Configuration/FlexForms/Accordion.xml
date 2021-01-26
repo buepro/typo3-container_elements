@@ -47,6 +47,21 @@
                             </config>
                         </TCEforms>
                     </style>
+                    <activeItemIndex>
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:accordion.activeItemIndex</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:accordion.activeItemIndex.description</description>
+                            <config>
+                                <type>input</type>
+                                <size>3</size>
+                                <eval>trim,int</eval>
+                                <default>1</default>
+                                <range>
+                                    <lower>0</lower>
+                                </range>
+                            </config>
+                        </TCEforms>
+                    </activeItemIndex>
                 </el>
             </ROOT>
         </sDEF>

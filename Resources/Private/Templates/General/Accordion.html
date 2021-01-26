@@ -7,13 +7,15 @@
     <div class="accordion {f:if(condition:'{data.pi_flexform.style}', then:'{data.pi_flexform.style}')}"
          id="accordion-{data.uid}">
         <f:for each="{children_101}" as="record" iteration="iterator">
+            {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex)}
+            {f:variable(name: '_activeItemIndex', value: 1) -> v:condition.variable.isNull(value: _activeItemIndex)}
             <div class="accordion-item card">
                 <div id="accordion-heading-{record.uid}" class="accordion-header card-header">
                     <h4 class="accordion-title">
-                        <a class="accordion-title-link {f:if(condition:'{iterator.index}!=0', then:'collapsed')}"
+                        <a class="accordion-title-link {f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:'collapsed')}"
                            href="#accordion-{record.uid}"
                            data-toggle="collapse" data-parent="#accordion-{data.uid}"
-                           aria-expand="{f:if(condition:'{iterator.index}==0', then:'true', else:'false')}"
+                           aria-expand="{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:'true', else:'false')}"
                            aria-controls="accordion-{record.uid}">
                             <span class="accordion-title-link-text">{record.header}</span>
                             <span class="accordion-title-link-state"></span>
@@ -21,7 +23,7 @@
                     </h4>
                 </div>
                 <div id="accordion-{record.uid}"
-                     class="accordion-collapse collapse {f:if(condition:'{iterator.index}==0', then:'show')}"
+                     class="accordion-collapse collapse {f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:'show')}"
                      aria-labelledby="accordion-heading-{record.uid}"
                      data-parent="#accordion-{data.uid}">
                     <div class="ce-accordion-body accordion-body card-body">
