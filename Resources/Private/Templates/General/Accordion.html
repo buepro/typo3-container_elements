@@ -4,11 +4,11 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
+    {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex)}
+    {f:variable(name: '_activeItemIndex', value: 1) -> v:condition.variable.isNull(value: _activeItemIndex)}
     <div class="accordion {f:if(condition:'{data.pi_flexform.style}', then:'{data.pi_flexform.style}')}"
          id="accordion-{data.uid}">
         <f:for each="{children_101}" as="record" iteration="iterator">
-            {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex)}
-            {f:variable(name: '_activeItemIndex', value: 1) -> v:condition.variable.isNull(value: _activeItemIndex)}
             <div class="accordion-item card">
                 <div id="accordion-heading-{record.uid}" class="accordion-header card-header">
                     <h4 class="accordion-title">
