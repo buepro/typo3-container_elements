@@ -15,7 +15,7 @@
                         <a class="accordion-title-link {f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:'collapsed')}"
                            href="#accordion-{record.uid}"
                            data-toggle="collapse" data-parent="#accordion-{data.uid}"
-                           aria-expand="{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:'true', else:'false')}"
+                           aria-expanded="{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:'true', else:'false')}"
                            aria-controls="accordion-{record.uid}">
                             <span class="accordion-title-link-text">{record.header}</span>
                             <span class="accordion-title-link-state"></span>
