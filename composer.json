@@ -21,8 +21,8 @@
     ],
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "typo3/cms-core": "^10.4",
-        "b13/container": "^1.2.0",
+        "typo3/cms-core": "^10.4 || dev-master",
+        "b13/container": "^1.2.0 || dev-master",
         "fluidtypo3/vhs": "^6.0 || dev-master"
     },
     "require-dev": {
