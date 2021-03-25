@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') || die('Access denied.');
 
 (function () {
     $typeList = 'ce_container,ce_columns2,ce_columns3,ce_columns4,ce_tabs,ce_accordion,ce_tile_unit,ce_card';
