@@ -11,7 +11,7 @@ $EM_CONF[$_EXTKEY] = [
     'title'            => 'Container elements',
     'description'      => 'Provides content elements powered by container and bootstrap. Available elements: container, columns, tabs, accordion, tile unit and card.',
     'category'         => 'misc',
-    'version'          => '1.3.0-dev',
+    'version'          => '1.4.0-dev',
     'state'            => 'stable',
     'clearCacheOnLoad' => 1,
     'author'           => 'Roman Büchler',
@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'typo3'         => '10.4.11-10.4.99',
-            'container'     => '1.2.0-1.99.99',
+            'container'     => '1.3.0-1.99.99',
             'vhs'           => '6.0.0-6.99.99',
         ],
         'conflicts' => [],

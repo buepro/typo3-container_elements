@@ -21,9 +21,9 @@
     ],
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "typo3/cms-core": "^10.4.11 || dev-master",
-        "b13/container": "^1.2.0 || dev-master",
-        "fluidtypo3/vhs": "^6.0 || dev-master"
+        "typo3/cms-core": "^10.4.11 || 11.*.*@dev",
+        "b13/container": "^1.3.0",
+        "fluidtypo3/vhs": "^6.0 || dev-development"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
@@ -40,6 +40,9 @@
     "extra": {
         "typo3/cms": {
             "extension-key": "container_elements"
+        },
+        "branch-alias": {
+            "dev-master": "1.x-dev"
         }
     }
 }
