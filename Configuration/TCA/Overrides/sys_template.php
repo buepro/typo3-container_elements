@@ -10,9 +10,13 @@
 defined('TYPO3') || die('Access denied');
 
 (function () {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        'container_elements',
-        'Configuration/TypoScript/Pizpalue',
-        'Container elements - Pizpalue'
-    );
+    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)->get('container_elements');
+    if(!(bool) $extensionConfiguration['autoLoadStaticTS']) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            'container_elements',
+            'Configuration/TypoScript/Pizpalue',
+            'Container elements - Pizpalue'
+        );
+    }
 })();

@@ -1,0 +1,2 @@
+# cat=Installation; type=boolean; label=Automatically load static TS
+autoLoadStaticTS = 1
