@@ -5,4 +5,30 @@ lib.containerContentElement {
     partialRootPaths {
         6 = EXT:container_elements/Resources/Private/Partials/Pizpalue
     }
+    settings {
+        containerElements {
+            imageVariants {
+                gutter {
+                    enable = {$plugin.tx_containerelements.settings.imageVariants.gutter.enable}
+                    variants {
+                        default = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.default}
+                        large = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.large}
+                        medium = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.medium}
+                        small = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.small}
+                        extrasmall = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.extrasmall}
+                    }
+                }
+                correction {
+                    enable = {$plugin.tx_containerelements.settings.imageVariants.correction.enable}
+                    variants {
+                        default = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.default}
+                        large = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.large}
+                        medium = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.medium}
+                        small = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.small}
+                        extrasmall = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.extrasmall}
+                    }
+                }
+            }
+        }
+    }
 }

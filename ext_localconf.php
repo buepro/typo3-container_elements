@@ -27,6 +27,9 @@ defined('TYPO3') || die('Access denied.');
      * Load static TS for pizpalue
      */
     if((bool) $extensionConfiguration['autoLoadStaticTS'] && \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
+            '@import "EXT:container_elements/Configuration/TypoScript/Pizpalue/constants.typoscript"'
+        );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             '@import "EXT:container_elements/Configuration/TypoScript/Pizpalue/setup.typoscript"'
         );

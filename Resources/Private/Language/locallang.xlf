@@ -67,6 +67,9 @@
 			<trans-unit id="position">
 				<source>Position</source>
 			</trans-unit>
+			<trans-unit id="enable">
+				<source>Enable</source>
+			</trans-unit>
 
 			<trans-unit id="general">
 				<source>General</source>
@@ -124,6 +127,9 @@
 			</trans-unit>
 			<trans-unit id="breakpoint">
 				<source>Breakpoint</source>
+			</trans-unit>
+			<trans-unit id="pizpalueFeature.description">
+				<source>This function has an effect only in conjunction with the template pizpalue.</source>
 			</trans-unit>
 
 			<trans-unit id="containerFixed.title">
@@ -283,7 +289,7 @@
 				<source>No gutters</source>
 			</trans-unit>
 
-			<trans-unit id="columns.collapseContentElement">
+			<trans-unit id="columns.collapseElement">
 				<source>Collapse elements</source>
 			</trans-unit>
 			<trans-unit id="columns.collapseContentElement">
@@ -291,6 +297,12 @@
 			</trans-unit>
 			<trans-unit id="columns.collapseRow">
 				<source>Collapse row</source>
+			</trans-unit>
+			<trans-unit id="columns.imageVariants.gutter">
+				<source>Gutter for image variants</source>
+			</trans-unit>
+			<trans-unit id="columns.imageVariants.correction">
+				<source>Correction for image variants</source>
 			</trans-unit>
 
 			<trans-unit id="tabs.title">

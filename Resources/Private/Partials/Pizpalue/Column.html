@@ -10,8 +10,11 @@
 
 {f:variable(name: 'class', value: '{class} {column.class}') -> f:if(condition: column.class)}
 {f:variable(name: 'class', value: '{class} ce-col-collapse') -> f:if(condition: collapse)}
+{f:variable(name: '_settings', value: settings.containerElements.imageVariants)}
+{f:variable(name: '_gutter', value: _settings.gutter.variants) -> f:if(condition: '{_settings.gutter.enable as integer} == 1')}
+{f:variable(name: '_correction', value: _settings.correction.variants) -> f:if(condition: '{_settings.correction.enable as integer} == 1')}
 
-<pp:render.bootstrap.column class="ce-col {class}" count="{colCount}">
+<pp:render.bootstrap.column class="ce-col {class}" count="{colCount}" gutter="{_gutter}" correction="{_correction}">
     <f:for each="{content}" as="record">
         {f:variable(name: '_vhsContentUid', value: record.uid)}
         {f:variable(name: '_vhsContentUid', value: record.l18n_parent)
