@@ -3,7 +3,7 @@
 .. highlight:: none
 
 ====================================
-Changelog for release 1.4.0
+Changelog for release v1.4.0
 ====================================
 
 Features

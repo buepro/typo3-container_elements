@@ -3,7 +3,7 @@
 .. highlight:: none
 
 ====================================
-Changelog for release df6fb33
+Changelog for release v1.3.0
 ====================================
 
 Features
