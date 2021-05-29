@@ -6,12 +6,13 @@
 <f:section name="Main">
     {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex)}
     {f:variable(name: '_activeItemIndex', value: 1) -> v:condition.variable.isNull(value: _activeItemIndex)}
+    {f:if(condition: data.pi_flexform.headerLayout, then: data.pi_flexform.headerLayout, else: '4') -> f:variable(name: '_headingLayout')}
     <div class="accordion {f:if(condition:'{data.pi_flexform.style}', then:'{data.pi_flexform.style}')}"
          id="accordion-{data.uid}">
         <f:for each="{children_101}" as="record" iteration="iterator">
             <div class="accordion-item card">
                 <div id="accordion-heading-{record.uid}" class="accordion-header card-header">
-                    <h4 class="accordion-title">
+                    <h{_headingLayout} class="accordion-title">
                         <a class="accordion-title-link {f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:'collapsed')}"
                            href="#accordion-{record.uid}"
                            data-toggle="collapse" data-parent="#accordion-{data.uid}"
@@ -20,7 +21,7 @@
                             <span class="accordion-title-link-text">{record.header}</span>
                             <span class="accordion-title-link-state"></span>
                         </a>
-                    </h4>
+                    </h{_headingLayout}>
                 </div>
                 <div id="accordion-{record.uid}"
                      class="accordion-collapse collapse {f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:'show')}"

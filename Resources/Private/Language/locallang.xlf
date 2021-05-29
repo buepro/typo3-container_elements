@@ -324,6 +324,9 @@
 			<trans-unit id="accordion.activeItemIndex.description">
 				<source>Set to 0 to have all items closed.</source>
 			</trans-unit>
+			<trans-unit id="accordion.headerLayout">
+				<source>Header type</source>
+			</trans-unit>
 
 			<trans-unit id="tileUnit.title">
 				<source>Tile unit</source>
