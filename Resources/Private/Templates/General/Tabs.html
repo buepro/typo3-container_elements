@@ -10,15 +10,15 @@
         <ul class="nav nav-tabs" role="tablist">
             <f:for each="{children_101}" as="record" iteration="iterator">
                 <li class="nav-item">
-                    <a id="tab-{record.uid}"
-                       class="nav-link {f:if(condition:'{iterator.index}==0',then:'active')}"
-                       href="#tab-content-{record.uid}"
-                       data-toggle="tab"
-                       role="tab"
-                       aria-controls="tab-content-{record.uid}"
-                       aria-selected="{f:if(condition:'{iterator.index}==0',then:'true',else:'false')}">
-                        {record.header}
-                    </a>
+                    {f:variable(name: '_selected', value: 'false')}
+                    {f:variable(name: '_selected', value: 'true') -> f:if(condition:'{iterator.index}==0')}
+                    <f:link.page
+                        id="tab-{record.uid}"
+                        class="nav-link {f:if(condition:'{iterator.index}==0',then:'active')}"
+                        section="tab-content-{record.uid}"
+                        data="{toggle: 'tab'}"
+                        additionalAttributes="{role: 'tab', aria-controls: 'tab-content-{record.uid}', aria-selected: _selected}"
+                    >{record.header}</f:link.page>
                 </li>
             </f:for>
         </ul>
