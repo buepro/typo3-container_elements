@@ -239,7 +239,7 @@
                                         </numIndex>
                                         <numIndex index="8" type="array">
                                             <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.noGutters</numIndex>
-                                            <numIndex index="1">no-gutters</numIndex>
+                                            <numIndex index="1">no-gutters g-0</numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>

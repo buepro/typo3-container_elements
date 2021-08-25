@@ -7,7 +7,7 @@
 {f:variable(name: '_textColumnClasses', value: data.pi_flexform.textColumnClasses) -> f:if(condition: data.pi_flexform.textColumnClasses)}
 {f:variable(name: '_imageColumnClasses', value: 'col-md-4')}
 {f:variable(name: '_imageColumnClasses', value: data.pi_flexform.imageColumnClasses) -> f:if(condition: data.pi_flexform.imageColumnClasses)}
-<div class="row no-gutters">
+<div class="row no-gutters g-0">
     <f:if condition="{data.pi_flexform.imagePosition} == left">
         <pp:render.bootstrap.column class="{_imageColumnClasses} cec-image-col" count="2">
             <f:render partial="Card/Parts/Image" arguments="{_all}" />
