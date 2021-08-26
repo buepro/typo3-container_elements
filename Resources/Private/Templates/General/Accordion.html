@@ -10,24 +10,28 @@
     <div class="accordion {f:if(condition:'{data.pi_flexform.style}', then:'{data.pi_flexform.style}')}"
          id="accordion-{data.uid}">
         <f:for each="{children_101}" as="record" iteration="iterator">
-            <div class="accordion-item card">
-                <div id="accordion-heading-{record.uid}" class="accordion-header card-header">
-                    <h{_headingLayout} class="accordion-title">
-                        {f:variable(name: '_expanded', value: 'false')}
-                        {f:variable(name: '_expanded', value: 'true') -> f:if(condition:'{iterator.cycle} == {_activeItemIndex}')}
-                        <f:link.page
-                            class="accordion-title-link {f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:'collapsed')}"
-                            section="accordion-{record.uid}"
-                            data="{toggle: 'collapse', parent: '#accordion-{data.uid}'}"
-                            additionalAttributes="{aria-expanded: _expanded, aria-controls: 'accordion-{record.uid}', role: 'button'}"
-                        ><span class="accordion-title-link-text">{record.header}</span><span class="accordion-title-link-state"></span></f:link.page>
-                    </h{_headingLayout}>
-                </div>
+            <div class="accordion-item">
+                <h{_headingLayout} class="accordion-header" id="accordion-heading-{record.uid}">
+                    {f:variable(name: '_expanded', value: 'false')}
+                    {f:variable(name: '_expanded', value: 'true') -> f:if(condition:'{iterator.cycle} == {_activeItemIndex}')}
+                    <button class="accordion-button{f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:' collapsed')}" type="button"
+                            data-toggle="collapse"
+                            data-target="#accordion-{record.uid}"
+                            data-parent="#accordion-{data.uid}"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordion-{record.uid}"
+                            data-bs-parent="#accordion-{data.uid}"
+                            aria-expanded="{_expanded}"
+                            aria-controls="accordion-{record.uid}"
+                    >
+                        {record.header}
+                    </button>
+                </h{_headingLayout}>
                 <div id="accordion-{record.uid}"
-                     class="accordion-collapse collapse {f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:'show')}"
+                     class="accordion-collapse collapse{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:' show')}"
                      aria-labelledby="accordion-heading-{record.uid}"
                      data-parent="#accordion-{data.uid}">
-                    <div class="ce-accordion-body accordion-body card-body">
+                    <div class="ce-accordion-body accordion-body">
                         <f:format.raw>{record.renderedContent}</f:format.raw>
                     </div>
                 </div>

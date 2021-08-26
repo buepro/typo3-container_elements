@@ -20,3 +20,13 @@ module and the static `Container elements - Pizpalue` included manually.
 
 .. warning::
    When using this extension together with gridelements ensure to install this extension after gridelements.
+
+Upgrade
+=======
+
+Version 3.0.0
+-------------
+
+This version is intended to be used together with bootstrap 5. To ease transition a static template supporting
+bootstrap 4 is available. To use it add `Container elements DEPRECATED - Bootstrap 4` to `Include static (from
+extensions)` from the template record.

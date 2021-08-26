@@ -1,2 +1,5 @@
 # cat=Installation; type=boolean; label=Automatically load static TS
 autoLoadStaticTS = 1
+
+# cat=Installation; type=boolean; label=Show deprecated items
+showDeprecatedItems = 1

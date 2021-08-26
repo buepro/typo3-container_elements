@@ -21,4 +21,12 @@ defined('TYPO3') || die('Access denied');
             'Container elements - Pizpalue'
         );
     }
+    if ((bool) $extensionConfiguration['showDeprecatedItems']) {
+        // @deprecated since version 3.0.0, will be removed in version 4.0.0
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            'container_elements',
+            'Configuration/TypoScript/Deprecated/Bootstrap4',
+            'Container elements DEPRECATED - Bootstrap 4'
+        );
+    }
 })();
