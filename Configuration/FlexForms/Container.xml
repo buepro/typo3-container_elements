@@ -28,14 +28,6 @@
                                             <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardGroup</numIndex>
                                             <numIndex index="1">card-group </numIndex>
                                         </numIndex>
-                                        <numIndex index="2" type="array">
-                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardDeck</numIndex>
-                                            <numIndex index="1">card-deck </numIndex>
-                                        </numIndex>
-                                        <numIndex index="3" type="array">
-                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardColumns</numIndex>
-                                            <numIndex index="1">card-columns </numIndex>
-                                        </numIndex>
                                     </items>
                                 </valuePicker>
                             </config>

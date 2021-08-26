@@ -154,12 +154,6 @@
 			<trans-unit id="container.class.cardGroup">
 				<source>Card group</source>
 			</trans-unit>
-			<trans-unit id="container.class.cardDeck">
-				<source>Card deck</source>
-			</trans-unit>
-			<trans-unit id="container.class.cardColumns">
-				<source>Card columns</source>
-			</trans-unit>
 			<trans-unit id="container.attribute">
 				<source>Attributes</source>
 			</trans-unit>
