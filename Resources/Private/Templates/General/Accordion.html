@@ -19,7 +19,7 @@
                             class="accordion-title-link {f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:'collapsed')}"
                             section="accordion-{record.uid}"
                             data="{toggle: 'collapse', parent: '#accordion-{data.uid}'}"
-                            additionalAttributes="{aria-expanded: _expanded, aria-controls: 'accordion-{record.uid}'}"
+                            additionalAttributes="{aria-expanded: _expanded, aria-controls: 'accordion-{record.uid}', role: 'button'}"
                         ><span class="accordion-title-link-text">{record.header}</span><span class="accordion-title-link-state"></span></f:link.page>
                     </h{_headingLayout}>
                 </div>
