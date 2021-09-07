@@ -169,8 +169,10 @@ class ClassesUpdate implements UpgradeWizardInterface
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
             foreach ($fieldNames as $fieldName) {
                 $classField = &$this->flexFormTools->getArrayValueByPath(
-                    'data/'. $sheetName . '/lDEF/' . $fieldName . '/vDEF',$flexformData);
-                $classField = $this->addNewClasses($classField);
+                    'data/'. $sheetName . '/lDEF/' . $fieldName . '/vDEF', $flexformData);
+                if ($classField) {
+                    $classField = $this->addNewClasses($classField);
+                }
             }
         }
         return $this->flexFormTools->flexArray2Xml($flexformData, true);
