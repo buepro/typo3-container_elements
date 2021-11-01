@@ -1,1 +1,8 @@
-.php_cs.cache
+# Folders
+.build/
+.idea/
+Documentation-GENERATED-temp/
+
+# Files
+composer.lock
+*.cache
