@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /*
  * This file is part of the composer package buepro/typo3-container-elements.
@@ -19,6 +20,9 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 class ClassesUpdate implements UpgradeWizardInterface
 {
+    /**
+     * @var array
+     */
     private $classFields = [
         'ce_accordion' => [],
         'ce_card' => [
@@ -43,6 +47,9 @@ class ClassesUpdate implements UpgradeWizardInterface
         ],
     ];
 
+    /**
+     * @var string[]
+     */
     private $replacementClasses = [
         'no-gutters' => 'g-0',
         'left-' => 'start-',
@@ -117,12 +124,14 @@ class ClassesUpdate implements UpgradeWizardInterface
     private function getConstraints(
         QueryBuilder $queryBuilder
     ): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression {
+        $typeConstraints = [];
         foreach ($this->classFields as $type => $unused) {
             $typeConstraints[] = $queryBuilder->expr()->eq(
                 'CType',
                 $queryBuilder->createNamedParameter($type, \PDO::PARAM_STR)
             );
         }
+        $classConstraints = [];
         foreach ($this->replacementClasses as $oldClass => $newClass) {
             $classConstraints[] = $queryBuilder->expr()->like(
                 'pi_flexform',
@@ -130,7 +139,9 @@ class ClassesUpdate implements UpgradeWizardInterface
             );
         }
         return $queryBuilder->expr()->andX(
+            /** @phpstan-ignore-next-line */
             $queryBuilder->expr()->orX(...$typeConstraints),
+            /** @phpstan-ignore-next-line */
             $queryBuilder->expr()->orX(...$classConstraints)
         );
     }
@@ -155,6 +166,7 @@ class ClassesUpdate implements UpgradeWizardInterface
             ->from('tt_content')
             ->where($this->getConstraints($queryBuilder))
             ->execute();
+        /** @phpstan-ignore-next-line */
         while ($record = $queryResult->fetch()) {
             $queryBuilder = $connection->createQueryBuilder();
             $queryBuilder->update('tt_content')
@@ -178,11 +190,12 @@ class ClassesUpdate implements UpgradeWizardInterface
         $flexformData = GeneralUtility::xml2array($flexform);
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
             foreach ($fieldNames as $fieldName) {
+                /** @phpstan-ignore-next-line */
                 $classField = &$this->flexFormTools->getArrayValueByPath(
                     'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF',
                     $flexformData
                 );
-                if ($classField) {
+                if (isset($classField) && is_string($classField) && trim($classField) !== '') {
                     $classField = $this->addNewClasses($classField);
                 }
             }
@@ -192,9 +205,6 @@ class ClassesUpdate implements UpgradeWizardInterface
 
     private function addNewClasses(string $classes): string
     {
-        if (!$classes) {
-            return $classes;
-        }
         $actualClasses = GeneralUtility::trimExplode(' ', $classes, true);
         $newClasses = [];
         foreach ($actualClasses as $actualClass) {

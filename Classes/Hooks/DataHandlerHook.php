@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /*
  * This file is part of the composer package buepro/typo3-container-elements.
@@ -26,7 +27,7 @@ class DataHandlerHook
      *
      * @param array $incomingFieldArray
      * @param string $table
-     * @param string $id
+     * @param int|string $id
      * @param DataHandler $dataHandler
      */
     public function processDatamap_preProcessFieldArray(
