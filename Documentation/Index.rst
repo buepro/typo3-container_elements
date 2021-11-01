@@ -7,9 +7,9 @@
 
 .. _start:
 
-=====================
-Gridelements elements
-=====================
+==================
+Container elements
+==================
 
 .. only:: html
 
