@@ -1,8 +1,13 @@
 <?php
 
+/*
+ * This file is part of the composer package buepro/typo3-container-elements.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\ContainerElements\Updates;
-
 
 use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -109,15 +114,20 @@ class ClassesUpdate implements UpgradeWizardInterface
         ];
     }
 
-    private function getConstraints(QueryBuilder $queryBuilder
+    private function getConstraints(
+        QueryBuilder $queryBuilder
     ): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression {
         foreach ($this->classFields as $type => $unused) {
-            $typeConstraints[] = $queryBuilder->expr()->eq('CType',
-                $queryBuilder->createNamedParameter($type, \PDO::PARAM_STR));
+            $typeConstraints[] = $queryBuilder->expr()->eq(
+                'CType',
+                $queryBuilder->createNamedParameter($type, \PDO::PARAM_STR)
+            );
         }
         foreach ($this->replacementClasses as $oldClass => $newClass) {
-            $classConstraints[] = $queryBuilder->expr()->like('pi_flexform',
-                $queryBuilder->createNamedParameter('%' . $oldClass . '%', \PDO::PARAM_STR));
+            $classConstraints[] = $queryBuilder->expr()->like(
+                'pi_flexform',
+                $queryBuilder->createNamedParameter('%' . $oldClass . '%', \PDO::PARAM_STR)
+            );
         }
         return $queryBuilder->expr()->andX(
             $queryBuilder->expr()->orX(...$typeConstraints),
@@ -169,7 +179,9 @@ class ClassesUpdate implements UpgradeWizardInterface
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
             foreach ($fieldNames as $fieldName) {
                 $classField = &$this->flexFormTools->getArrayValueByPath(
-                    'data/'. $sheetName . '/lDEF/' . $fieldName . '/vDEF', $flexformData);
+                    'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF',
+                    $flexformData
+                );
                 if ($classField) {
                     $classField = $this->addNewClasses($classField);
                 }
