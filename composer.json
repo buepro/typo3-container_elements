@@ -54,6 +54,7 @@
         "friendsoftypo3/phpstan-typo3": "^0.8.1",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
         "overtrue/phplint": "^2.3.5",
+        "phpspec/prophecy-phpunit": "^1.1 || ^2.0",
         "phpstan/phpstan": "^0.12.87",
         "phpstan/phpstan-deprecation-rules": "^0.12.6",
         "phpstan/phpstan-phpunit": "^0.12.19",

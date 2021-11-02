@@ -16,8 +16,21 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
+if (PHP_VERSION_ID > 70299) {
+    trait AccordionTestTrait
+    {
+        use \Prophecy\PhpUnit\ProphecyTrait;
+    }
+} else {
+    trait AccordionTestTrait
+    {
+    }
+}
+
 class AccordionTest extends FunctionalFrontendTestCase
 {
+    use AccordionTestTrait;
+
     protected const ACCORDION_UID = 31;
     protected const ACCORDION_PID = 5;
 
