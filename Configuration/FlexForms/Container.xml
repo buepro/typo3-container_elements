@@ -16,6 +16,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class</label>
                             <config type="array">
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>30</size>
                                 <valuePicker>
                                     <mode>append</mode>
@@ -38,6 +39,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.attribute</label>
                             <config type="array">
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>30</size>
                             </config>
                         </TCEforms>
@@ -64,6 +66,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.sectionClass</label>
                             <config type="array">
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>30</size>
                             </config>
                         </TCEforms>

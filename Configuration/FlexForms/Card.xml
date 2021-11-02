@@ -16,6 +16,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:title</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </titleText>
@@ -129,6 +130,7 @@
                             <config>
                                 <type>input</type>
                                 <renderType>inputLink</renderType>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </titleLink>
@@ -270,6 +272,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:width</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>5</size>
                             </config>
                         </TCEforms>
@@ -322,6 +325,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.wrapClasses</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </cardWrapClasses>
@@ -330,6 +334,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.classes</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </cardClasses>
@@ -338,6 +343,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.bodyClasses</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </bodyClasses>
@@ -346,6 +352,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.borderClasses</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </borderClasses>
@@ -354,6 +361,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.titleClasses</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </titleClasses>
@@ -362,6 +370,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageWrapClasses</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </imageWrapClasses>
@@ -370,6 +379,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageClasses</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                             </config>
                         </TCEforms>
                     </imageClasses>
@@ -384,6 +394,7 @@
                             </displayCond>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <default>col-md-8</default>
                             </config>
                         </TCEforms>
@@ -399,6 +410,7 @@
                             </displayCond>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <default>col-md-4</default>
                             </config>
                         </TCEforms>

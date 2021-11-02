@@ -202,6 +202,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass</label>
                             <config>
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>50</size>
                                 <valuePicker>
                                     <items type="array">
@@ -251,6 +252,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column1Class</label>
                             <config type="array">
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>100</size>
                             </config>
                         </TCEforms>
@@ -260,6 +262,7 @@
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column2Class</label>
                             <config type="array">
                                 <type>input</type>
+                                <eval>trim</eval>
                                 <size>100</size>
                             </config>
                         </TCEforms>

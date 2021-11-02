@@ -76,6 +76,7 @@
                         <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.customClassColumn1</label>
                         <config type="array">
                             <type>input</type>
+                            <eval>trim</eval>
                             <size>100</size>
                         </config>
                     </TCEforms>
@@ -85,6 +86,7 @@
                         <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.customClassColumn2</label>
                         <config type="array">
                             <type>input</type>
+                            <eval>trim</eval>
                             <size>100</size>
                         </config>
                     </TCEforms>

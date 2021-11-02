@@ -1,5 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <f:layout name="Default" />
@@ -7,8 +6,8 @@
 <f:section name="Main">
     {f:variable(name: 'breakpoint', value: '-{data.pi_flexform.columnsBreakpoint}')
         -> f:if(condition: data.pi_flexform.columnsBreakpoint)}
-    {data.pi_flexform.customColumn1 -> v:format.trim() -> f:variable(name: 'col1Class')}
-    {data.pi_flexform.customColumn2 -> v:format.trim() -> f:variable(name: 'col2Class')}
+    {data.pi_flexform.customColumn1 -> f:variable(name: 'col1Class')}
+    {data.pi_flexform.customColumn2 -> f:variable(name: 'col2Class')}
     <f:if condition="{data.pi_flexform.columnsDistribution} != 0">
         {f:variable(name: 'col1Class', value: ' {col1Class}') -> f:if(condition: col1Class)}
         {f:variable(name: 'col2Class', value: ' {col2Class}') -> f:if(condition: col2Class)}
