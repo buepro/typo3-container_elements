@@ -49,7 +49,7 @@
         "fluidtypo3/vhs": "^6.0.3 || dev-development"
     },
     "require-dev": {
-        "buepro/typo3-pizpalue": "^12.0",
+        "buepro/typo3-pizpalue": "^12",
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "friendsoftypo3/phpstan-typo3": "^0.8.1",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
@@ -119,9 +119,6 @@
         "test:php:lint": [
             "phplint"
         ],
-        "test:php:unit": [
-            "phpunit -c Build/phpunit-unit.xml"
-        ],
         "test:php:functional": [
             "phpunit -c Build/phpunit-functional.xml"
         ],
@@ -129,7 +126,6 @@
             "@cgl:ci",
             "@phpstan",
             "@test:php:lint",
-            "@test:php:unit",
             "@test:php:functional"
         ]
     },

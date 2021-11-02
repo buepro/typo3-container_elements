@@ -74,6 +74,7 @@ class FlexFormProcessor implements DataProcessorInterface
         $flexformData = $this->flexFormService->convertFlexFormContentToArray($originalValue);
 
         // Set the target variable
+        /** @phpstan-ignore-next-line */
         $targetVariableName = (string) $cObj->stdWrapValue('as', $processorConfiguration);
         if ($targetVariableName !== '') {
             $processedData[$targetVariableName] = $flexformData;

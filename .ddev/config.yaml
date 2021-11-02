@@ -5,14 +5,21 @@ php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
-xdebug_enabled: false
+xdebug_enabled: true
 additional_hostnames: []
 additional_fqdns: []
 mariadb_version: "10.3"
 mysql_version: ""
 use_dns_when_possible: true
 composer_version: ""
-web_environment: []
+web_environment:
+    - PATH=/var/www/html/.build/bin:$PATH
+    - TYPO3_CONTEXT=Development
+    - typo3DatabaseHost=db
+    - typo3DatabaseName=t3func
+    - typo3DatabasePassword=root
+    - typo3DatabaseUsername=root
+    - PHP_IDE_CONFIG=serverName=container-elements.ddev.site
 
 
 # This config.yaml was created with ddev version v1.17.7
