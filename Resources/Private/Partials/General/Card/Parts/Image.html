@@ -1,7 +1,6 @@
-<html lang="en" data-namespace-typo3-fluid="true"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="https://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-      xmlns:v="https://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 
 {v:content.resources.fal(field: 'flexform_imageReference', record: data)
     -> v:iterator.first()
@@ -33,10 +32,7 @@
         -> f:if(condition: data.pi_flexform.imageWrapClasses)}
     <div class="{_imageWrapClasses}">
         <f:for each="{children_201}" as="record">
-            {f:variable(name: '_vhsContentUid', value: record.uid)}
-            {f:variable(name: '_vhsContentUid', value: record.l18n_parent)
-                -> f:if(condition: '{record.l18n_parent} != 0')}
-            <v:content.render contentUids="{0: _vhsContentUid}"/>
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
         </f:for>
     </div>
 </f:if>

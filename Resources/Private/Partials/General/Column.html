@@ -11,7 +11,7 @@
 
 <div class="ce-col {class}">
     <f:for each="{content}" as="record">
-        <f:format.raw>{record.renderedContent}</f:format.raw>
+        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
     </f:for>
 </div>
 </html>

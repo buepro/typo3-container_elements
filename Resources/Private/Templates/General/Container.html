@@ -19,7 +19,7 @@
     {f:variable(name: 'css', value: '{css} container-fluid') -> f:if(condition: '{data.pi_flexform.isContainerFluid} == "1"')}
     <div class="ce-container{css}" {data.pi_flexform.containerAttribute -> f:format.htmlentitiesDecode()}>
         <f:for each="{children_101}" as="record">
-            <f:format.raw>{record.renderedContent}</f:format.raw>
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
         </f:for>
     </div>
 </f:section>

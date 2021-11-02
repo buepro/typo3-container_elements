@@ -1,17 +1,32 @@
 base: 'https://container-elements.ddev.site'
 languages:
-    -
-        title: English
-        enabled: true
-        languageId: 0
-        base: /
-        typo3Language: default
-        locale: en_GB.utf8
-        iso-639-1: en
-        navigationTitle: English
-        hreflang: en-GB
-        direction: ltr
-        flag: gb
-        websiteTitle: ''
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: default
+    locale: en_GB.utf8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-GB
+    direction: ltr
+    flag: gb
+    websiteTitle: ''
+  -
+    title: Deutsch
+    enabled: true
+    base: /de/
+    typo3Language: de
+    locale: de_CH.utf8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    hreflang: de-CH
+    direction: ''
+    fallbackType: strict
+    fallbacks: ''
+    flag: ch
+    languageId: 1
 rootPageId: 1
 websiteTitle: ''

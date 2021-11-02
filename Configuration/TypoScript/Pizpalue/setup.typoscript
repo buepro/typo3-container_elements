@@ -1,3 +1,7 @@
+#=========================================================#
+# Content element
+#=========================================================#
+
 lib.containerContentElement {
     templateRootPaths {
         6 = EXT:container_elements/Resources/Private/Templates/Pizpalue
@@ -28,6 +32,25 @@ lib.containerContentElement {
                         extrasmall = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.extrasmall}
                     }
                 }
+            }
+        }
+    }
+}
+
+
+#=========================================================#
+# Container content, used in fluid templates
+#=========================================================#
+
+lib.containerElements {
+    renderContent >
+    renderContent = CONTENT
+    renderContent {
+        table = tt_content
+        select {
+            uidInList {
+                field = uid
+                override.field = l18n_parent
             }
         }
     }

@@ -4,8 +4,8 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-    {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex)}
-    {f:variable(name: '_activeItemIndex', value: 1) -> v:condition.variable.isNull(value: _activeItemIndex)}
+    {f:variable(name: '_activeItemIndex', value: 1)}
+    {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex) -> f:if(condition: '{data.pi_flexform.activeItemIndex} > -1')}
     {f:if(condition: data.pi_flexform.headerLayout, then: data.pi_flexform.headerLayout, else: '4') -> f:variable(name: '_headingLayout')}
     <div class="accordion {f:if(condition:'{data.pi_flexform.style}', then:'{data.pi_flexform.style}')}"
          id="accordion-{data.uid}">
@@ -28,7 +28,7 @@
                      aria-labelledby="accordion-heading-{record.uid}"
                      data-parent="#accordion-{data.uid}">
                     <div class="ce-accordion-body accordion-body card-body">
-                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
                     </div>
                 </div>
             </div>

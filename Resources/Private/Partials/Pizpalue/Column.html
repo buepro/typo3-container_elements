@@ -1,5 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
@@ -16,10 +15,7 @@
 
 <pp:render.bootstrap.column class="ce-col {class}" count="{colCount}" gutter="{_gutter}" correction="{_correction}">
     <f:for each="{content}" as="record">
-        {f:variable(name: '_vhsContentUid', value: record.uid)}
-        {f:variable(name: '_vhsContentUid', value: record.l18n_parent)
-            -> f:if(condition: '{record.l18n_parent} != 0')}
-        <v:content.render contentUids="{0: _vhsContentUid}"/>
+        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
     </f:for>
 </pp:render.bootstrap.column>
 </html>

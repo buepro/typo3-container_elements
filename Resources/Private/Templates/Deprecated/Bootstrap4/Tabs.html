@@ -28,7 +28,7 @@
                      class="ce-tab-pane tab-pane fade {f:if(condition:'{iterator.index}==0',then:'show active')}"
                      role="tabpanel"
                      aria-labelledby="tab-{record.uid}">
-                    <f:format.raw>{record.renderedContent}</f:format.raw>
+                    {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
                 </div>
             </f:for>
         </div>
