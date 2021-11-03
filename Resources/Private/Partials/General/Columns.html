@@ -1,11 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ce="http://typo3.org/ns/Buepro/ContainerElements/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <f:comment>Merge image variants settings (used in conjunction with pizpalue)</f:comment>
-{v:iterator.merge(a: settings.containerElements, b: data.pi_flexform, useKeys: 1)
-    -> v:variable.set(name: 'settings.containerElements')
-    -> f:if(condition: settings.containerElements)}
+{data.pi_flexform -> ce:mergeSettings() -> f:if(condition: settings.containerElements)}
 
 {f:variable(name: 'css', value: ' {data.pi_flexform.row.class}') -> f:if(condition: data.pi_flexform.row.class)}
 {f:variable(name: 'css', value: '{css} ce-row-collapse')
