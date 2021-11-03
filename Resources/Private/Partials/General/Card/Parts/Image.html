@@ -1,10 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{v:content.resources.fal(field: 'flexform_imageReference', record: data)
-    -> v:iterator.first()
-    -> f:variable(name: '_image')}
+{ceCardImages.0 -> f:variable(name: '_image')}
 <f:if condition="{_image}">
     {f:variable(name: '_imageClasses', value: 'card-img')}
     <f:if condition="{data.pi_flexform.imagePosition} == 'top' || {data.pi_flexform.imagePosition} == 'bottom'">
@@ -16,12 +13,12 @@
     <f:if condition="{data.pi_flexform.imageWrapClasses}">
         <f:then>
             <div class="{data.pi_flexform.imageWrapClasses}">
-                <f:image class="{_imageClasses}" treatIdAsReference="1" src="{_image.id}" crop="{_image.crop}"
+                <f:image class="{_imageClasses}" treatIdAsReference="1" image="{_image}" crop="{_image.properties.crop}"
                          title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
             </div>
         </f:then>
         <f:else>
-            <f:image class="{_imageClasses}" treatIdAsReference="1" src="{_image.id}" crop="{_image.crop}"
+            <f:image class="{_imageClasses}" treatIdAsReference="1" image="{_image}" crop="{_image.properties.crop}"
                      title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
         </f:else>
     </f:if>

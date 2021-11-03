@@ -34,7 +34,16 @@ tt_content.ce_accordion.templateName = Accordion
 tt_content.ce_tile_unit =< lib.containerContentElement
 tt_content.ce_tile_unit.templateName = TileUnit
 tt_content.ce_card =< lib.containerContentElement
-tt_content.ce_card.templateName = Card
+tt_content.ce_card {
+    templateName = Card
+    dataProcessing {
+        1635936375 = Buepro\ContainerElements\DataProcessing\CardImageProcessor
+        1635936375 {
+            references.fieldName = flexform_imageReference
+            as = ceCardImages
+        }
+    }
+}
 
 
 #===========================================================================================#
