@@ -2,10 +2,10 @@ name: container-elements
 type: typo3
 docroot: .build/public
 php_version: "7.4"
-webserver_type: nginx-fpm
+webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
-xdebug_enabled: false
+xdebug_enabled: true
 additional_hostnames: []
 additional_fqdns: []
 mariadb_version: "10.3"
