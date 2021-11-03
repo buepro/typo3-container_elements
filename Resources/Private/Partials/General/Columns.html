@@ -13,11 +13,7 @@
 {f:variable(name: 'collapse', value: 1)
     -> f:if(condition: '{data.pi_flexform.collapseElement} == 1 || {data.pi_flexform.collapseElement} == 3')}
 
-{f:variable(name: 'colCount', value: 0)}
-{v:math.sum(a: colCount, b: 1) -> f:variable(name: 'colCount') -> f:if(condition: children_101)}
-{v:math.sum(a: colCount, b: 1) -> f:variable(name: 'colCount') -> f:if(condition: children_102)}
-{v:math.sum(a: colCount, b: 1) -> f:variable(name: 'colCount') -> f:if(condition: children_103)}
-{v:math.sum(a: colCount, b: 1) -> f:variable(name: 'colCount') -> f:if(condition: children_104)}
+{f:variable(name: 'colCount', value: ceInfo.childrenCount)}
 
 {f:variable(name: '_columns', value: data.pi_flexform.columns)}
 <div class="row{css}">

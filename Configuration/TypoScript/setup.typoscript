@@ -16,6 +16,7 @@ lib.containerContentElement {
         1597060100 {
             fieldName = pi_flexform
         }
+        1635924357 = Buepro\ContainerElements\DataProcessing\InfoProcessor
     }
 }
 tt_content.ce_container =< lib.containerContentElement
