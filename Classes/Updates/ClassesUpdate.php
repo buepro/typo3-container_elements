@@ -14,6 +14,7 @@ use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
+use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
@@ -190,13 +191,17 @@ class ClassesUpdate implements UpgradeWizardInterface
         $flexformData = GeneralUtility::xml2array($flexform);
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
             foreach ($fieldNames as $fieldName) {
-                /** @phpstan-ignore-next-line */
-                $classField = &$this->flexFormTools->getArrayValueByPath(
-                    'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF',
-                    $flexformData
+                $classField = ArrayUtility::getValueByPath(
+                    $flexformData,
+                    'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF'
                 );
                 if (isset($classField) && is_string($classField) && trim($classField) !== '') {
                     $classField = $this->addNewClasses($classField);
+                    $flexformData = ArrayUtility::setValueByPath(
+                        $flexformData,
+                        'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF',
+                        $classField
+                    );
                 }
             }
         }
