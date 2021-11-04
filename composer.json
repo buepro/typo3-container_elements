@@ -79,17 +79,17 @@
             "mkdir -p .build/public/typo3conf/ext/",
             "[ -L .build/public/typo3conf/ext/container_elements ] || ln -snvf ../../../../. .build/public/typo3conf/ext/container_elements",
             "mkdir -p .build/config/sites/default",
-            "[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Resources/Private/Site/config.yaml .build/config/sites/default/config.yaml"
+            "[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
         ],
         "typo3cms:install:setup": [
             ".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='container-elements dev' --web-server-config='apache'"
         ],
         "typo3cms:database:export": [
-            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Resources/Private/Site/db.sql.gz",
-            "ls -l Resources/Private/Site/db.sql.gz"
+            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
+            "ls -l Build/site/db.sql.gz"
         ],
         "typo3cms:database:import": [
-            "gzip -cdk Resources/Private/Site/db.sql.gz | .build/bin/typo3cms database:import"
+            "gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
         ],
         "site:install": [
             "@typo3cms:install:setup",
