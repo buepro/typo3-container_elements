@@ -1,14 +1,6 @@
-.. include:: ../Includes.txt
-
-
-.. _introduction:
-
-============
-Introduction
-============
-
-What it does
-============
+========================
+TYPO3 container_elements
+========================
 
 This extension provides elements to further structure the content area. It is powered by the
 `extension container <https://extensions.typo3.org/extension/container/>`__. Many thanks to the
@@ -40,7 +32,7 @@ Columns, tabs and accordion
 The following image shows the usage from a two columns container element containing a tabs container element in the left column
 and an accordion container element in the right column. Three and four columns container elements are available too.
 
-.. figure:: ../Images/Introduction/ColumnsTabsAccordion.jpg
+.. figure:: Documentation/Images/Introduction/ColumnsTabsAccordion.jpg
    :alt: Two columns with a tabs and accordion element
 
 Container and cards
@@ -51,7 +43,7 @@ in designing the layout. It might be used to group elements as well as to enhanc
 image the `Classes` field from the container element `container` has been set to `card-deck` and accommodates two card
 container elements.
 
-.. figure:: ../Images/Introduction/ContainerCards.jpg
+.. figure:: Documentation/Images/Introduction/ContainerCards.jpg
    :alt: Card deck container with two cards
 
 Tile unit
@@ -63,7 +55,7 @@ Tiles aren't yet supported by the bootstrap framework hence on bare installation
 started using tile units the `extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__ might be
 checked out.
 
-.. figure:: ../Images/Introduction/TileUnit.jpg
+.. figure:: Documentation/Images/Introduction/TileUnit.jpg
    :alt: Tile unit containing tile content elements
 
 Code quality
