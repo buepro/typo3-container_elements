@@ -23,7 +23,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 class FunctionalFrontendTestCase extends FunctionalTestCase
 {
-    protected function setUpFrontendSite(int $pageId = 1, array $additionalLanguages = [])
+    protected function setUpFrontendSite(int $pageId = 1, array $additionalLanguages = []): void
     {
         $languages = [
             0 => [
@@ -84,7 +84,13 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
         $context = GeneralUtility::makeInstance(Context::class);
         /** @var Site $site */
         $site = (GeneralUtility::makeInstance(\TYPO3\CMS\Core\Site\SiteFinder::class))->getSiteByPageId(1);
-        $type = $request->getQueryParams()['type'] ?? $request->getParsedBody()['type'] ?? '0';
+        $type = 0;
+        if (is_array($parsedBody = $request->getParsedBody()) && isset($parsedBody['type'])) {
+            $type = $parsedBody['type'];
+        }
+        if (isset($request->getQueryParams()['type']) && (bool)$request->getQueryParams()['type']) {
+            $type = $request->getQueryParams()['type'];
+        }
         $pageArguments = $request->getAttribute('routing', new PageArguments($pageUid, (string)$type, []));
         $controller = GeneralUtility::makeInstance(
             TypoScriptFrontendController::class,

@@ -108,7 +108,7 @@ class AccordionTest extends FunctionalFrontendTestCase
         if (isset($matches[1])) {
             $indexKeys = array_keys($matches[1], 'show', true);
             foreach ($indexKeys as $key) {
-                $result[] = $key + 1;
+                $result[] = (int)$key + 1;
             }
         }
         return $result;
@@ -135,7 +135,7 @@ class AccordionTest extends FunctionalFrontendTestCase
             ->fetchOne();
 
         $this->setActiveIndex($index);
-        $this->assertSame($expected, $this->getActiveIndexesFromHtml());
+        self::assertSame($expected, $this->getActiveIndexesFromHtml());
 
         $this->dbConnection->update(
             'tt_content',
@@ -162,7 +162,7 @@ class AccordionTest extends FunctionalFrontendTestCase
             $piFlexform
         );
         $this->dbConnection->update('tt_content', ['pi_flexform' => $piFlexform], ['uid' => self::ACCORDION_UID]);
-        $this->assertSame([1], $this->getActiveIndexesFromHtml());
+        self::assertSame([1], $this->getActiveIndexesFromHtml());
 
         $this->dbConnection->update(
             'tt_content',
