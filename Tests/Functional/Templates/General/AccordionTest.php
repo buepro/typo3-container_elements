@@ -10,26 +10,16 @@
 namespace Buepro\ContainerElements\Tests\Functional\Templates\General;
 
 use Buepro\ContainerElements\Tests\Functional\FunctionalFrontendTestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
-if (PHP_VERSION_ID > 70299) {
-    trait AccordionTestTrait
-    {
-        use \Prophecy\PhpUnit\ProphecyTrait;
-    }
-} else {
-    trait AccordionTestTrait
-    {
-    }
-}
-
 class AccordionTest extends FunctionalFrontendTestCase
 {
-    use AccordionTestTrait;
+    use ProphecyTrait;
 
     protected const ACCORDION_UID = 31;
     protected const ACCORDION_PID = 5;
