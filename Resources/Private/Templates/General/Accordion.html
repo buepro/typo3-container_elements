@@ -30,7 +30,8 @@
                 <div id="accordion-{record.uid}"
                      class="accordion-collapse collapse{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:' show')}"
                      aria-labelledby="accordion-heading-{record.uid}"
-                     data-parent="#accordion-{data.uid}">
+                     data-parent="#accordion-{data.uid}"
+                     data-bs-parent="#accordion-{data.uid}">
                     <div class="ce-accordion-body accordion-body">
                         {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
                     </div>
