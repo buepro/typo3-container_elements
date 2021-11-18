@@ -40,11 +40,11 @@ class ClassesUpdate implements UpgradeWizardInterface
             'sCustom' => ['row.class', 'columns.1.class', 'columns.2.class', 'columns.3.class', 'columns.4.class'],
         ],
         'ce_container' => [
-            'sDef' => ['containerClass', 'sectionClass'],
+            'sDEF' => ['containerClass', 'sectionClass'],
         ],
         'ce_tabs' => [],
         'ce_tile_unit' => [
-            'sDef' => ['customColumn1', 'customColumn2'],
+            'sDEF' => ['customColumn1', 'customColumn2'],
         ],
     ];
 
@@ -191,15 +191,19 @@ class ClassesUpdate implements UpgradeWizardInterface
         $flexformData = GeneralUtility::xml2array($flexform);
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
             foreach ($fieldNames as $fieldName) {
+                $path = 'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF';
+                if (!ArrayUtility::isValidPath($flexformData, $path)) {
+                    continue;
+                }
                 $classField = ArrayUtility::getValueByPath(
                     $flexformData,
-                    'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF'
+                    $path
                 );
                 if (isset($classField) && is_string($classField) && trim($classField) !== '') {
                     $classField = $this->addNewClasses($classField);
                     $flexformData = ArrayUtility::setValueByPath(
                         $flexformData,
-                        'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF',
+                        $path,
                         $classField
                     );
                 }
