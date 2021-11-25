@@ -37,7 +37,6 @@ class AccordionTest extends FunctionalFrontendTestCase
      * @var string[]
      */
     protected $testExtensionsToLoad = [
-        'typo3conf/ext/vhs',
         'typo3conf/ext/container',
         'typo3conf/ext/container_elements',
         'typo3conf/ext/bootstrap_package',

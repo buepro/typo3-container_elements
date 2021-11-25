@@ -10,7 +10,6 @@ declare(strict_types = 1);
 
 namespace Buepro\ContainerElements\ViewHelpers;
 
-use FluidTYPO3\Vhs\Utility\ViewHelperUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
@@ -43,7 +42,7 @@ class MergeSettingsViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     ): string {
         $value = $renderChildrenClosure();
-        $variableProvider = ViewHelperUtility::getVariableProviderFromRenderingContext($renderingContext);
+        $variableProvider = $renderingContext->getVariableProvider();
         $settings = $variableProvider->get('settings');
         if (!is_array($value) || !is_array($settings) || !isset($settings['containerElements'])) {
             return '';
