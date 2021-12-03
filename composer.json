@@ -11,6 +11,9 @@
         "pizpalue"
     ],
     "homepage": "https://github.com/buepro/typo3-container_elements",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
     "authors": [
         {
             "name": "Roman Büchler",
@@ -19,36 +22,18 @@
             "role": "Developer"
         }
     ],
-    "license": ["GPL-2.0-or-later"],
-    "config": {
-        "bin-dir": ".build/bin",
-        "optimize-autoloader": true,
-        "sort-packages": true,
-        "vendor-dir": ".build/vendor"
-    },
-    "extra": {
-        "typo3/cms": {
-            "app-dir": ".build",
-            "extension-key": "container_elements",
-            "web-dir": ".build/public"
-        },
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
+    "require": {
+        "php": ">=7.3.0",
+        "b13/container": "^1.3.1",
+        "typo3/cms-core": "^10.4.11 || ^11.5.1"
     },
     "replace": {
         "buepro/typo3-container-elements": "self.version",
         "typo3-ter/container-elements": "self.version"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.3.0",
-        "typo3/cms-core": "^10.4.11 || ^11.5.1",
-        "b13/container": "^1.3.1"
-    },
     "require-dev": {
         "buepro/typo3-pizpalue": "^12",
+        "ergebnis/composer-normalize": "^2.15.0",
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "friendsoftypo3/phpstan-typo3": "^0.8.1",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
@@ -64,6 +49,22 @@
         "typo3/cms-recycler": "^10.4 || ^11.5.1",
         "typo3/testing-framework": "^5.0 || ^6.4"
     },
+    "config": {
+        "bin-dir": ".build/bin",
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "vendor-dir": ".build/vendor"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        },
+        "typo3/cms": {
+            "app-dir": ".build",
+            "extension-key": "container_elements",
+            "web-dir": ".build/public"
+        }
+    },
     "autoload": {
         "psr-4": {
             "Buepro\\ContainerElements\\": "Classes/"
@@ -74,6 +75,8 @@
             "Buepro\\ContainerElements\\Tests\\": "Tests/"
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
             "mkdir -p .build/public/typo3conf/ext/",
@@ -81,19 +84,32 @@
             "mkdir -p .build/config/sites/default",
             "[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
         ],
-        "typo3cms:install:setup": [
-            ".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='container-elements dev' --web-server-config='apache'"
+        "ci": [
+            "@ci:static",
+            "@ci:tests:functional"
         ],
-        "typo3cms:database:export": [
-            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
-            "ls -l Build/site/db.sql.gz"
+        "ci:composer:normalize": "@composer normalize --dry-run",
+        "ci:php:cs": [
+            "php-cs-fixer --diff -v --dry-run fix"
         ],
-        "typo3cms:database:import": [
-            "gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
+        "ci:php:lint": [
+            "phplint"
         ],
-        "site:install": [
-            "@typo3cms:install:setup",
-            "@typo3cms:database:import"
+        "ci:php:stan": [
+            "phpstan analyze --configuration Build/phpstan.neon"
+        ],
+        "ci:static": [
+            "@ci:php:cs",
+            "@ci:php:stan",
+            "@ci:php:lint"
+        ],
+        "ci:tests:functional": [
+            "phpunit -c Build/phpunit-functional.xml"
+        ],
+        "ddev:uninstall": [
+            "ddev composer typo3cms:database:export",
+            "ddev delete",
+            "rm -rf .build/"
         ],
         "ddev:install": [
             "composer install",
@@ -102,31 +118,22 @@
             "ddev launch typo3",
             "echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
         ],
-        "ddev:delete": [
-            "ddev composer typo3cms:database:export",
-            "ddev delete",
-            "rm -rf .build/"
-        ],
-        "cgl": [
+        "fix:php:cs": [
             "php-cs-fixer --diff -v fix"
         ],
-        "cgl:ci": [
-            "php-cs-fixer --diff -v --dry-run fix"
+        "site:install": [
+            "@typo3cms:install:setup",
+            "@typo3cms:database:import"
         ],
-        "phpstan": [
-            "phpstan analyze --configuration Build/phpstan.neon"
+        "typo3cms:database:export": [
+            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
+            "ls -l Build/site/db.sql.gz"
         ],
-        "test:php:lint": [
-            "phplint"
+        "typo3cms:database:import": [
+            "gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
         ],
-        "test:php:functional": [
-            "phpunit -c Build/phpunit-functional.xml"
-        ],
-        "test": [
-            "@cgl:ci",
-            "@phpstan",
-            "@test:php:lint",
-            "@test:php:functional"
+        "typo3cms:install:setup": [
+            ".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='container-elements dev' --web-server-config='apache'"
         ]
     },
     "support": {
