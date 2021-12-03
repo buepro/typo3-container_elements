@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+<f:section name="Main">
+    {f:variable(name: '_config', value: data.pi_flexform)}
+    {f:variable(name: '_config', value: '{count: 1, shuffle: 1}') -> f:if(condition: '{_config as integer} == 0')}
+    {children_101 -> pvh:iterator.random(count: _config.count, shuffle: _config.shuffle, as: '_records')}
+    <f:for each="{_records}" as="_record">
+        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+    </f:for>
+</f:section>
+</html>

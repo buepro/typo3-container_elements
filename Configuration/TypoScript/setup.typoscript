@@ -44,6 +44,8 @@ tt_content.ce_card {
         }
     }
 }
+tt_content.ce_randomizer =< lib.containerContentElement
+tt_content.ce_randomizer.templateName = Randomizer
 
 
 #===========================================================================================#

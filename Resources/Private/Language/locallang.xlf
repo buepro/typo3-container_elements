@@ -404,6 +404,19 @@
 			<trans-unit id="card.imageColumnClasses">
 				<source>Image column classes</source>
 			</trans-unit>
+
+			<trans-unit id="randomizer.title">
+				<source>Randomizer</source>
+			</trans-unit>
+			<trans-unit id="randomizer.description">
+				<source>Shows random selected content elements.</source>
+			</trans-unit>
+			<trans-unit id="randomizer.count">
+				<source>Count</source>
+			</trans-unit>
+			<trans-unit id="randomizer.shuffle">
+				<source>Shuffle</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

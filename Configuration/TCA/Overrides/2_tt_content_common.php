@@ -11,7 +11,7 @@ declare(strict_types = 1);
 defined('TYPO3') or die('Access denied.');
 
 (static function (): void {
-    $typeList = 'ce_container,ce_columns2,ce_columns3,ce_columns4,ce_tabs,ce_accordion,ce_tile_unit,ce_card';
+    $typeList = 'ce_container,ce_columns2,ce_columns3,ce_columns4,ce_tabs,ce_accordion,ce_tile_unit,ce_card,ce_randomizer';
     // Remove header field
     foreach (\TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $typeList, true) as $type) {
         $showitem = $GLOBALS['TCA']['tt_content']['types'][$type]['showitem'];
