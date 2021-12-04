@@ -6,8 +6,8 @@ This extension provides elements to further structure the content area. It is po
 `extension container <https://extensions.typo3.org/extension/container/>`__. Many thanks to the
 `b13.com <https://b13.com/>`__!
 
-Currently the following elements are available: container, columns, registers, accordion, tile unit and card. The
-extension is intended to be used together with the `bootstrap framework <https://getbootstrap.com/>`__.
+Currently the following elements are available: container, columns, registers, accordion, tile unit, card and
+randomizer. The extension is intended to be used together with the `bootstrap framework <https://getbootstrap.com/>`__.
 
 Since the elements are provided by `container <https://extensions.typo3.org/extension/container>`__ they are
 following referred to as container elements.

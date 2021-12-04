@@ -7,6 +7,17 @@
 Administration
 ==============
 
+Requirements
+============
+
+============= ====================
+Component     Version
+============= ====================
+php           >= 7.3
+TYPO3         10.4.x, 11.5.x
+container     >= 1.3.1
+============= ====================
+
 Installation
 ============
 
@@ -24,9 +35,9 @@ module and the static `Container elements - Pizpalue` included manually.
 Upgrade
 =======
 
-Version 3.0.0
--------------
+The following upgrade descriptions are available:
 
-This version is intended to be used together with bootstrap 5. To ease transition a static template supporting
-bootstrap 4 is available. To use it add `Container elements DEPRECATED - Bootstrap 4` to `Include static (from
-extensions)` from the template record.
+.. toctree::
+   :maxdepth: 2
+
+   02_Upgrade_3.0
