@@ -11,7 +11,7 @@ namespace Buepro\ContainerElements\Tests\Functional\Templates\General;
 
 use Buepro\ContainerElements\Tests\Functional\FunctionalFrontendTestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
-use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
+use TYPO3\CMS\Core\Core\Bootstrap;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -60,9 +60,8 @@ class AccordionTest extends FunctionalFrontendTestCase
         );
         $this->setUpFrontendSite(1);
         $this->setupFrontendController(self::ACCORDION_PID);
-        $backendUserAuthenticationProphecy = $this->prophesize(BackendUserAuthentication::class);
-        $backendUserAuthenticationProphecy->isAdmin()->willReturn(true);
-        $GLOBALS['BE_USER'] = $backendUserAuthenticationProphecy->reveal();
+        $this->setUpBackendUserFromFixture(1);
+        Bootstrap::initializeLanguageObject();
         $this->dbConnection = GeneralUtility::makeInstance(ConnectionPool::class)
             ->getConnectionForTable('tt_content');
     }
