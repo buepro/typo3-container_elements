@@ -37,6 +37,15 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
+     * Adjust PageTs
+     */
+    if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '@import "EXT:container_elements/Configuration/PageTs/TCEFORM.tsconfig"'
+        );
+    }
+
+    /**
      * Register icons
      */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);

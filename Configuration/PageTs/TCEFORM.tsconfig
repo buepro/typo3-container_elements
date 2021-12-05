@@ -1,0 +1,5 @@
+TCEFORM.tt_content.pi_flexform {
+    ce_columns2.sAdjust.disabled = 1
+    ce_columns3.sAdjust.disabled = 1
+    ce_columns4.sAdjust.disabled = 1
+}
