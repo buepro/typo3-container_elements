@@ -44,10 +44,15 @@ class DataHandlerHook
             'ce_tabs',
             'ce_accordion',
             'ce_tile_unit',
-            'ce_card'
+            'ce_card',
+            'ce_randomizer',
         ];
-        if (is_string($id) && false !== strpos($id, 'NEW') && !isset($incomingFieldArray['pi_flexform'])
-            && in_array($incomingFieldArray['CType'], $cTypes, true)) {
+        if (
+            is_string($id) && false !== strpos($id, 'NEW') &&
+            $table === 'tt_content' &&
+            !isset($incomingFieldArray['pi_flexform']) &&
+            in_array($incomingFieldArray['CType'], $cTypes, true)
+        ) {
 
             // Set default pi_flexform values
             $formDataGroup = GeneralUtility::makeInstance(TcaDatabaseRecord::class);
@@ -65,7 +70,7 @@ class DataHandlerHook
             $formData = $formDataCompiler->compile($formDataCompilerInput);
             $incomingFieldArray['pi_flexform'] = $formData['databaseRow']['pi_flexform'];
 
-            // Set frame_class to `none` in case this element is nested into an other container element
+            // Set frame_class to `none` in case this element is nested into another container element
             if ($incomingFieldArray['tx_container_parent'] !== 0) {
                 $incomingFieldArray['frame_class'] = 'none';
             }
