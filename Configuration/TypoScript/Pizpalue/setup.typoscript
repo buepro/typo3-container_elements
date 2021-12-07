@@ -16,6 +16,7 @@ lib.containerContentElement {
                     enable = {$plugin.tx_containerelements.settings.imageVariants.gutter.enable}
                     variants {
                         default = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.default}
+                        xlarge = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.xlarge}
                         large = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.large}
                         medium = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.medium}
                         small = {$plugin.tx_containerelements.settings.imageVariants.gutter.variants.small}
@@ -26,6 +27,7 @@ lib.containerContentElement {
                     enable = {$plugin.tx_containerelements.settings.imageVariants.correction.enable}
                     variants {
                         default = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.default}
+                        xlarge = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.xlarge}
                         large = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.large}
                         medium = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.medium}
                         small = {$plugin.tx_containerelements.settings.imageVariants.correction.variants.small}

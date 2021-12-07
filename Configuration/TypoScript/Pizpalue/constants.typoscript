@@ -9,6 +9,8 @@ plugin.tx_containerelements {
                 variants {
                     # cat=container elements/21043010/default; type=string; label=Column gutter for default screen breakpoint
                     default = {$plugin.bootstrap_package.settings.scss.grid-gutter-width}
+                    # cat=container elements/21043010/120; type=string; label=Column gutter for xlarge screen breakpoint
+                    xlarge = {$plugin.bootstrap_package.settings.scss.grid-gutter-width}
                     # cat=container elements/21043010/120; type=string; label=Column gutter for large screen breakpoint
                     large = {$plugin.bootstrap_package.settings.scss.grid-gutter-width}
                     # cat=container elements/21043010/130; type=string; label=Column gutter for medium screen breakpoint
@@ -25,6 +27,8 @@ plugin.tx_containerelements {
                 variants {
                     # cat=container elements/21043020/610; type=int; label=Column correction for default screen breakpoint
                     default = 0
+                    # cat=container elements/21043020/620; type=int; label=Column correction for xlarge screen breakpoint
+                    xlarge = 0
                     # cat=container elements/21043020/620; type=int; label=Column correction for large screen breakpoint
                     large = 0
                     # cat=container elements/21043020/630; type=int; label=Column correction for medium screen breakpoint
