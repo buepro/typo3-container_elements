@@ -41,6 +41,7 @@ class DataHandlerHook
             'ce_columns2',
             'ce_columns3',
             'ce_columns4',
+            'ce_grid',
             'ce_tabs',
             'ce_accordion',
             'ce_tile_unit',

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sGeneral>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <rowClasses type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:grid.row.classes</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>row row-cols-1 row-cols-md-2 row-cols-lg-3</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </rowClasses>
+                    <elementDefaultClasses type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:grid.element.default.classes</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>col</default>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </elementDefaultClasses>
+                    <elementClasses type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:grid.element.classes</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:grid.element.classes.description</description>
+                            <config type="array">
+                                <type>text</type>
+                                <renderType>t3editor</renderType>
+                                <cols>40</cols>
+                                <rows>10</rows>
+                            </config>
+                        </TCEforms>
+                    </elementClasses>
+                </el>
+            </ROOT>
+        </sGeneral>
+    </sheets>
+</T3DataStructure>

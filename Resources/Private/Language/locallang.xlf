@@ -129,14 +129,14 @@
 				<source>Breakpoint</source>
 			</trans-unit>
 			<trans-unit id="pizpalueFeature.description">
-				<source>This function has an effect only in conjunction with the template pizpalue.</source>
+				<source>This function has an effect only in conjunction with the template pizpalue</source>
 			</trans-unit>
 
 			<trans-unit id="containerFixed.title">
 				<source>Content container (depreciated)</source>
 			</trans-unit>
 			<trans-unit id="containerFixed.description">
-				<source>Provides a container covering the content width.</source>
+				<source>Provides a container covering the content width</source>
 			</trans-unit>
 
 			<trans-unit id="container.title">
@@ -303,20 +303,20 @@
 				<source>Tabs</source>
 			</trans-unit>
 			<trans-unit id="tabs.description">
-				<source>The content elements are accessible through tabs.</source>
+				<source>The content elements are accessible through tabs</source>
 			</trans-unit>
 
 			<trans-unit id="accordion.title">
 				<source>Accordion</source>
 			</trans-unit>
 			<trans-unit id="accordion.description">
-				<source>The content elements are accessible in an accordion.</source>
+				<source>The content elements are accessible in an accordion</source>
 			</trans-unit>
 			<trans-unit id="accordion.activeItemIndex">
 				<source>Active item index</source>
 			</trans-unit>
 			<trans-unit id="accordion.activeItemIndex.description">
-				<source>Set to 0 to have all items closed.</source>
+				<source>Set to 0 to have all items closed</source>
 			</trans-unit>
 			<trans-unit id="accordion.headerLayout">
 				<source>Header type</source>
@@ -348,7 +348,7 @@
 				<source>Card</source>
 			</trans-unit>
 			<trans-unit id="card.description">
-				<source>Card with image and text or any type of content elements.</source>
+				<source>Card with image and text or any type of content elements</source>
 			</trans-unit>
 			<trans-unit id="card.content">
 				<source>Content (optional)</source>
@@ -409,13 +409,35 @@
 				<source>Randomizer</source>
 			</trans-unit>
 			<trans-unit id="randomizer.description">
-				<source>Shows random selected content elements.</source>
+				<source>Shows random selected content elements</source>
 			</trans-unit>
 			<trans-unit id="randomizer.count">
 				<source>Count</source>
 			</trans-unit>
 			<trans-unit id="randomizer.shuffle">
 				<source>Shuffle</source>
+			</trans-unit>
+
+			<trans-unit id="grid.title">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="grid.description">
+				<source>Create a grid with any number of elements</source>
+			</trans-unit>
+			<trans-unit id="grid.elements">
+				<source>Grid elements</source>
+			</trans-unit>
+			<trans-unit id="grid.row.classes">
+				<source>Row classes</source>
+			</trans-unit>
+			<trans-unit id="grid.element.default.classes">
+				<source>Element default classes</source>
+			</trans-unit>
+			<trans-unit id="grid.element.classes">
+				<source>Element classes</source>
+			</trans-unit>
+			<trans-unit id="grid.element.classes.description">
+				<source>Each line corresponds to an element (first line -> first element, second line -> second element, etc). For empty or missing lines the default classes are used.</source>
 			</trans-unit>
 		</body>
 	</file>

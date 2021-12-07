@@ -50,7 +50,9 @@ defined('TYPO3') || die('Access denied.');
      */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     // Content elements
-    $icons = ['Container', 'Columns2', 'Columns3', 'Columns4', 'Tabs', 'Accordion', 'TileUnit', 'Card', 'Randomizer'];
+    $icons = [
+        'Container', 'Columns2', 'Columns3', 'Columns4', 'Tabs', 'Accordion', 'TileUnit', 'Card', 'Randomizer', 'Grid'
+    ];
     foreach ($icons as $icon) {
         $iconRegistry->registerIcon(
             'container-elements-' . strtolower($icon),

@@ -16,7 +16,7 @@ lib.containerContentElement {
         1597060100 {
             fieldName = pi_flexform
         }
-        1635924357 = Buepro\ContainerElements\DataProcessing\InfoProcessor
+        1635924357 = Buepro\ContainerElements\DataProcessing\AspectProcessor
     }
 }
 tt_content.ce_container =< lib.containerContentElement
@@ -46,6 +46,11 @@ tt_content.ce_card {
 }
 tt_content.ce_randomizer =< lib.containerContentElement
 tt_content.ce_randomizer.templateName = Randomizer
+tt_content.ce_grid =< lib.containerContentElement
+tt_content.ce_grid {
+    templateName = Grid
+    dataProcessing.1638777899 = Buepro\ContainerElements\DataProcessing\GridClassesProcessor
+}
 
 
 #===========================================================================================#

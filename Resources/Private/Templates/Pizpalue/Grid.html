@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+    {f:variable(name: '_config', value: data.pi_flexform)}
+    {f:variable(name: '_settings', value: settings.containerElements.imageVariants)}
+    {f:variable(name: '_gutter', value: _settings.gutter.variants) -> f:if(condition: '{_settings.gutter.enable as integer} == 1')}
+    {f:variable(name: '_correction', value: _settings.correction.variants) -> f:if(condition: '{_settings.correction.enable as integer} == 1')}
+    <f:if condition="{children_101}">
+        <div class="{_config.rowClasses}">
+            <f:if condition="{ceAspect.pizpalueMainVersion} >= 12 || {ceAspect.pizpalueMainVersion} == 'dev-master'">
+                <f:then>
+                    <f:for each="{children_101}" as="_record">
+                        <pp:render.bootstrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        </pp:render.bootstrap.column>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <f:for each="{children_101}" as="_record">
+                        <pp:render.bootstrap.column class="{_record.ce_grid_classes}" gutter="{_gutter}" correction="{_correction}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        </pp:render.bootstrap.column>
+                    </f:for>
+                </f:else>
+            </f:if>
+        </div>
+    </f:if>
+</f:section>
+</html>

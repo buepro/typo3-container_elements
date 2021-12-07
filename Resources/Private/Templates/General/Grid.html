@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+    {f:variable(name: '_config', value: data.pi_flexform)}
+    <f:if condition="{children_101}">
+        <div class="{_config.rowClasses}">
+            <f:for each="{children_101}" as="_record">
+                <div class="{_record.ce_grid_classes}">
+                    {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:section>
+</html>
