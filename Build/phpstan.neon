@@ -14,6 +14,7 @@ parameters:
 	- "#^Call to an undefined method Prophecy\\\\Prophecy\\\\ObjectProphecy#"
 	- "#^Call to an undefined method Doctrine\\\\DBAL\\\\Driver\\\\Statement::fetchOne\\(\\)\\.$#"
 	- "#^Call to an undefined method Doctrine\\\\DBAL\\\\Driver\\\\ResultStatement::fetchOne\\(\\)\\.$#"
+	- "#^Parameter \\#\\d+ \\.\\.\\.\\$predicates of method TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\QueryBuilder::\\w+\\(\\) expects array<int, mixed>,|Doctrine\\\\DBAL\\\\Query\\\\Expression\\\\CompositeExpression, string given.$#"
 
 	paths:
 	- %currentWorkingDirectory%/Classes/
