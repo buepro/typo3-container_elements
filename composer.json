@@ -29,7 +29,6 @@
         "typo3/cms-core": "^10.4.11 || ^11.5.1"
     },
     "replace": {
-        "buepro/typo3-container-elements": "self.version",
         "typo3-ter/container-elements": "self.version"
     },
     "require-dev": {
@@ -113,8 +112,9 @@
             "rm -rf .build/"
         ],
         "ddev:install": [
-            "composer install",
+            "mkdir -p .build/public/typo3conf",
             "ddev start",
+            "ddev composer install",
             "ddev composer site:install",
             "ddev launch typo3",
             "echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
