@@ -59,7 +59,7 @@ class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessor
         $result = 0;
         if (ExtensionManagementUtility::isLoaded('pizpalue')) {
             $result = ExtensionManagementUtility::getExtensionVersion('pizpalue');
-            if ($result !== 'dev-master') {
+            if (strpos($result, 'dev') === false) {
                 $version = VersionNumberUtility::convertVersionStringToArray(str_replace('v', '', $result));
                 $result = $version['version_main'] ?? 0;
             }
