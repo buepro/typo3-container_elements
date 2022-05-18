@@ -9,7 +9,7 @@
     {f:variable(name: '_correction', value: _settings.correction.variants) -> f:if(condition: '{_settings.correction.enable as integer} == 1')}
     <f:if condition="{children_101}">
         <div class="{_config.rowClasses}">
-            <f:if condition="{ceAspect.pizpalueMainVersion} >= 12 || {ceAspect.pizpalueMainVersion} == 'dev-master'">
+            <f:if condition="{ceAspect.pizpalueMainVersion} >= 12 || {ceAspect.pizpalueMainVersion} == 'dev-main' || {ceAspect.pizpalueMainVersion} == 'dev-master'">
                 <f:then>
                     <f:for each="{children_101}" as="_record">
                         <pp:render.bootstrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
