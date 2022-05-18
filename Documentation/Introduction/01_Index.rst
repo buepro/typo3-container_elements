@@ -1,5 +1,28 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
+.. image:: https://poser.pugx.org/buepro/typo3-container-elements/v/stable.svg
+   :alt: Latest Stable Version
+   :target: https://extensions.typo3.org/extension/container-elements/
+
+.. image:: https://img.shields.io/badge/TYPO3-11-orange.svg
+   :alt: TYPO3 11
+   :target: https://get.typo3.org/version/11
+
+.. image:: https://img.shields.io/badge/TYPO3-10-orange.svg
+   :alt: TYPO3 10
+   :target: https://get.typo3.org/version/10
+
+.. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/total.svg
+   :alt: Total Downloads
+   :target: https://packagist.org/packages/buepro/typo3-container-elements
+
+.. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/monthly
+   :alt: Monthly Downloads
+   :target: https://packagist.org/packages/buepro/typo3-container-elements
+
+.. image:: https://github.com/buepro/typo3-container-elements/workflows/CI/badge.svg
+   :alt: Continuous Integration Status
+   :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
 
 .. _introduction:
 

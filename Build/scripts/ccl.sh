@@ -24,7 +24,7 @@ function write_commits {
 
 target=./Documentation/Changelog/$2.rst
 
-echo ".. include:: ../Includes.txt
+echo ".. include:: /Includes.rst.txt
 
 .. highlight:: none
 

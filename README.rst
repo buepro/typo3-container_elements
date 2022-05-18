@@ -1,6 +1,30 @@
-========================
-TYPO3 container_elements
-========================
+.. image:: https://poser.pugx.org/buepro/typo3-container-elements/v/stable.svg
+   :alt: Latest Stable Version
+   :target: https://extensions.typo3.org/extension/container-elements/
+
+.. image:: https://img.shields.io/badge/TYPO3-11-orange.svg
+   :alt: TYPO3 11
+   :target: https://get.typo3.org/version/11
+
+.. image:: https://img.shields.io/badge/TYPO3-10-orange.svg
+   :alt: TYPO3 10
+   :target: https://get.typo3.org/version/10
+
+.. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/total.svg
+   :alt: Total Downloads
+   :target: https://packagist.org/packages/buepro/typo3-container-elements
+
+.. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/monthly
+   :alt: Monthly Downloads
+   :target: https://packagist.org/packages/buepro/typo3-container-elements
+
+.. image:: https://github.com/buepro/typo3-container_elements/workflows/CI/badge.svg
+   :alt: Continuous Integration Status
+   :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
+
+============================
+TYPO3 ``container_elements``
+============================
 
 This extension provides elements to further structure the content area. It is powered by the
 `extension container <https://extensions.typo3.org/extension/container/>`__. Many thanks to the
@@ -13,6 +37,10 @@ Since the elements are provided by `container <https://extensions.typo3.org/exte
 following referred to as container elements.
 
 Container elements can hold any kind of content elements hence as well other container elements.
+
+:Repository:  https://github.com/buepro/typo3-container_elements
+:Read online: https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/
+:TER:         https://extensions.typo3.org/extension/container_elements
 
 Limitations
 ===========
@@ -57,15 +85,3 @@ checked out.
 
 .. figure:: Documentation/Images/Introduction/TileUnit.jpg
    :alt: Tile unit containing tile content elements
-
-Code quality
-============
-
-.. image:: https://github.com/buepro/typo3-container_elements/workflows/CI/badge.svg
-   :alt: Continuous Integration Status
-   :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
-
-Documentation
-=============
-
-Head over to `docs.typo3.org <https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/>`__.
