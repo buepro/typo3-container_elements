@@ -57,7 +57,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.2.x-dev"
+            "dev-main": "3.2.x-dev"
         },
         "typo3/cms": {
             "app-dir": ".build",
@@ -140,6 +140,6 @@
     "support": {
         "issues": "https://github.com/buepro/typo3-container_elements/issues",
         "source": "https://github.com/buepro/typo3-container_elements",
-        "docs": "https://docs.typo3.org/p/buepro/typo3-container-elements/master/en-us/"
+        "docs": "https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/"
     }
 }

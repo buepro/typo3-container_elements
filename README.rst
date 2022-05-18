@@ -19,7 +19,7 @@ Limitations
 
 When using images in container elements reducing the horizontal space (e.g. column elements) the image dimensions
 should be adapted to the resulting space. The approach to obtain the final space depends on the context and therefore
-no general solution can be offered. The `template pizpalue <https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/>`__
+no general solution can be offered. The `template pizpalue <https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/>`__
 offers a flexible way to optimize image dimensions in structure elements and is fully supported by this extension.
 An example can be found under `pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente/container/spalten>`__.
 
@@ -68,4 +68,4 @@ Code quality
 Documentation
 =============
 
-Head over to `docs.typo3.org <https://docs.typo3.org/p/buepro/typo3-container-elements/master/en-us/>`__.
+Head over to `docs.typo3.org <https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/>`__.
