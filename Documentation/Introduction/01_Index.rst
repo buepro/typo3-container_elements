@@ -20,7 +20,7 @@
    :alt: Monthly Downloads
    :target: https://packagist.org/packages/buepro/typo3-container-elements
 
-.. image:: https://github.com/buepro/typo3-container-elements/workflows/CI/badge.svg
+.. image:: https://github.com/buepro/typo3-container_elements/workflows/CI/badge.svg
    :alt: Continuous Integration Status
    :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
 
@@ -52,7 +52,7 @@ When using images in container elements reducing the horizontal space (e.g. colu
 should be adapted to the resulting space. The approach to obtain the final space depends on the context and therefore
 no general solution can be offered. The `template pizpalue <https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/>`__
 offers a flexible way to optimize image dimensions in structure elements and is fully supported by this extension.
-An example can be found under `pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente/container/spalten>`__.
+An example can be found under `pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__.
 
 Example contents
 ================
@@ -88,15 +88,3 @@ checked out.
 
 .. figure:: ../Images/Introduction/TileUnit.jpg
    :alt: Tile unit containing tile content elements
-
-Code quality
-============
-
-.. image:: https://github.com/buepro/typo3-container_elements/workflows/CI/badge.svg
-   :alt: Continuous Integration Status
-   :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
-
-Documentation
-=============
-
-Head over to `docs.typo3.org <https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/>`__.

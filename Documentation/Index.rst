@@ -9,6 +9,9 @@ Container elements
 :Extension key:
    container_elements
 
+:Package name:
+   buepro/typo3-container-elements
+
 :Version:
    |release|
 
@@ -28,15 +31,30 @@ Container elements
 :Rendered:
    |today|
 
------------------------------------------------------------------------------------------------------------------------
+----
+
+This extension provides elements to further structure the website content area by using the
+`extension container <https://extensions.typo3.org/extension/container/>`__ and the
+`bootstrap framework <https://getbootstrap.com/>`__. Currently the following elements are available: container,
+columns, grid, register, accordion, tile unit, card and randomizer. A demo can be found at
+`pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__.
+
+----
 
 **Table of content**
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    Introduction/01_Index
    Administration/01_Index
    User/01_Index
    Changelog/01_Index
    Develop/01_Index
+
+.. Meta Menu
+
+.. toctree::
+   :hidden:
+
+   Sitemap
