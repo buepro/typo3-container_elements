@@ -43,7 +43,6 @@ defined('TYPO3') or die('Access denied.');
             )
         )
         ->setIcon('container-elements-columns4')
-        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/Container.html')
         ->setSaveAndCloseInNewContentElementWizard(true)
     );
 

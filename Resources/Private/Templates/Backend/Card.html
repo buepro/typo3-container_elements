@@ -1,16 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<div class="bg-info ce-content-element-info{f:if(condition: header, then: ' cec-my')}">
-    <f:if condition="{frame_class} == 'none'">
-        <f:then>
-            <core:icon identifier="container-elements-noframe" /> {f:translate(key: 'without_frame', extensionName: 'container_elements')}
-        </f:then>
-        <f:else>
-            <core:icon identifier="container-elements-frame" /> {f:translate(key: 'with_frame', extensionName: 'container_elements')}
-        </f:else>
-    </f:if>
-</div>
 {f:variable(name: '_title', value: pi_flexform_transformed.titleText)}
 {pi_flexform_transformed.bodyText -> f:format.stripTags() -> f:format.crop(maxCharacters: 300, append: '...') -> f:variable(name: '_text')}
 <f:if condition="{_title} || {_text}">
@@ -22,6 +12,5 @@
     </div>
 </f:if>
 <f:format.raw>{tx_container_grid}</f:format.raw>
-<f:asset.css identifier="ce-container" href="EXT:container_elements/Resources/Public/Css/backend.css" />
 
 </html>
