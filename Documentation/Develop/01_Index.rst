@@ -53,50 +53,17 @@ Create test db
 
 .. rst-class:: bignums
 
-#. Export db using preset "Test content elements"
+#. Clean up db structure
 
-#. Rename the `T3RecordDocument` to `dataset`
+#. Clear the field `uc` from `be_users`
 
-#. Remove the `header`-tag
+#. Export tables `be_users, pages, sys_template, tt_content` in CSV-format
 
-#. Remove `files_fal`-tag
+#. Format CSV-Files
 
-#. Remove `records`-tag
-
-#. Remove `related`-tag using the following regular expression
-
-   .. code-block:: bash
-
-      <related[\s\w="]*>[\w\W\s]*?</related>\n
-
-#. Create table tags using the following regular expression
-
-   **Search:**
-
-   .. code-block:: bash
-
-      <tablerow index="(\w*)[:\w\s="]*>[\n\s]+<fieldlist index="data"
-      type="array">([\w\W\s]+?)<\/fieldlist>[\n\s]*<\/tablerow>
-
-   **Replace:**
-
-   .. code-block:: bash
-
-      <$1>$2</$1>
-
-#. Create columns tag using the following regular expression
-
-   **Search:**
-
-   .. code-block:: bash
-
-      <field index="(\w+)"[\s\w\d="]*>([\w\W]*?)</field>
-
-   **Replace:**
-
-   .. code-block:: bash
-
-      <$1>$2</$1>
+   -  Add table name on top of column definitions
+   -  Prefix all rows except the table name row with a coma
+   -  Replace `""` by `'`
 
 
 Add needed extensions

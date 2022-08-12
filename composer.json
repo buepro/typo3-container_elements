@@ -26,7 +26,7 @@
         "php": ">=7.3.0",
         "b13/container": "^1.3.1 || ^2.0.0",
         "buepro/typo3-pvh": "^1.0.0",
-        "typo3/cms-core": "^10.4.11 || ^11.5.1"
+        "typo3/cms-core": "^10.4.11"
     },
     "replace": {
         "typo3-ter/container-elements": "self.version"
