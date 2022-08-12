@@ -14,7 +14,10 @@ defined('TYPO3') or die('Access denied');
     $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     )->get('container_elements');
-    if (!(bool) $extensionConfiguration['autoLoadStaticTS'] &&
+    if (!is_array($extensionConfiguration)) {
+        throw new \LogicException('Extension configuration is not available', 1660322963);
+    }
+    if (!(bool)($extensionConfiguration['autoLoadStaticTS'] ?? true) &&
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue')
     ) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
@@ -23,7 +26,7 @@ defined('TYPO3') or die('Access denied');
             'Container elements - Pizpalue'
         );
     }
-    if ((bool) $extensionConfiguration['showDeprecatedItems']) {
+    if ((bool)($extensionConfiguration['showDeprecatedItems'] ?? false)) {
         // @deprecated since version 3.0.0, will be removed in version 4.0.0
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'container_elements',

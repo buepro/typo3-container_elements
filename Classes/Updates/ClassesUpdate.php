@@ -189,6 +189,9 @@ class ClassesUpdate implements UpgradeWizardInterface
             return $flexform;
         }
         $flexformData = GeneralUtility::xml2array($flexform);
+        if (!is_array($flexformData)) {
+            throw new \LogicException('Required flexform data is not an array', 1660323185);
+        }
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
             foreach ($fieldNames as $fieldName) {
                 $path = 'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF';

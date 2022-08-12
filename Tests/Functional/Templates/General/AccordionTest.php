@@ -26,7 +26,7 @@ class AccordionTest extends FunctionalFrontendTestCase
     protected const ACCORDION_PID = 5;
 
     /**
-     * @var string[]
+     * @var non-empty-string[]
      */
     protected $coreExtensionsToLoad = [
         'impexp',
@@ -35,7 +35,7 @@ class AccordionTest extends FunctionalFrontendTestCase
     ];
 
     /**
-     * @var string[]
+     * @var non-empty-string[]
      */
     protected $testExtensionsToLoad = [
         'typo3conf/ext/container',
@@ -79,6 +79,9 @@ class AccordionTest extends FunctionalFrontendTestCase
         $piFlexform = $this->dbConnection
             ->select(['pi_flexform'], 'tt_content', ['uid' => self::ACCORDION_UID])
             ->fetchOne();
+        if (!is_string($piFlexform)) {
+            throw new \LogicException('Obtained flexform is not valid', 1660322366);
+        }
         $piFlexform = preg_replace(
             "/<field index='activeItemIndex'>\n[\t\s]*<value index='vDEF'>(.)<\/value>\n[\t\s]*<\/field>/",
             "<field index='activeItemIndex'><value index='vDEF'>" . $index . '</value></field>',
@@ -152,6 +155,9 @@ class AccordionTest extends FunctionalFrontendTestCase
         $piFlexform = $this->dbConnection
             ->select(['pi_flexform'], 'tt_content', ['uid' => self::ACCORDION_UID])
             ->fetchOne();
+        if (!is_string($piFlexform)) {
+            throw new \LogicException('Obtained flexform is not valid', 1660322366);
+        }
         $piFlexform = preg_replace(
             '/<field index="activeItemIndex">\n*\t*<value index="vDEF">\w*(.)\w*<\/value>\n*\t*<\/field>/',
             '',
