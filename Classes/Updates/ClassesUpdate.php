@@ -169,6 +169,9 @@ class ClassesUpdate implements UpgradeWizardInterface
             ->execute();
         /** @phpstan-ignore-next-line */
         while ($record = $queryResult->fetch()) {
+            if (!is_array($record)) {
+                continue;
+            }
             $queryBuilder = $connection->createQueryBuilder();
             $queryBuilder->update('tt_content')
                 ->where(
@@ -177,7 +180,7 @@ class ClassesUpdate implements UpgradeWizardInterface
                         $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
                     )
                 )
-                ->set('pi_flexform', $this->addNewClassesToDs($record['CType'], $record['pi_flexform']));
+                ->set('pi_flexform', $this->addNewClassesToDs((string)$record['CType'], (string)$record['pi_flexform']));
             $queryBuilder->execute();
         }
         return true;
