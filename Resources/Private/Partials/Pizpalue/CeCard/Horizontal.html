@@ -9,18 +9,18 @@
 <div class="row no-gutters g-0">
     <f:if condition="{data.pi_flexform.imagePosition} == left">
         <pp:render.bootstrap.column class="{_imageColumnClasses} cec-image-col" count="2">
-            <f:render partial="Card/Parts/Image" arguments="{_all}" />
+            <f:render partial="CeCard/Parts/Image" arguments="{_all}" />
         </pp:render.bootstrap.column>
         <pp:render.bootstrap.column class="{_textColumnClasses} cec-content-col" count="2">
-            <f:render partial="Card/Parts/Body" arguments="{_all}" />
+            <f:render partial="CeCard/Parts/Body" arguments="{_all}" />
         </pp:render.bootstrap.column>
     </f:if>
     <f:if condition="{data.pi_flexform.imagePosition} == right">
         <pp:render.bootstrap.column class="{_textColumnClasses} cec-content-col" count="2">
-            <f:render partial="Card/Parts/Body" arguments="{_all}" />
+            <f:render partial="CeCard/Parts/Body" arguments="{_all}" />
         </pp:render.bootstrap.column>
         <pp:render.bootstrap.column class="{_imageColumnClasses} cec-image-col" count="2">
-            <f:render partial="Card/Parts/Image" arguments="{_all}" />
+            <f:render partial="CeCard/Parts/Image" arguments="{_all}" />
         </pp:render.bootstrap.column>
     </f:if>
 </div>

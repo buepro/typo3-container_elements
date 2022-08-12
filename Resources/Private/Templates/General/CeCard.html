@@ -27,13 +27,13 @@
             </div>
         </f:if>
         <f:if condition="{data.pi_flexform.imagePosition} == 'top' || {data.pi_flexform.imagePosition} == 'bottom'">
-            <f:render partial="Card/Vertical" arguments="{_all}" />
+            <f:render partial="CeCard/Vertical" arguments="{_all}" />
         </f:if>
         <f:if condition="{data.pi_flexform.imagePosition} == 'left' || {data.pi_flexform.imagePosition} == 'right'">
-            <f:render partial="Card/Horizontal" arguments="{_all}" />
+            <f:render partial="CeCard/Horizontal" arguments="{_all}" />
         </f:if>
         <f:if condition="{data.pi_flexform.imagePosition} == 'below'">
-            <f:render partial="Card/Stack" arguments="{_all}" />
+            <f:render partial="CeCard/Stack" arguments="{_all}" />
         </f:if>
         <f:if condition="{data.pi_flexform.borderType} == 'footer'">
             <div class="card-footer{_borderClasses}">

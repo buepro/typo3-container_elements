@@ -27,7 +27,7 @@ defined('TYPO3') or die('Access denied');
         );
     }
     if ((bool)($extensionConfiguration['showDeprecatedItems'] ?? false)) {
-        // @deprecated since version 3.0.0, will be removed in version 4.0.0
+        // @deprecated since version 3.0.0, will be removed in version 5.0.0
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'container_elements',
             'Configuration/TypoScript/Deprecated/Bootstrap4',

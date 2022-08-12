@@ -3,10 +3,10 @@
       xmlns:f="https://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 <f:if condition="{data.pi_flexform.imagePosition} == 'top'">
-    <f:render partial="Card/Parts/Image" arguments="{_all}" />
+    <f:render partial="CeCard/Parts/Image" arguments="{_all}" />
 </f:if>
-<f:render partial="Card/Parts/Body" arguments="{_all}" />
+<f:render partial="CeCard/Parts/Body" arguments="{_all}" />
 <f:if condition="{data.pi_flexform.imagePosition} == 'bottom'">
-    <f:render partial="Card/Parts/Image" arguments="{_all}" />
+    <f:render partial="CeCard/Parts/Image" arguments="{_all}" />
 </f:if>
 </html>
