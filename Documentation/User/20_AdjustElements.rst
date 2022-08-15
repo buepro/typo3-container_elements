@@ -2,9 +2,9 @@
 
 .. _user_adjust_elements:
 
-====================
+=========================
 Adjust container elements
-====================
+=========================
 
 Information regarding special features from some container elements is given below.
 
@@ -23,26 +23,6 @@ container classes value picker.
    :alt: Properties from container element
 
    Properties from container element
-
-.. _user_adjust_columns:
-
-Columns
-=======
-
-Column container elements provide a register `Adjustment` allowing to control collapsing and rendering of images by
-adjusting the image variants. Both features depend on the
-`template pizpalue <https://extensions.typo3.org/extension/pizpalue>`__ and won't have any effect if it isn't installed.
-
-Collapsing might be of interest to control spacing between content elements used in container elements. The settings
-add related css-classes to the HTML code. Without any additional css definitions these settings don't have any visual
-effects.
-
-`Image variants` were introduced by the `bootstrap package <https://extensions.typo3.org/extension/bootstrap_package>`__
-to render images with the correct properties (size, resolution, aspect ratio). The `image variants modifier stack`
-provided by the `template pizpalue <https://extensions.typo3.org/extension/pizpalue>`__ extends the image variants
-functionality allowing to add image variants modifications by elements such as layouts or structure elements.
-As a result images in nested column container elements can be rendered with the optimal size. The feature can be
-disabled globally through the typoscript constant editor or for each content element individually.
 
 .. _user_adjust_tileUnit:
 

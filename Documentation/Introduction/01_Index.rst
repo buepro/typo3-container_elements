@@ -35,7 +35,7 @@ What it does
 
 This extension provides elements to further structure the content area. It is powered by the
 `extension container <https://extensions.typo3.org/extension/container/>`__. Many thanks to the
-`b13.com <https://b13.com/>`__!
+`b13.com <https://b13.com/>`__ team!
 
 Currently the following elements are available: container, columns, grid, registers, accordion, tile unit, card and
 randomizer. The extension is intended to be used together with the `bootstrap framework <https://getbootstrap.com/>`__.
@@ -51,7 +51,7 @@ Limitations
 When using images in container elements reducing the horizontal space (e.g. column elements) the image dimensions
 should be adapted to the resulting space. The approach to obtain the final space depends on the context and therefore
 no general solution can be offered. The `template pizpalue <https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/>`__
-offers a flexible way to optimize image dimensions in structure elements and is fully supported by this extension.
+offers a flexible way to optimize image dimensions in structure elements and fully supports this extension.
 An example can be found under `pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__.
 
 Example contents
