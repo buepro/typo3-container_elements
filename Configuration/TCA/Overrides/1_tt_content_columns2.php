@@ -41,9 +41,22 @@ defined('TYPO3') or die('Access denied.');
     /**
      * Add flexForm
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-        '*',
-        'FILE:EXT:container_elements/Configuration/FlexForms/Columns2.xml',
-        'ce_columns2'
-    );
+    if (
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue') &&
+        ($pizpalueVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('pizpalue'))
+            !== 0 && $pizpalueVersion < 13000001
+    ) {
+        // @deprecated since version 4.0.0, will be removed in version 5.0.0
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:EXT:container_elements/Configuration/FlexForms/Deprecated/Columns2.xml',
+            'ce_columns2'
+        );
+    } else {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:EXT:container_elements/Configuration/FlexForms/Columns2.xml',
+            'ce_columns2'
+        );
+    }
 })();

@@ -2,8 +2,18 @@
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
+<f:comment>Merge image variants settings (used in conjunction with pizpalue)</f:comment>
+{pvh:iterator.merge(a: data.pi_flexform, b: settings.containerElements)
+    -> pvh:variable.set(name: 'settings.containerElements') -> f:if(condition: settings.containerElements)}
+
 {f:variable(name: 'css', value: ' {data.pi_flexform.row.class}') -> f:if(condition: data.pi_flexform.row.class)}
+{f:variable(name: 'css', value: '{css} ce-row-collapse')
+    -> f:if(condition: '{data.pi_flexform.collapseElement} > 1')}
+{f:variable(name: 'collapse', value: 1)
+    -> f:if(condition: '{data.pi_flexform.collapseElement} == 1 || {data.pi_flexform.collapseElement} == 3')}
+
 {f:variable(name: 'colCount', value: ceAspect.childrenCount)}
+
 {f:variable(name: '_columns', value: data.pi_flexform.columns)}
 <div class="row{css}">
     {f:render(partial: 'CeColumn', arguments: '{content: children_101, column: _columns.1,

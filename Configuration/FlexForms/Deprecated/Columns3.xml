@@ -352,5 +352,66 @@
                 </el>
             </ROOT>
         </sCustom>
+        <sAdjust>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:adjustment</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <collapseElement type="array">
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.collapseElement</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:pizpalueFeature.description</description>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.collapseContentElement</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.collapseRow</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>3</default>
+                                <cols>inline</cols>
+                            </config>
+                        </TCEforms>
+                    </collapseElement>
+                    <imageVariants.gutter.enable type="array">
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.imageVariants.gutter</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:pizpalueFeature.description</description>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:enable</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>1</default>
+                                <cols>inline</cols>
+                            </config>
+                        </TCEforms>
+                    </imageVariants.gutter.enable>
+                    <imageVariants.correction.enable type="array">
+                        <TCEforms>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.imageVariants.correction</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:pizpalueFeature.description</description>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:enable</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>1</default>
+                                <cols>inline</cols>
+                            </config>
+                        </TCEforms>
+                    </imageVariants.correction.enable>
+                </el>
+            </ROOT>
+        </sAdjust>
     </sheets>
 </T3DataStructure>

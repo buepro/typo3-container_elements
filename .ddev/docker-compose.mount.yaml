@@ -1,0 +1,5 @@
+services:
+  web:
+    volumes:
+      # Mount local directory to the web container
+      - "~/Projects/public:/mnt/public/package"

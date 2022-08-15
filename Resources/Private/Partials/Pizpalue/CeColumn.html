@@ -2,6 +2,8 @@
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
+<f:comment>TODO: deprecated since version 4.0.0, will be removed in version 5.0.0</f:comment>
+
 {f:variable(name: 'class', value: 'col')}
 {f:variable(name: 'class', value: '{class}-{breakpoint}') -> f:if(condition: '{breakpoint} != "none"')}
 {f:variable(name: 'class', value: '{class}-{column.width}') -> f:if(condition: '{column.width} != "equal"')}

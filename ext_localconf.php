@@ -26,8 +26,14 @@ defined('TYPO3') || die('Access denied.');
 
     /**
      * Load static TS for pizpalue
+     * @deprecated since version 4.0.0, will be removed in version 5.0.0
      */
-    if ((bool) $extensionConfiguration['autoLoadStaticTS'] && \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue')) {
+    if (
+        (bool) $extensionConfiguration['autoLoadStaticTS'] &&
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue') &&
+        ($pizpalueVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('pizpalue'))
+            !== 0 && $pizpalueVersion < 13000001
+    ) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
             '@import "EXT:container_elements/Configuration/TypoScript/Pizpalue/constants.typoscript"'
         );
