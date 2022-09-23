@@ -18,6 +18,47 @@
                                 <type>input</type>
                                 <default>row row-cols-1 row-cols-md-2 row-cols-lg-3</default>
                                 <eval>trim</eval>
+                                <size>50</size>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="0" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.alignItemsStart</numIndex>
+                                            <numIndex index="1">align-items-start</numIndex>
+                                        </numIndex>
+                                        <numIndex index="1" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.alignItemsCenter</numIndex>
+                                            <numIndex index="1">align-items-center</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.alignItemsEnd</numIndex>
+                                            <numIndex index="1">align-items-end</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.justifyContentStart</numIndex>
+                                            <numIndex index="1">justify-content-start</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.justifyContentCenter</numIndex>
+                                            <numIndex index="1">justify-content-center</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.justifyContentEnd</numIndex>
+                                            <numIndex index="1">justify-content-end</numIndex>
+                                        </numIndex>
+                                        <numIndex index="6" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.justifyContentAround</numIndex>
+                                            <numIndex index="1">justify-content-around</numIndex>
+                                        </numIndex>
+                                        <numIndex index="7" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.justifyContentBetween</numIndex>
+                                            <numIndex index="1">justify-content-between</numIndex>
+                                        </numIndex>
+                                        <numIndex index="8" type="array">
+                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.rowClass.noGutters</numIndex>
+                                            <numIndex index="1">no-gutters g-0</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
                             </config>
                         </TCEforms>
                     </rowClasses>
@@ -28,6 +69,7 @@
                                 <type>input</type>
                                 <default>col</default>
                                 <eval>trim</eval>
+                                <size>50</size>
                             </config>
                         </TCEforms>
                     </elementDefaultClasses>
