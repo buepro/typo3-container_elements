@@ -32,7 +32,7 @@
         "typo3-ter/container-elements": "self.version"
     },
     "require-dev": {
-        "buepro/typo3-pizpalue": "^13",
+        "buepro/typo3-pizpalue": "^14",
         "ergebnis/composer-normalize": "^2.15.0",
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "friendsoftypo3/phpstan-typo3": "^0.9.0",
