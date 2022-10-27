@@ -35,13 +35,10 @@ class GridClassesProcessor implements DataProcessorInterface
         if (!isset($processedData['children_101']) || count($processedData['children_101']) < 1) {
             return $processedData;
         }
-        $config = $processedData['data']['pi_flexform'] ?? null;
-        if (!is_array($config)) {
-            $config = [
-                'elementDefaultClasses' => 'col',
-                'elementClasses' => '',
-            ];
-        }
+        $config = array_merge([
+            'elementDefaultClasses' => 'col',
+            'elementClasses' => '',
+        ], $processedData['data']['pi_flexform'] ?? []);
         $elementClasses = GeneralUtility::trimExplode(',', str_replace(["\r\n", "\n", "\r"], ',', $config['elementClasses']));
         foreach ($processedData['children_101'] as $key => &$child) {
             $child['ce_grid_classes'] = $config['elementDefaultClasses'];
