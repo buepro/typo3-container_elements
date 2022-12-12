@@ -139,11 +139,9 @@ class ClassesUpdate implements UpgradeWizardInterface
                 $queryBuilder->createNamedParameter('%' . $oldClass . '%', \PDO::PARAM_STR)
             );
         }
-        return $queryBuilder->expr()->andX(
-            /** @phpstan-ignore-next-line */
-            $queryBuilder->expr()->orX(...$typeConstraints),
-            /** @phpstan-ignore-next-line */
-            $queryBuilder->expr()->orX(...$classConstraints)
+        return $queryBuilder->expr()->and(
+            $queryBuilder->expr()->or(...$typeConstraints),
+            $queryBuilder->expr()->or(...$classConstraints)
         );
     }
 
@@ -166,10 +164,9 @@ class ClassesUpdate implements UpgradeWizardInterface
         $queryResult = $queryBuilder->select('uid', 'CType', 'pi_flexform')
             ->from('tt_content')
             ->where($this->getConstraints($queryBuilder))
-            ->execute();
-        /** @phpstan-ignore-next-line */
-        while ($record = $queryResult->fetch()) {
-            if (!is_array($record)) {
+            ->executeQuery();
+        while ($record = $queryResult->fetchAssociative()) {
+            if (!is_string($record['CType']) || !is_string($record['pi_flexform'])) {
                 continue;
             }
             $queryBuilder = $connection->createQueryBuilder();
@@ -180,8 +177,8 @@ class ClassesUpdate implements UpgradeWizardInterface
                         $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
                     )
                 )
-                ->set('pi_flexform', $this->addNewClassesToDs((string)$record['CType'], (string)$record['pi_flexform']));
-            $queryBuilder->execute();
+                ->set('pi_flexform', $this->addNewClassesToDs($record['CType'], $record['pi_flexform']));
+            $queryBuilder->executeStatement();
         }
         return true;
     }
