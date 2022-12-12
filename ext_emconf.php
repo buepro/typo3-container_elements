@@ -11,17 +11,16 @@ $EM_CONF[$_EXTKEY] = [
     'title'            => 'Container elements',
     'description'      => 'Provides content elements powered by container and bootstrap. Available elements: container, columns, grid, tabs, accordion, tile unit, card and randomizer.',
     'category'         => 'misc',
-    'version'          => '4.0.2-dev',
+    'version'          => '5.0.0-dev',
     'state'            => 'stable',
     'clearCacheOnLoad' => 1,
     'author'           => 'Roman Büchler',
     'author_email'     => 'rb@buechler.pro',
     'constraints'      => [
         'depends'   => [
-            'php'           => '7.3.0-8.0.99',
-            'typo3'         => '10.4.11-11.5.99',
-            'container'     => '1.3.1-2.99.99',
-            'pvh'           => '1.0.0-1.99.99'
+            'typo3'         => '11.5.1-12.99.99',
+            'container'     => '2.1.1-2.99.99',
+            'pvh'           => '2.0.0-2.99.99'
         ],
         'conflicts' => [],
     ],

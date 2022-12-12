@@ -1,7 +1,9 @@
 # Folders
 .build/
 .idea/
+config/
 Documentation-GENERATED-temp/
+var/
 
 # Files
 composer.lock
