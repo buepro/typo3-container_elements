@@ -17,7 +17,7 @@ class VersionUtility
      */
     public static function getExtensionVersion(string $extension): int
     {
-        return $version = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionStringToArray(ltrim(
+        return (int)\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionStringToArray(ltrim(
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion($extension),
             'vV'
         ))['version_int'];
