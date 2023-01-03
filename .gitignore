@@ -6,3 +6,4 @@ Documentation-GENERATED-temp/
 # Files
 composer.lock
 *.cache
+/config/sites/default/config.yaml
