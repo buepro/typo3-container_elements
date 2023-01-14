@@ -14,8 +14,6 @@
                     {f:variable(name: '_selected', value: 'true') -> f:if(condition:'{iterator.index}==0')}
                     <button class="nav-link{f:if(condition:'{iterator.index}==0',then:' active')}"
                             id="tab-{record.uid}"
-                            data-toggle="tab"
-                            data-target="#tab-content-{record.uid}"
                             data-bs-toggle="tab"
                             data-bs-target="#tab-content-{record.uid}"
                             type="button"

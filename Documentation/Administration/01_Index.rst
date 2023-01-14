@@ -24,6 +24,7 @@ Compatibility
 Component     Version
 ============= ====================
 pizpalue      15
+bootstrap     5
 ============= ====================
 
 Installation

@@ -15,9 +15,6 @@
                     {f:variable(name: '_expanded', value: 'false')}
                     {f:variable(name: '_expanded', value: 'true') -> f:if(condition:'{iterator.cycle} == {_activeItemIndex}')}
                     <button class="accordion-button{f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:' collapsed')}" type="button"
-                            data-toggle="collapse"
-                            data-target="#accordion-{record.uid}"
-                            data-parent="#accordion-{data.uid}"
                             data-bs-toggle="collapse"
                             data-bs-target="#accordion-{record.uid}"
                             data-bs-parent="#accordion-{data.uid}"
@@ -30,7 +27,6 @@
                 <div id="accordion-{record.uid}"
                      class="accordion-collapse collapse{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:' show')}"
                      aria-labelledby="accordion-heading-{record.uid}"
-                     data-parent="#accordion-{data.uid}"
                      data-bs-parent="#accordion-{data.uid}">
                     <div class="ce-accordion-body accordion-body">
                         {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
