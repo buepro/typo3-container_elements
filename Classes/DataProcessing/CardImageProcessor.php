@@ -14,6 +14,8 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class CardImageProcessor extends \TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 {
+    use ProcessedDataTrait;
+
     /**
      * Process data of a record to resolve File objects to the view
      *
@@ -29,6 +31,9 @@ class CardImageProcessor extends \TYPO3\CMS\Frontend\DataProcessing\FilesProcess
         array $processorConfiguration,
         array $processedData
     ): array {
+        if (!$this->isContainerElement($processedData)) {
+            return $processedData;
+        }
         $data = $cObj->data;
         $cObj->data['flexform_imageReference'] = $processedData['data']['pi_flexform']['imageReference'] ?? null;
         $result = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);

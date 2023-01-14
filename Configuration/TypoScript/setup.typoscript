@@ -1,5 +1,5 @@
 #=========================================================#
-# Content element
+# Content elements
 #=========================================================#
 
 lib.containerContentElement =< lib.contentElement

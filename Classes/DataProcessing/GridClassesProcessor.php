@@ -16,6 +16,8 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
 class GridClassesProcessor implements DataProcessorInterface
 {
+    use ProcessedDataTrait;
+
     /**
      * Add the field `ce_grid_classes` to the child data. The field contains the resulting css class for the grid
      * element.
@@ -32,7 +34,11 @@ class GridClassesProcessor implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ): array {
-        if (!isset($processedData['children_101']) || count($processedData['children_101']) < 1) {
+        if (
+            !$this->isContainerElement($processedData) ||
+            !isset($processedData['children_101']) ||
+            count($processedData['children_101']) < 1
+        ) {
             return $processedData;
         }
         $config = array_merge([

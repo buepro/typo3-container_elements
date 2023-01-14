@@ -26,6 +26,8 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
  */
 class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface
 {
+    use ProcessedDataTrait;
+
     /**
      * @inheritDoc
      */
@@ -34,7 +36,10 @@ class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessor
         array $contentObjectConfiguration,
         array $processorConfiguration,
         array $processedData
-    ) {
+    ): array {
+        if (!$this->isContainerElement($processedData)) {
+            return $processedData;
+        }
         $variableName = $cObj->stdWrapValue('as', $processorConfiguration);
         if ($variableName === '') {
             $variableName = 'ceAspect';
