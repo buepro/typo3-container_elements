@@ -58,7 +58,7 @@ class FlexFormProcessor implements DataProcessorInterface
     public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
     {
         // The field name to process
-        $fieldName = $cObj->stdWrapValue('fieldName', $processorConfiguration);
+        $fieldName = (string) $cObj->stdWrapValue('fieldName', $processorConfiguration);
         if ($fieldName === '') {
             $fieldName = 'pi_flexform';
         }
@@ -74,7 +74,6 @@ class FlexFormProcessor implements DataProcessorInterface
         $flexformData = $this->flexFormService->convertFlexFormContentToArray($originalValue);
 
         // Set the target variable
-        /** @phpstan-ignore-next-line */
         $targetVariableName = (string) $cObj->stdWrapValue('as', $processorConfiguration);
         if ($targetVariableName !== '') {
             $processedData[$targetVariableName] = $flexformData;
