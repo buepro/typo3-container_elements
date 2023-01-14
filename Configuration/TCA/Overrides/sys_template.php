@@ -17,20 +17,6 @@ defined('TYPO3') or die('Access denied');
     if (!is_array($extensionConfiguration)) {
         throw new \LogicException('Extension configuration is not available', 1660322963);
     }
-    if (
-        // @deprecated since version 4.0.0, will be removed in version 5.0.0
-        (bool)($extensionConfiguration['showDeprecatedItems'] ?? false) &&
-        !(bool)($extensionConfiguration['autoLoadStaticTS'] ?? true) &&
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue') &&
-        ($pizpalueVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('pizpalue'))
-            !== 0 && $pizpalueVersion < 13000001
-    ) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            'container_elements',
-            'Configuration/TypoScript/Pizpalue',
-            'Container elements DEPRECATED - Pizpalue'
-        );
-    }
     if ((bool)($extensionConfiguration['showDeprecatedItems'] ?? false)) {
         // @deprecated since version 3.0.0, will be removed in version 5.0.0
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
