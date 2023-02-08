@@ -35,6 +35,8 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  */
 class FlexFormProcessor implements DataProcessorInterface
 {
+    use ProcessedDataTrait;
+
     /**
      * @var FlexFormService
      */
@@ -57,6 +59,10 @@ class FlexFormProcessor implements DataProcessorInterface
      */
     public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
     {
+        if (!$this->isContainerElement($processedData)) {
+            return $processedData;
+        }
+
         // The field name to process
         $fieldName = (string) $cObj->stdWrapValue('fieldName', $processorConfiguration);
         if ($fieldName === '') {
