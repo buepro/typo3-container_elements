@@ -23,6 +23,7 @@ web_environment:
 - typo3DatabaseName=t3func
 - typo3DatabasePassword=root
 - typo3DatabaseUsername=root
+- COMPOSER=composer-dev.json
 nodejs_version: "16"
 
 # Key features of ddev's config.yaml:

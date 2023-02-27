@@ -6,5 +6,7 @@ Documentation-GENERATED-temp/
 var/
 
 # Files
-composer.lock
+/composer.lock
+/composer-dev.json
+/composer-dev.lock
 *.cache
