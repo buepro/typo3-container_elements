@@ -12,6 +12,7 @@ lib.containerContentElement {
     }
     dataProcessing {
         1597060000 = B13\Container\DataProcessing\ContainerProcessor
+        1597060000.skipRenderingChildContent = 1
         1597060100 = Buepro\ContainerElements\DataProcessing\FlexFormProcessor
         1597060100 {
             fieldName = pi_flexform
