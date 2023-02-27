@@ -188,7 +188,7 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <imageReference>
+                    <flexform_imageReference>
                         <TCEforms>
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:image</label>
                             <config>
@@ -266,7 +266,7 @@
                                 </appearance>
                             </config>
                         </TCEforms>
-                    </imageReference>
+                    </flexform_imageReference>
                     <imageWidth>
                         <TCEforms>
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:width</label>
