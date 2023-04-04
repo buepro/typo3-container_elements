@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "b13/container": "^2.2.0 || dev-master",
+        "b13/container": "^2.2.1",
         "buepro/typo3-pvh": "^2.0.0",
         "typo3/cms-core": "^11.5.1 || ^12.3"
     },
@@ -42,9 +42,9 @@
 		"phpstan/phpstan-deprecation-rules": "^1.0.0",
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
-        "typo3/cms-base-distribution": "^11.5.1 || ^12.1",
-        "typo3/cms-lowlevel": "^11.5.1 || ^12.1",
-        "typo3/cms-recycler": "^11.5.1 || ^12.1",
+        "typo3/cms-base-distribution": "^11.5.1 || ^12.3",
+        "typo3/cms-lowlevel": "^11.5.1 || ^12.3",
+        "typo3/cms-recycler": "^11.5.1 || ^12.3",
         "typo3/testing-framework": "^6.4 || 7.*.*@dev"
     },
     "config": {

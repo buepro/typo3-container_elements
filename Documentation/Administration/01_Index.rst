@@ -13,8 +13,8 @@ Requirements
 ============= ====================
 Component     Version
 ============= ====================
-TYPO3         11.5.x, 12.1
-container     2.1.1
+TYPO3         11.5.x, 12.3
+container     2.2.1
 ============= ====================
 
 Compatibility
