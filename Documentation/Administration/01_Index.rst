@@ -45,5 +45,6 @@ The following upgrade descriptions are available:
 .. toctree::
    :maxdepth: 2
 
-   02_Upgrade_3.0
+   02_Upgrade_5.0
    02_Upgrade_4.0
+   02_Upgrade_3.0
