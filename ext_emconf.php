@@ -22,7 +22,9 @@ $EM_CONF[$_EXTKEY] = [
             'container'     => '2.2.1-2.99.99',
             'pvh'           => '2.0.0-2.99.99'
         ],
-        'conflicts' => [],
+        'conflicts' => [
+            'pizpalue'      => '0.0.0-12.99.99'
+        ],
     ],
     'autoload' => [
         'psr-4' => [

@@ -27,6 +27,9 @@
         "buepro/typo3-pvh": "^2.0.0",
         "typo3/cms-core": "^11.5.1 || ^12.3"
     },
+	"conflict": {
+		"buepro/typo3-pizpalue": "<13"
+	},
     "replace": {
         "typo3-ter/container-elements": "self.version"
     },
