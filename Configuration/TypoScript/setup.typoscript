@@ -67,6 +67,16 @@ tt_content.ce_grid {
 #===========================================================================================#
 
 lib.containerElements {
-    renderContent = TEXT
-    renderContent.field = renderedContent
+    renderContent >
+    renderContent = CONTENT
+    renderContent {
+        table = tt_content
+        select {
+            uidInList {
+                field = uid
+                override.field = l18n_parent
+            }
+            pidInList = 0
+        }
+    }
 }
