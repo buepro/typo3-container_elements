@@ -28,7 +28,7 @@ class AccordionTest extends FunctionalFrontendTestCase
     /**
      * @var non-empty-string[]
      */
-    protected $coreExtensionsToLoad = [
+    protected array $coreExtensionsToLoad = [
         'impexp',
         'seo',
         'felogin',
@@ -37,7 +37,7 @@ class AccordionTest extends FunctionalFrontendTestCase
     /**
      * @var non-empty-string[]
      */
-    protected $testExtensionsToLoad = [
+    protected array $testExtensionsToLoad = [
         'typo3conf/ext/container',
         'typo3conf/ext/container_elements',
         'typo3conf/ext/bootstrap_package',
