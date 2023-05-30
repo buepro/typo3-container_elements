@@ -10,6 +10,11 @@
 defined('TYPO3') || die('Access denied.');
 
 (function () {
+    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    );
+    $containerElementsConfiguration = $extensionConfiguration->get('container_elements');
+
     /**
      * Load default TS
      */
@@ -23,6 +28,14 @@ defined('TYPO3') || die('Access denied.');
     if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pizpalue')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '@import "EXT:container_elements/Configuration/PageTs/TCEFORM.tsconfig"'
+        );
+    }
+    if (
+        (bool) ($containerElementsConfiguration['collapsibleContentElements'] ?? false) &&
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class)->getMajorVersion() >= 12
+    ) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '@import "EXT:container_elements/Sysext/backend/Configuration/TsConfig/Page/CollapsibleContentElements.tsconfig"'
         );
     }
 

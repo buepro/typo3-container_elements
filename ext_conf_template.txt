@@ -1,0 +1,2 @@
+# cat=Backend; type=boolean; label=Enable collapsible content elements
+collapsibleContentElements = 1

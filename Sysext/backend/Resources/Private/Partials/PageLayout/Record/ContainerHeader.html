@@ -1,0 +1,65 @@
+<html xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    See .build/vendor/typo3/cms-backend/Resources/Private/Partials/PageLayout/RecordDefault/Header.html
+</f:comment>
+<div class="t3-page-ce-header {f:if(condition: '{allowEditContent} && {item.dragAndDropAllowed}', then: 't3-page-ce-header-draggable t3js-page-ce-draghandle')}">
+    <div class="t3-page-ce-header-left">
+        {item.icons -> f:format.raw()}
+        <f:if condition="{item.siteLanguage.flagIdentifier}">
+            <span class="t3-page-ce-header-icon-flag t3js-flag" title="{item.siteLanguage.title}">
+                <core:icon identifier="{item.siteLanguage.flagIdentifier}" />
+            </span>
+        </f:if>
+    </div>
+    {f:render(partial: 'PageLayout/RecordDefault/Preview', arguments: _all)
+        -> pvh:format.replace(substring: '<br/>', replacement: ' - ')
+        -> pvh:format.replace(substring: '<br />', replacement: ' - ')
+        -> pvh:format.replace(substring: '<br>', replacement: ' - ')
+        -> f:format.stripTags()
+        -> pvh:format.trim()
+        -> f:format.crop(maxCharacters: 80)
+        -> f:variable(name: '_title')}
+    <div id="ce-header-title-{item.record.uid}" class="ce-header-title t3-page-ce-header-title">
+        <span>{item.contentTypeLabel}</span><span>{_title -> f:format.raw()}</span>
+    </div>
+    <div class="t3-page-ce-header-right">
+        <div class="btn-toolbar">
+            <div class="btn-group btn-group-sm">
+                <f:if condition="{item.editable} && {allowEditContent}">
+                    <a href="{item.editUrl}" class="btn btn-default btn-borderless" title="{f:translate(key:'LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:edit')}">
+                        <core:icon identifier="actions-open" />
+                    </a>
+                    <f:if condition="{item.visibilityToggling}">
+                        <a class="btn btn-default btn-borderless" href="{item.visibilityToggleUrl}" title="{item.visibilityToggleTitle}">
+                            <core:icon identifier="actions-edit-{item.visibilityToggleIconName}" />
+                        </a>
+                    </f:if>
+                    <f:if condition="{item.delible}">
+                        <a class="btn btn-default btn-borderless t3js-modal-trigger"
+                            href="{item.deleteUrl}"
+                            data-severity="warning"
+                            data-title="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_alt_doc.xlf:label.confirm.delete_record.title')}"
+                            data-bs-content="{item.deleteMessage}"
+                            data-button-close-text="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:cancel')}"
+                            data-button-ok-text="{f:translate(key:'LLL:EXT:core/Resources/Private/Language/locallang_mod_web_list.xlf:delete')}"
+                            title="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_layout.xlf:deleteItem')}">
+                            <core:icon identifier="actions-edit-delete" size="small" />
+                        </a>
+                    </f:if>
+                    <button aria-haspopup="true"
+                            aria-controls="contentMenu0" aria-label="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_layout.xlf:advancedFunctions')}"
+                            class="btn btn-default btn-borderless btn-sm"
+                            data-contextmenu-trigger="click"
+                            data-contextmenu-table="tt_content"
+                            data-contextmenu-uid="{item.record.uid}">
+                        <core:icon identifier="actions-menu-alternative" />
+                    </button>
+                </f:if>
+                <a id="ce-toggler-{item.record.uid}" class="ce-toggler btn btn-default btn-borderless btn-sm" data-bs-toggle="collapse" href="#ce-collapse-{item.record.uid}" role="button" aria-expanded="true" aria-controls="ce-collapse-{item.record.uid}">{core:icon(identifier: 'actions-chevron-bar-up')}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<f:asset.css identifier="ce-sysext-backend-layoutmodule" href="EXT:container_elements/Resources/Public/Sysext/backend/Css/LayoutModule/collapsible-content-element.css" />
+<f:asset.script identifier="ce-sysext-backend-layoutmodule" src="EXT:container_elements/Resources/Public/Sysext/backend/JavaScript/LayoutModule/collapsible-content-element.js" />
+</html>

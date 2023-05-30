@@ -1,0 +1,22 @@
+.ce-toggler .icon {
+    transition: transform 0.5s;
+}
+.ce-toggler.collapsed .icon{
+    transform: scaleY(-1);
+}
+.ce-header-title {
+    min-width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.ce-header-title span:nth-child(2) {
+    display: none;
+}
+.ce-header-title.cec-collapsed span:nth-child(1) {
+    display: none;
+}
+.ce-header-title.cec-collapsed span:nth-child(2) {
+    display: inline-block;
+}
