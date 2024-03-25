@@ -439,6 +439,40 @@
 			<trans-unit id="grid.element.classes.description">
 				<source>Each line corresponds to an element (first line -> first element, second line -> second element, etc). For empty or missing lines the default classes are used.</source>
 			</trans-unit>
+
+			<trans-unit id="slider.title">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="slider.description">
+				<source>Create a slider with any number of slides</source>
+			</trans-unit>
+			<trans-unit id="slider.slides">
+				<source>Sliders</source>
+			</trans-unit>
+			<trans-unit id="slider.showPagination">
+				<source>Show pagination</source>
+			</trans-unit>
+			<trans-unit id="slider.showNavigation">
+				<source>Show navigation</source>
+			</trans-unit>
+			<trans-unit id="slider.container.classes">
+				<source>Container classes</source>
+			</trans-unit>
+			<trans-unit id="slider.slide.default.classes">
+				<source>Slide default classes</source>
+			</trans-unit>
+			<trans-unit id="slider.slide.classes">
+				<source>Slide classes</source>
+			</trans-unit>
+			<trans-unit id="slider.slide.classes.description">
+				<source>Each line corresponds to a slide (first line -> first slide, second line -> second slide, etc). For empty or missing lines the default classes are used.</source>
+			</trans-unit>
+			<trans-unit id="slider.config">
+				<source>Configuration</source>
+			</trans-unit>
+			<trans-unit id="slider.config.description">
+				<source>Configuration used to initialize the slider. See as well https://swiperjs.com/swiper-api#initialize-swiper and https://jsonlint.com/</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sGeneral>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <showPagination type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.showPagination</label>
+                            <config type="array">
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </showPagination>
+                    <showNavigation type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.showNavigation</label>
+                            <config type="array">
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </showNavigation>
+                    <containerClasses type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.container.classes</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>ce-slides-wrapper swiper-wrapper</default>
+                                <eval>trim</eval>
+                                <size>50</size>
+                            </config>
+                        </TCEforms>
+                    </containerClasses>
+                    <slideDefaultClasses type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slide.default.classes</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>ce-slide swiper-slide</default>
+                                <eval>trim</eval>
+                                <size>50</size>
+                            </config>
+                        </TCEforms>
+                    </slideDefaultClasses>
+                    <slideClasses type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slide.classes</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slide.classes.description</description>
+                            <config type="array">
+                                <type>text</type>
+                                <renderType>t3editor</renderType>
+                                <cols>40</cols>
+                                <rows>10</rows>
+                            </config>
+                        </TCEforms>
+                    </slideClasses>
+                    <config type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config.description</description>
+                            <default>
+{
+    "slidesPerView": 4,
+    "spaceBetween": "20px",
+    "slidesPerGroup": 1,
+    "loop": 0,
+    "disableOnInteraction": "true",
+    "autoplay": "auto",
+    "breakpoints": {
+        "10": {
+            "slidesPerView": 1
+        },
+        "576": {
+            "slidesPerView": 1
+        },
+        "768": {
+            "slidesPerView": 2
+        },
+        "1200": {
+            "slidesPerView": 3
+        },
+        "1400": {
+            "slidesPerView": 4
+        }
+    }
+}
+                            </default>
+                            <config type="array">
+                                <type>text</type>
+                                <renderType>t3editor</renderType>
+                                <cols>40</cols>
+                                <rows>10</rows>
+                            </config>
+                        </TCEforms>
+                    </config>
+                </el>
+            </ROOT>
+        </sGeneral>
+    </sheets>
+</T3DataStructure>

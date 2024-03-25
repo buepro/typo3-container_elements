@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: CorelDRAW 2021 (64-Bit Not for commercial use) -->
+
+<svg
+   xml:space="preserve"
+   width="140px"
+   height="140px"
+   version="1.1"
+   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   viewBox="0 0 139.998 139.998"
+   id="svg4"
+   sodipodi:docname="Slider.svg"
+   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview4"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="4.2830467"
+   inkscape:cx="81.951008"
+   inkscape:cy="83.35188"
+   inkscape:window-width="1920"
+   inkscape:window-height="1052"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_x0020_1" />
+ <defs
+   id="defs1">
+  <style
+   type="text/css"
+   id="style1">
+   <![CDATA[
+    .str2 {stroke:#005E8E;stroke-width:5.333;stroke-miterlimit:22.9256}
+    .str0 {stroke:#005E8E;stroke-width:0.901;stroke-miterlimit:22.9256}
+    .str1 {stroke:#005E8E;stroke-width:5;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil0 {fill:#FEFEFE}
+   ]]>
+  </style>
+ </defs>
+ <g
+   id="Layer_x0020_1"
+   inkscape:label="Layer 1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <rect
+   class="fil0 str0"
+   x="0"
+   y="0"
+   width="139.998"
+   height="139.998"
+   id="rect1"
+   style="stroke:none" />
+  
+  
+  
+  
+ <g
+   id="g4"
+   transform="translate(2.5004606)"><rect
+     style="clip-rule:evenodd;fill:#4dc4ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.79408;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     id="rect4-6"
+     width="54.999214"
+     height="119.99828"
+     x="69.999001"
+     y="9.9998569" /><rect
+     style="fill:#4dc4ff;fill-opacity:1;stroke:none;stroke-width:2.79408;stroke-dasharray:none;stroke-opacity:1"
+     id="rect4"
+     width="54.999214"
+     height="119.99828"
+     x="9.9998569"
+     y="9.9998569" /></g><path
+   style="fill:none;stroke:#005e8e;stroke-width:5.85842;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+   d="M 17.970705,57.567388 5.2066812,70.124946 18.070491,82.430614"
+   id="path5" /><path
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#005e8e;stroke-width:5.85842;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   d="M 122.02731,82.430604 134.79133,69.873056 121.92751,57.567398"
+   id="path5-5" /></g>
+</svg>

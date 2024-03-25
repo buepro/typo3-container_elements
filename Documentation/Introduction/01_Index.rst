@@ -88,3 +88,28 @@ checked out.
 
 .. figure:: ../Images/Introduction/TileUnit.jpg
    :alt: Tile unit containing tile content elements
+
+Randomizer
+----------
+
+Shows random content elements.
+
+
+Grid
+----
+
+To create grid components.
+
+
+Slider
+------
+
+Responsive slider using `Swiper <https://swiperjs.com/>`__.
+
+Allows to configure the quantity of content elements per breakpoints.
+
+.. figure:: ../Images/Introduction/Slider_md.jpg
+   :alt: Slider with two content elements per slide for medium sized screens
+
+.. figure:: ../Images/Introduction/Slider_xxl.jpg
+   :alt: Slider with four content elements per slide for large sized screens

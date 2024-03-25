@@ -52,6 +52,11 @@ tt_content.ce_grid {
     templateName = CeGrid
     dataProcessing.1638777899 = Buepro\ContainerElements\DataProcessing\GridClassesProcessor
 }
+tt_content.ce_slider =< lib.containerContentElement
+tt_content.ce_slider {
+    templateName = CeSlider
+    dataProcessing.1711379238 = Buepro\ContainerElements\DataProcessing\SliderProcessor
+}
 
 
 #===========================================================================================#
