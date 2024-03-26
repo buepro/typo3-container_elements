@@ -41,9 +41,10 @@
                             </config>
                         </TCEforms>
                     </showNavigation>
-                    <containerClasses type="array">
+                    <slidesWrapperClasses type="array">
                         <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.container.classes</label>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses.description</description>
                             <config type="array">
                                 <type>input</type>
                                 <default>ce-slides-wrapper swiper-wrapper</default>
@@ -51,10 +52,11 @@
                                 <size>50</size>
                             </config>
                         </TCEforms>
-                    </containerClasses>
+                    </slidesWrapperClasses>
                     <slideDefaultClasses type="array">
                         <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slide.default.classes</label>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideDefaultClasses</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideDefaultClasses.description</description>
                             <config type="array">
                                 <type>input</type>
                                 <default>ce-slide swiper-slide</default>
@@ -65,8 +67,8 @@
                     </slideDefaultClasses>
                     <slideClasses type="array">
                         <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slide.classes</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slide.classes.description</description>
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideClasses</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideClasses.description</description>
                             <config type="array">
                                 <type>text</type>
                                 <renderType>t3editor</renderType>

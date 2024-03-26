@@ -455,16 +455,22 @@
 			<trans-unit id="slider.showNavigation">
 				<source>Show navigation</source>
 			</trans-unit>
-			<trans-unit id="slider.container.classes">
-				<source>Container classes</source>
+			<trans-unit id="slider.slidesWrapperClasses">
+				<source>Slides wrapper classes</source>
 			</trans-unit>
-			<trans-unit id="slider.slide.default.classes">
+			<trans-unit id="slider.slidesWrapperClasses.description">
+				<source>Classes assigned to the slides wrapping element. Use "!external" to prevent rendering the element. Default is "ce-slides-wrapper swiper-wrapper".</source>
+			</trans-unit>
+			<trans-unit id="slider.slideDefaultClasses">
 				<source>Slide default classes</source>
 			</trans-unit>
-			<trans-unit id="slider.slide.classes">
+			<trans-unit id="slider.slideDefaultClasses.description">
+				<source>Classes assigned to the slide element. Use "!external" to prevent rendering the element. Default is "ce-slide swiper-slide".</source>
+			</trans-unit>
+			<trans-unit id="slider.slideClasses">
 				<source>Slide classes</source>
 			</trans-unit>
-			<trans-unit id="slider.slide.classes.description">
+			<trans-unit id="slider.slideClasses.description">
 				<source>Each line corresponds to a slide (first line -> first slide, second line -> second slide, etc). For empty or missing lines the default classes are used.</source>
 			</trans-unit>
 			<trans-unit id="slider.config">

@@ -9,13 +9,7 @@
              data-ce-show-navigation="{_config.showNavigation}"
              data-ce-config="{_config.config}"
         >
-            <div class="{_config.containerClasses}">
-                <f:for each="{children_101}" as="_record">
-                    <div class="{_record.ce_slide_classes}">
-                        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
-                    </div>
-                </f:for>
-            </div>
+            <f:render section="SliderSlides" arguments="{_config: _config, _children: children_101}" />
             <f:if condition="{_config.showPagination}">
                 <div id="ce-slider-pagination-{data.uid}" class="swiper-pagination"></div>
             </f:if>
@@ -24,9 +18,39 @@
                 <div id="ce-slider-next-{data.uid}" class="swiper-button-next"></div>
             </f:if>
         </div>
-        <f:asset.script identifier="tx-container-element-slider-lib" src="EXT:container_elements/Resources/Public/JavaScript/Dist/nolimits4web.swiper.min.js" />
-        <f:asset.script identifier="tx-container-element-slider" src="EXT:container_elements/Resources/Public/JavaScript/Src/slider.js" />
-        <f:asset.css identifier="tx-container-element-slider" href="EXT:container_elements/Resources/Public/Css/nolimits4web.swiper.min.css" />
+        <f:asset.script identifier="tx-container-elements-slider-lib" src="EXT:container_elements/Resources/Public/JavaScript/Dist/nolimits4web.swiper.min.js" />
+        <f:asset.script identifier="tx-container-elements-slider" src="EXT:container_elements/Resources/Public/JavaScript/Src/slider.js" />
+        <f:asset.css identifier="tx-container-elements-slider" href="EXT:container_elements/Resources/Public/Css/nolimits4web.swiper.min.css" />
+    </f:if>
+</f:section>
+
+<f:section name="SliderSlides">
+    <f:if condition="{_config.slidesWrapperClasses} == '!external'">
+        <f:then>
+            <f:for each="{_children}" as="_record">
+                <f:render section="SliderSlide" arguments="{_record: _record}" />
+            </f:for>
+        </f:then>
+        <f:else>
+            <div class="{_config.slidesWrapperClasses}">
+                <f:for each="{_children}" as="_record">
+                    <f:render section="SliderSlide" arguments="{_record: _record}" />
+                </f:for>
+            </div>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="SliderSlide">
+    <f:if condition="{_record.ce_slide_classes} == '!external'">
+        <f:then>
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+        </f:then>
+        <f:else>
+            <div class="{_record.ce_slide_classes}">
+                {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+            </div>
+        </f:else>
     </f:if>
 </f:section>
 </html>
