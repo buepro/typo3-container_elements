@@ -91,3 +91,40 @@ Cards might be grouped with container elements.
    :alt: Cards in container
 
    Two cards in a container
+
+.. _user_adjust_slider:
+
+Slider
+======
+
+The slider container element uses the `Swiper js library <https://swiperjs.com/>`__.
+The behaviour from each slider can be configured within the content element using
+json:
+
+.. code-block:: yaml
+
+   {
+       "slidesPerView": 4,
+       "spaceBetween": "20px",
+       "slidesPerGroup": 1,
+       "loop": 0,
+       "disableOnInteraction": "true",
+       "autoplay": "auto",
+       "breakpoints": {
+           "10": {
+               "slidesPerView": 1
+           },
+           "576": {
+               "slidesPerView": 1
+           },
+           "768": {
+               "slidesPerView": 2
+           },
+           "1200": {
+               "slidesPerView": 3
+           },
+           "1400": {
+               "slidesPerView": 4
+           }
+       }
+   }

@@ -81,33 +81,6 @@
                         <TCEforms type="array">
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config</label>
                             <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config.description</description>
-                            <default>
-{
-    "slidesPerView": 4,
-    "spaceBetween": "20px",
-    "slidesPerGroup": 1,
-    "loop": 0,
-    "disableOnInteraction": "true",
-    "autoplay": "auto",
-    "breakpoints": {
-        "10": {
-            "slidesPerView": 1
-        },
-        "576": {
-            "slidesPerView": 1
-        },
-        "768": {
-            "slidesPerView": 2
-        },
-        "1200": {
-            "slidesPerView": 3
-        },
-        "1400": {
-            "slidesPerView": 4
-        }
-    }
-}
-                            </default>
                             <config type="array">
                                 <type>text</type>
                                 <renderType>t3editor</renderType>
