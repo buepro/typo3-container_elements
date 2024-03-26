@@ -10,14 +10,13 @@
              data-ce-config="{_config.config}"
         >
             <f:render section="SliderSlides" arguments="{_config: _config, _children: children_101}" />
-            <f:if condition="{_config.showPagination}">
-                <div id="ce-slider-pagination-{data.uid}" class="swiper-pagination"></div>
-            </f:if>
-            <f:if condition="{_config.showNavigation}">
-                <div id="ce-slider-prev-{data.uid}" class="swiper-button-prev"></div>
-                <div id="ce-slider-next-{data.uid}" class="swiper-button-next"></div>
+            <f:if condition="{_config.decoupleControls as integer} != 1">
+                <f:render section="SliderControls" arguments="{_config: _config, _uid: data.uid}" />
             </f:if>
         </div>
+        <f:if condition="{_config.decoupleControls as integer} == 1">
+            <f:render section="SliderControls" arguments="{_config: _config, _uid: data.uid}" />
+        </f:if>
         <f:asset.script identifier="tx-container-elements-slider-lib" src="EXT:container_elements/Resources/Public/JavaScript/Dist/nolimits4web.swiper.min.js" />
         <f:asset.script identifier="tx-container-elements-slider" src="EXT:container_elements/Resources/Public/JavaScript/Src/slider.js" />
         <f:asset.css identifier="tx-container-elements-slider" href="EXT:container_elements/Resources/Public/Css/nolimits4web.swiper.min.css" />
@@ -51,6 +50,16 @@
                 {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
             </div>
         </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="SliderControls">
+    <f:if condition="{_config.showPagination}">
+        <div id="ce-slider-pagination-{_uid}" class="swiper-pagination"></div>
+    </f:if>
+    <f:if condition="{_config.showNavigation}">
+        <div id="ce-slider-prev-{_uid}" class="swiper-button-prev"></div>
+        <div id="ce-slider-next-{_uid}" class="swiper-button-next"></div>
     </f:if>
 </f:section>
 </html>

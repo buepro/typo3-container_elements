@@ -41,6 +41,16 @@
                             </config>
                         </TCEforms>
                     </showNavigation>
+                    <decoupleControls type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.decoupleControls</label>
+                            <config type="array">
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </decoupleControls>
                     <slidesWrapperClasses type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses</label>

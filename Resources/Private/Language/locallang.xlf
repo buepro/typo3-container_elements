@@ -455,6 +455,9 @@
 			<trans-unit id="slider.showNavigation">
 				<source>Show navigation</source>
 			</trans-unit>
+			<trans-unit id="slider.decoupleControls">
+				<source>Decouple controls</source>
+			</trans-unit>
 			<trans-unit id="slider.slidesWrapperClasses">
 				<source>Slides wrapper classes</source>
 			</trans-unit>
