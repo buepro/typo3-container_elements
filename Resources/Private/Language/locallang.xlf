@@ -433,6 +433,9 @@
 			<trans-unit id="grid.element.default.classes">
 				<source>Element default classes</source>
 			</trans-unit>
+			<trans-unit id="grid.element.default.classes.description">
+				<source>Default classes assigned to each grid element. Use "!external" to not render the wrapping container.</source>
+			</trans-unit>
 			<trans-unit id="grid.element.classes">
 				<source>Element classes</source>
 			</trans-unit>

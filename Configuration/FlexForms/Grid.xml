@@ -65,6 +65,7 @@
                     <elementDefaultClasses type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:grid.element.default.classes</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:grid.element.default.classes.description</description>
                             <config type="array">
                                 <type>input</type>
                                 <default>col</default>

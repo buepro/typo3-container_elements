@@ -5,9 +5,16 @@
     <f:if condition="{children_101}">
         <div class="{_config.rowClasses}">
             <f:for each="{children_101}" as="_record">
-                <div class="{_record.ce_grid_classes}">
-                    {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
-                </div>
+                <f:if condition="{_record.ce_grid_classes} == '!external'">
+                    <f:then>
+                        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                    </f:then>
+                    <f:else>
+                        <div class="{_record.ce_grid_classes}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        </div>
+                    </f:else>
+                </f:if>
             </f:for>
         </div>
     </f:if>
