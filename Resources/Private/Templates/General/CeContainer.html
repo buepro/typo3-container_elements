@@ -13,7 +13,23 @@
             <f:render section="renderContent" arguments="{_all}" />
         </f:else>
     </f:if>
+    <f:if condition="{data.pi_flexform.assets.jsLibraryUrl}">
+        <f:asset.script
+            identifier="{data.pi_flexform.assets.jsLibraryUrl}"
+            src="{data.pi_flexform.assets.jsLibraryUrl}" />
+    </f:if>
+    <f:if condition="{data.pi_flexform.assets.jsCustomUrl}">
+        <f:asset.script
+            identifier="{data.pi_flexform.assets.jsCustomUrl}"
+            src="{data.pi_flexform.assets.jsCustomUrl}" />
+    </f:if>
+    <f:if condition="{data.pi_flexform.assets.styleUrl}">
+        <f:asset.css
+            identifier="{data.pi_flexform.assets.styleUrl}"
+            href="{data.pi_flexform.assets.styleUrl -> f:format.raw()}" />
+    </f:if>
 </f:section>
+
 <f:section name="renderContent">
     {f:variable(name: 'css', value: ' {data.pi_flexform.containerClass}') -> f:if(condition: data.pi_flexform.containerClass)}
     {f:variable(name: 'css', value: '{css} container-fluid') -> f:if(condition: '{data.pi_flexform.isContainerFluid} == "1"')}

@@ -166,6 +166,27 @@
 			<trans-unit id="container.isContainerFluid">
 				<source>Is bootstrap fluid container</source>
 			</trans-unit>
+			<trans-unit id="container.assets">
+				<source>Assets</source>
+			</trans-unit>
+			<trans-unit id="container.assets.jsLibraryUrl">
+				<source>JS library URL</source>
+			</trans-unit>
+			<trans-unit id="container.assets.jsLibraryUrl.description">
+				<source>The value will be passed to the src attribute from the asset:script view helper.</source>
+			</trans-unit>
+			<trans-unit id="container.assets.jsCustomUrl">
+				<source>JS customization URL</source>
+			</trans-unit>
+			<trans-unit id="container.assets.jsCustomUrl.description">
+				<source>Usually this script holds configuration and initialization code for the library used.</source>
+			</trans-unit>
+			<trans-unit id="container.assets.styleUrl">
+				<source>Style URL</source>
+			</trans-unit>
+			<trans-unit id="container.assets.styleUrl.description">
+				<source>The value will be passed to the href attribute from the asset:css view helper.</source>
+			</trans-unit>
 
 			<trans-unit id="columns.twoColumnTitle">
 				<source>2 Columns</source>

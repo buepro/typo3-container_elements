@@ -7,7 +7,7 @@
         <sDEF>
             <ROOT type="array">
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:options</sheetTitle>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el type="array">
@@ -74,5 +74,48 @@
                 </el>
             </ROOT>
         </sDEF>
+        <sAssets>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <assets.jsLibraryUrl type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsLibraryUrl</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsLibraryUrl.description</description>
+                            <config type="array">
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <size>60</size>
+                            </config>
+                        </TCEforms>
+                    </assets.jsLibraryUrl>
+                    <assets.jsCustomUrl type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsCustomUrl</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsCustomUrl.description</description>
+                            <config type="array">
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <size>60</size>
+                            </config>
+                        </TCEforms>
+                    </assets.jsCustomUrl>
+                    <assets.styleUrl type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.styleUrl</label>
+                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.styleUrl.description</description>
+                            <config type="array">
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <size>60</size>
+                            </config>
+                        </TCEforms>
+                    </assets.styleUrl>
+                </el>
+            </ROOT>
+        </sAssets>
     </sheets>
 </T3DataStructure>
