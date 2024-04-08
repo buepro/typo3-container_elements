@@ -9,7 +9,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'Container elements',
-    'description'      => 'Provides content elements powered by container and bootstrap. Available elements: container, columns, grid, tabs, accordion, tile unit, card and randomizer.',
+    'description'      => 'Provides content elements powered by container and bootstrap. Available elements: container, columns, grid, tabs, accordion, tile unit, card, randomizer and slider.',
     'category'         => 'misc',
     'version'          => '5.2.0-dev',
     'state'            => 'stable',

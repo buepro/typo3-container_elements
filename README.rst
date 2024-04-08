@@ -29,7 +29,7 @@ TYPO3 extension ``container_elements``
 This extension provides elements to further structure the website content area by using the
 `extension container <https://extensions.typo3.org/extension/container/>`__ and the
 `bootstrap framework <https://getbootstrap.com/>`__. Currently the following elements are available: container,
-columns, grid, register, accordion, tile unit, card and randomizer. A demo can be found at
+columns, grid, register, accordion, tile unit, card, randomizer and slider. A demo can be found at
 `pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__.
 
 :Repository:  https://github.com/buepro/typo3-container_elements

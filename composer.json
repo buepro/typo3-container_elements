@@ -1,7 +1,7 @@
 {
     "name": "buepro/typo3-container-elements",
     "type": "typo3-cms-extension",
-    "description": "TYPO3 extension providing content elements powered by container and bootstrap. Available elements: container, columns, tabs, accordion, tile unit, card and randomizer.",
+    "description": "TYPO3 extension providing content elements powered by container and bootstrap. Available elements: container, columns, tabs, accordion, tile unit, card, randomizer and slider.",
     "keywords": [
         "TYPO3 CMS",
         "container",
