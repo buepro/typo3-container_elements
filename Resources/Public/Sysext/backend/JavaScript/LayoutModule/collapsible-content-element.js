@@ -28,11 +28,13 @@
     }
     document.querySelectorAll('.ce-collapse').forEach((el) => {
         el.addEventListener('show.bs.collapse', (e) => {
+            e.stopPropagation();
             const id = e.target.dataset.ceId;
             document.getElementById('ce-header-title-' + id).classList.remove('cec-collapsed');
             collapsedIds.remove(id);
         });
         el.addEventListener('hide.bs.collapse', (e) => {
+            e.stopPropagation();
             const id = e.target.dataset.ceId;
             document.getElementById('ce-header-title-' + id).classList.add('cec-collapsed');
             collapsedIds.add(id);
