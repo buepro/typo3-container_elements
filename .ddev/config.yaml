@@ -1,7 +1,7 @@
 name: container-elements
 type: typo3
 docroot: .build/public
-php_version: "8.1"
+php_version: "8.2"
 webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -17,7 +17,6 @@ use_dns_when_possible: true
 timezone: Europe/Zurich
 composer_version: "2"
 web_environment:
-- PATH=/var/www/html/.build/bin:$PATH
 - TYPO3_CONTEXT=Development
 - typo3DatabaseHost=db
 - typo3DatabaseName=t3func
