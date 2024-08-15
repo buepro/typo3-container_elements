@@ -79,7 +79,6 @@ lib.containerElements {
         select {
             uidInList {
                 field = uid
-                override.field = l18n_parent
             }
             pidInList = 0
         }
