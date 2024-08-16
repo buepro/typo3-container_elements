@@ -21,10 +21,7 @@ defined('TYPO3') or die('Access denied.');
     /**
      * @link https://github.com/b13/container/issues/272
      */
-    if (
-        (bool) ($containerElementsConfiguration['collapsibleContentElements'] ?? false) &&
-        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class)->getMajorVersion() >= 12
-    ) {
+    if ((bool) ($containerElementsConfiguration['collapsibleContentElements'] ?? false)) {
         $backendPartialsPath = 'EXT:container_elements/Sysext/backend/Resources/Private/Partials';
         foreach ($GLOBALS['TCA']['tt_content']['containerConfiguration'] as &$config) {
             if (!isset(array_flip($config['gridPartialPaths'])[$backendPartialsPath])) {

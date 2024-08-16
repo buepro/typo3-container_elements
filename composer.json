@@ -28,7 +28,7 @@
         "typo3/cms-core": "^12.4 || ^13.3"
     },
 	"conflict": {
-		"buepro/typo3-pizpalue": "<13"
+		"buepro/typo3-pizpalue": "<17"
 	},
     "replace": {
         "typo3-ter/container-elements": "self.version"

@@ -23,7 +23,7 @@ $EM_CONF[$_EXTKEY] = [
             'pvh'           => '3.0.0-3.99.99'
         ],
         'conflicts' => [
-            'pizpalue'      => '0.0.0-12.99.99'
+            'pizpalue'      => '0.0.0-16.99.99'
         ],
     ],
     'autoload' => [
