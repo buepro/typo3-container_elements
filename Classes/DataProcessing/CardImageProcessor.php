@@ -34,9 +34,13 @@ class CardImageProcessor extends \TYPO3\CMS\Frontend\DataProcessing\FilesProcess
         if (!$this->isContainerElement($processedData)) {
             return $processedData;
         }
+        /** @extensionScannerIgnoreLine */
         $data = $cObj->data;
+        /** @extensionScannerIgnoreLine */
         $cObj->data['flexform_imageReference'] = $processedData['data']['pi_flexform']['flexform_imageReference'] ?? null;
+        /** @extensionScannerIgnoreLine */
         $result = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);
+        /** @extensionScannerIgnoreLine */
         $cObj->data = $data;
         return $result;
     }

@@ -206,6 +206,8 @@ class ClassesUpdate implements UpgradeWizardInterface
                 }
             }
         }
+        /** @todo For TYPO3 v13 change to `return $this->flexFormTools->flexArray2Xml($flexformData);` */
+        /** @extensionScannerIgnoreLine */
         return $this->flexFormTools->flexArray2Xml($flexformData, true);
     }
 
