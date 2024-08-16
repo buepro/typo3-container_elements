@@ -51,7 +51,6 @@ columns, grid, register, accordion, tile unit, card and randomizer. A demo can b
    Configuration/01_Index
    User/01_Index
    Changelog/01_Index
-   Develop/01_Index
 
 .. Meta Menu
 
