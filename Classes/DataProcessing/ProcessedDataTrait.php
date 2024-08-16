@@ -15,4 +15,9 @@ trait ProcessedDataTrait
     {
         return substr($processedData['data']['CType'] ?? '', 0, 3) === 'ce_';
     }
+
+    protected function isColumnElement(array $processedData): bool
+    {
+        return substr($processedData['data']['CType'] ?? '', 0, 10) === 'ce_columns';
+    }
 }

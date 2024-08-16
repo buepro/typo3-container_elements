@@ -2,17 +2,22 @@
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{f:variable(name: 'css', value: ' {data.pi_flexform.row.class}') -> f:if(condition: data.pi_flexform.row.class)}
-{f:variable(name: 'colCount', value: ceAspect.childrenCount)}
+{f:variable(name: '_css', value: ' {data.pi_flexform.row.class}') -> f:if(condition: data.pi_flexform.row.class)}
+{f:variable(name: '_colCount', value: ceAspect.columnCount)}
+{f:variable(name: '_renderEmptyColumns', value: ceAspect.renderEmptyColumns)}
 {f:variable(name: '_columns', value: data.pi_flexform.columns)}
-<div class="row{css}">
+<div class="row{_css}">
     {f:render(partial: 'CeColumn', arguments: '{content: children_101, column: _columns.1,
-        breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount}') -> f:if(condition: children_101)}
+        breakpoint: _columns.breakpoint, collapse: collapse, colCount: _colCount}')
+        -> f:if(condition: '{children_101} || ({_renderEmptyColumns} && {_colCount} > 0)')}
     {f:render(partial: 'CeColumn', arguments: '{content: children_102, column: _columns.2,
-        breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount}') -> f:if(condition: children_102)}
+        breakpoint: _columns.breakpoint, collapse: collapse, colCount: _colCount}')
+        -> f:if(condition: '{children_102} || ({_renderEmptyColumns} && {_colCount} > 1)')}
     {f:render(partial: 'CeColumn', arguments: '{content: children_103, column: _columns.3,
-        breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount}') -> f:if(condition: children_103)}
+        breakpoint: _columns.breakpoint, collapse: collapse, colCount: _colCount}')
+        -> f:if(condition: '{children_103} || ({_renderEmptyColumns} && {_colCount} > 2)')}
     {f:render(partial: 'CeColumn', arguments: '{content: children_104, column: _columns.4,
-        breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount}') -> f:if(condition: children_104)}
+        breakpoint: _columns.breakpoint, collapse: collapse, colCount: _colCount}')
+        -> f:if(condition: '{children_104} || ({_renderEmptyColumns} && {_colCount} > 3)')}
 </div>
 </html>

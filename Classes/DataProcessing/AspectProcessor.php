@@ -44,15 +44,41 @@ class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessor
         if ($variableName === '') {
             $variableName = 'ceAspect';
         }
-        $children = array_filter($processedData, static function (string $key): bool {
-            return strpos($key, 'children_') !== false;
-        }, ARRAY_FILTER_USE_KEY);
-
+        $childrenCount = $this->getChildrenCount($processedData);
         $processedData[$variableName] = [
-            'childrenCount' => count($children),
+            'childrenCount' => $childrenCount,
             'pizpalueMainVersion' => $this->getPizpalueMainVersion(),
         ];
+        if ($this->isColumnElement($processedData)) {
+            $renderEmptyColumns = $this->renderEmptyColumns();
+            $columnCount = $childrenCount;
+            if ($renderEmptyColumns) {
+                $columnCount = (int)substr($processedData['data']['CType'] ?? '', 10, 1);
+            }
+            $processedData[$variableName]['columnCount'] = $columnCount;
+            $processedData[$variableName]['renderEmptyColumns'] = $renderEmptyColumns;
+        }
         return $processedData;
+    }
+
+    private function getChildrenCount(array $processedData): int
+    {
+        $childrenContentElements = array_filter($processedData, static function (string $key): bool {
+            return strpos($key, 'children_') !== false;
+        }, ARRAY_FILTER_USE_KEY);
+        return count($childrenContentElements);
+    }
+
+    private function renderEmptyColumns(): bool
+    {
+        $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+        );
+        $config = $extensionConfiguration->get('container_elements');
+        if (!is_array($config)) {
+            return false;
+        }
+        return (bool)($config['renderEmptyColumns'] ?? false);
     }
 
     /**

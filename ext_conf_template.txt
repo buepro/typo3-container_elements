@@ -1,2 +1,5 @@
 # cat=Backend; type=boolean; label=Enable collapsible content elements
 collapsibleContentElements = 1
+
+# cat=Frontend; type=boolean; label=Render empty columns in column content elements
+renderEmptyColumns = 0

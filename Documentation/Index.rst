@@ -48,6 +48,7 @@ columns, grid, register, accordion, tile unit, card and randomizer. A demo can b
 
    Introduction/01_Index
    Administration/01_Index
+   Configuration/01_Index
    User/01_Index
    Changelog/01_Index
    Develop/01_Index

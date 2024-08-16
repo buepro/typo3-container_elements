@@ -113,7 +113,7 @@ class AccordionTest extends FunctionalFrontendTestCase
         return $result;
     }
 
-    public function activeItemIndexDataProvider(): array
+    public static function activeItemIndexDataProvider(): array
     {
         return [
             'all inactive' => [0, []],

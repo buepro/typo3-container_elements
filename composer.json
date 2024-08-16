@@ -24,7 +24,7 @@
     ],
     "require": {
         "b13/container": "^2.2.1",
-        "buepro/typo3-pvh": "^2.0.0",
+        "buepro/typo3-pvh": "^2.0.0 || ^3.0.0",
         "typo3/cms-core": "^11.5.1 || ^12.4"
     },
 	"conflict": {
@@ -34,7 +34,7 @@
         "typo3-ter/container-elements": "self.version"
     },
     "require-dev": {
-        "buepro/typo3-pizpalue": "^15",
+        "buepro/typo3-pizpalue": "^16",
         "ergebnis/composer-normalize": "^2.15.0",
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "friendsoftypo3/phpstan-typo3": "^0.9.0",
