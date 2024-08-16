@@ -16,9 +16,11 @@ use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Install\Attribute\UpgradeWizard;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
+#[UpgradeWizard('ClassesUpdate')]
 class ClassesUpdate implements UpgradeWizardInterface
 {
     /**
@@ -84,14 +86,6 @@ class ClassesUpdate implements UpgradeWizardInterface
     public function __construct()
     {
         $this->flexFormTools = GeneralUtility::makeInstance(FlexFormTools::class);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getIdentifier(): string
-    {
-        return self::class;
     }
 
     /**

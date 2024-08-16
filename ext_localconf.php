@@ -72,10 +72,4 @@ defined('TYPO3') || die('Access denied.');
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
         ['container_elements'] = \Buepro\ContainerElements\Hooks\DataHandlerHook::class;
     }
-
-    /**
-     * Upgrade wizard steps
-     */
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\Buepro\ContainerElements\Updates\ClassesUpdate::class]
-        = \Buepro\ContainerElements\Updates\ClassesUpdate::class;
 })();
