@@ -23,9 +23,9 @@
         }
     ],
     "require": {
-        "b13/container": "^2.2.1",
-        "buepro/typo3-pvh": "^2.0.0 || ^3.0.0",
-        "typo3/cms-core": "^11.5.1 || ^12.4"
+        "b13/container": "^2.3.6 || dev-master",
+        "buepro/typo3-pvh": "^3.0.0",
+        "typo3/cms-core": "^12.4 || ^13.3"
     },
 	"conflict": {
 		"buepro/typo3-pizpalue": "<13"
@@ -62,7 +62,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "5.3.x-dev"
+            "dev-main": "6.0.x-dev"
         },
         "typo3/cms": {
             "app-dir": ".build",

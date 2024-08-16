@@ -13,8 +13,8 @@ Requirements
 ============= ====================
 Component     Version
 ============= ====================
-TYPO3         11.5.x, 12.3
-container     2.2.1
+TYPO3         12.4, 13.3
+container     2.3.6
 ============= ====================
 
 Compatibility
@@ -23,7 +23,7 @@ Compatibility
 ============= ====================
 Component     Version
 ============= ====================
-pizpalue      15
+pizpalue      17
 bootstrap     5
 ============= ====================
 
