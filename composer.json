@@ -109,35 +109,8 @@
             "@ci:php:stan",
             "@ci:php:lint"
         ],
-        "ddev:uninstall": [
-            "ddev composer typo3cms:database:export",
-            "ddev delete",
-            "rm -rf .build/"
-        ],
-        "ddev:install": [
-            "mkdir -p .build/public/typo3conf",
-            "ddev start",
-            "ddev composer install",
-            "ddev composer site:install",
-            "ddev launch typo3",
-            "echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
-        ],
         "fix:php:cs": [
             "php-cs-fixer --diff -v fix"
-        ],
-        "site:install": [
-            "@typo3cms:install:setup",
-            "@typo3cms:database:import"
-        ],
-        "typo3cms:database:export": [
-            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
-            "ls -l Build/site/db.sql.gz"
-        ],
-        "typo3cms:database:import": [
-            "gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
-        ],
-        "typo3cms:install:setup": [
-            ".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='container-elements dev' --web-server-config='apache'"
         ]
     },
     "support": {
