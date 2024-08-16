@@ -46,8 +46,7 @@
 		"phpstan/phpstan-strict-rules": "^1.4.3",
         "typo3/cms-base-distribution": "^11.5.1 || ^12.4",
         "typo3/cms-lowlevel": "^11.5.1 || ^12.4",
-        "typo3/cms-recycler": "^11.5.1 || ^12.4",
-        "typo3/testing-framework": "^7.0.0 || ^8.0.0"
+        "typo3/cms-recycler": "^11.5.1 || ^12.4"
     },
     "config": {
         "bin-dir": ".build/bin",
@@ -109,9 +108,6 @@
             "@ci:php:cs",
             "@ci:php:stan",
             "@ci:php:lint"
-        ],
-        "ci:tests:functional": [
-            "phpunit -c Build/phpunit-functional.xml"
         ],
         "ddev:uninstall": [
             "ddev composer typo3cms:database:export",

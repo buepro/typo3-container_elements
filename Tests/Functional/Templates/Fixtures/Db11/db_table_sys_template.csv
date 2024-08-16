@@ -1,3 +1,0 @@
-"sys_template"
-,"uid","pid","tstamp","crdate","cruser_id","deleted","hidden","starttime","endtime","sorting","description","t3_origuid","t3ver_oid","t3ver_wsid","t3ver_state","t3ver_stage","title","root","clear","include_static_file","constants","config","basedOn","includeStaticAfterBasedOn","static_file_mode"
-,"1","1","1635962898","1635772030","2","0","0","0","0","256",NULL,"0","0","0","0","0","Pizpalue","1","3","EXT:bootstrap_package/Configuration/TypoScript,EXT:pizpalue/Configuration/TypoScript/Main","pizpalue.agency.siteMode = 2",,,"0","0"

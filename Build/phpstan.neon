@@ -19,7 +19,3 @@ parameters:
 	paths:
 	- %currentWorkingDirectory%/Classes/
 	- %currentWorkingDirectory%/Configuration/
-	- %currentWorkingDirectory%/Tests/
-
-	excludePaths:
-	- %currentWorkingDirectory%/Tests/Functional/

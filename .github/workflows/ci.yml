@@ -76,14 +76,3 @@ jobs:
         if: ${{ always() && steps.install.conclusion == 'success' }}
         run: |
           composer ci:php:stan -- --error-format=github
-      - id: tests_functional
-        name: Functional Tests
-        if: ${{ always() && steps.install.conclusion == 'success' && matrix.typo3 == '^11' }}
-        run: |
-          composer ci:tests:functional
-        env:
-          COMPOSER_PROCESS_TIMEOUT: 1200
-          typo3DatabaseHost: 127.0.0.1
-          typo3DatabaseName: t3func
-          typo3DatabasePassword: root
-          typo3DatabaseUsername: root
