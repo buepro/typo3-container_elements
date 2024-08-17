@@ -1,7 +1,10 @@
 {
     "name": "buepro/typo3-container-elements",
-    "type": "typo3-cms-extension",
     "description": "TYPO3 extension providing content elements powered by container and bootstrap. Available elements: container, columns, tabs, accordion, tile unit, card, randomizer and slider.",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3 CMS",
         "container",
@@ -9,10 +12,6 @@
         "structure",
         "element",
         "pizpalue"
-    ],
-    "homepage": "https://extensions.typo3.org/extension/container_elements",
-    "license": [
-        "GPL-2.0-or-later"
     ],
     "authors": [
         {
@@ -22,42 +21,61 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://extensions.typo3.org/extension/container_elements",
+    "support": {
+        "issues": "https://github.com/buepro/typo3-container_elements/issues",
+        "source": "https://github.com/buepro/typo3-container_elements",
+        "docs": "https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/"
+    },
     "require": {
         "b13/container": "^2.3.6 || dev-master",
-        "buepro/typo3-pvh": "^3.0.0",
-        "typo3/cms-core": "^12.4 || ^13.3"
+        "buepro/typo3-pvh": "^3.0.0@dev",
+        "typo3/cms-core": "^12.4 || ^13.2"
     },
-	"conflict": {
-		"buepro/typo3-pizpalue": "<17"
-	},
+    "require-dev": {
+        "bk2k/bootstrap-package": "^14.0.7 || ^15.0.0@dev",
+        "buepro/typo3-pizpalue": "^17@dev",
+        "ergebnis/composer-normalize": "^2.43.0",
+        "friendsofphp/php-cs-fixer": "^3.62.0",
+        "friendsoftypo3/phpstan-typo3": "^0.9.0",
+        "overtrue/phplint": "^9.4.1",
+        "phpspec/prophecy-phpunit": "^2.2.0",
+        "phpstan/phpstan": "^1.11.10",
+        "phpstan/phpstan-deprecation-rules": "^1.2.0",
+        "phpstan/phpstan-phpunit": "^1.4.0",
+        "phpstan/phpstan-strict-rules": "^1.6.0",
+        "typo3/cms-base-distribution": "^12.4 || ^13.1",
+        "typo3/cms-core": "^12.4",
+        "typo3/cms-lowlevel": "^12.4 || ^13.2",
+        "typo3/cms-recycler": "^12.4 || ^13.2"
+    },
     "replace": {
         "typo3-ter/container-elements": "self.version"
     },
-    "require-dev": {
-        "buepro/typo3-pizpalue": "^16",
-        "ergebnis/composer-normalize": "^2.15.0",
-        "friendsofphp/php-cs-fixer": "^3.0.0",
-        "friendsoftypo3/phpstan-typo3": "^0.9.0",
-		"overtrue/phplint": "^3.2.0 || ^4.3.0 || ^5.3.0",
-		"phpspec/prophecy-phpunit": "^2.0",
-		"phpstan/phpstan": "^1.8.5",
-		"phpstan/phpstan-deprecation-rules": "^1.0.0",
-		"phpstan/phpstan-phpunit": "^1.1.1",
-		"phpstan/phpstan-strict-rules": "^1.4.3",
-        "typo3/cms-base-distribution": "^11.5.1 || ^12.4",
-        "typo3/cms-lowlevel": "^11.5.1 || ^12.4",
-        "typo3/cms-recycler": "^11.5.1 || ^12.4"
+    "conflict": {
+        "buepro/typo3-pizpalue": "<17"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Buepro\\ContainerElements\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Buepro\\ContainerElements\\Tests\\": "Tests/"
+        }
     },
     "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
         "bin-dir": ".build/bin",
         "optimize-autoloader": true,
         "sort-packages": true,
-        "vendor-dir": ".build/vendor",
-        "allow-plugins": {
-            "typo3/class-alias-loader": true,
-            "typo3/cms-composer-installers": true,
-            "ergebnis/composer-normalize": true
-        }
+        "vendor-dir": ".build/vendor"
     },
     "extra": {
         "branch-alias": {
@@ -69,18 +87,6 @@
             "web-dir": ".build/public"
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Buepro\\ContainerElements\\": "Classes/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Buepro\\ContainerElements\\Tests\\": "Tests/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
             "[ -d .build/public/_assets ] || mkdir -p .build/public/typo3conf/ext/",
@@ -109,13 +115,12 @@
             "@ci:php:stan",
             "@ci:php:lint"
         ],
+        "fix:composer:normalize": "@composer normalize",
         "fix:php:cs": [
             "php-cs-fixer --diff -v fix"
+        ],
+        "fix:php:stan": [
+            "phpstan analyze --level max --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
         ]
-    },
-    "support": {
-        "issues": "https://github.com/buepro/typo3-container_elements/issues",
-        "source": "https://github.com/buepro/typo3-container_elements",
-        "docs": "https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/"
     }
 }
