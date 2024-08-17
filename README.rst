@@ -35,3 +35,12 @@ columns, grid, register, accordion, tile unit, card, randomizer and slider. A de
 :Repository:  https://github.com/buepro/typo3-container_elements
 :Read online: https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/
 :TER:         https://extensions.typo3.org/extension/container_elements
+
+----
+
+**Credits**
+
+This extension can be provided thanks to generous support from partners. A big
+thanks goes to:
+
+-  `PopNet Informatik AG <https://www.popnet.ch/>`__

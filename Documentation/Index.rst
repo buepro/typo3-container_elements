@@ -41,6 +41,15 @@ columns, grid, register, accordion, tile unit, card and randomizer. A demo can b
 
 ----
 
+**Credits**
+
+This extension can be provided thanks to generous support from partners. A big
+thanks goes to:
+
+-  `PopNet Informatik AG <https://www.popnet.ch/>`__
+
+----
+
 **Table of content**
 
 .. toctree::
