@@ -20,7 +20,7 @@ use TYPO3\CMS\Install\Attribute\UpgradeWizard;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
-#[UpgradeWizard('ClassesUpdate')]
+#[UpgradeWizard('ceClassesUpdate')]
 class ClassesUpdate implements UpgradeWizardInterface
 {
     /**
