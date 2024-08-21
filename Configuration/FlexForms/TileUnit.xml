@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
-<meta>
-    <langDisable>1</langDisable>
-</meta>
-<sheets>
-    <sDEF>
-        <ROOT type="array">
-            <TCEforms>
-                <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.sheet.columns</sheetTitle>
-            </TCEforms>
-            <type>array</type>
-            <el type="array">
-                <columnsDistribution>
-                    <TCEforms type="array">
-                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.columnDistribution</label>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT type="array">
+                <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.sheet.columns
+                </sheetTitle>
+                <type>array</type>
+                <el type="array">
+                    <columnsDistribution>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.columnDistribution
+                        </label>
                         <config type="array">
                             <type>select</type>
                             <renderType>selectSingle</renderType>
@@ -32,15 +32,15 @@
                                     <numIndex index="1">21</numIndex>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:custom</numIndex>
+                                    <numIndex index="0">
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:custom
+                                    </numIndex>
                                     <numIndex index="1">0</numIndex>
                                 </numIndex>
                             </items>
                         </config>
-                    </TCEforms>
-                </columnsDistribution>
-                <columnsBreakpoint>
-                    <TCEforms type="array">
+                    </columnsDistribution>
+                    <columnsBreakpoint>
                         <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:breakpoint</label>
                         <config type="array">
                             <type>select</type>
@@ -48,51 +48,60 @@
                             <default>md</default>
                             <items type="array">
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:extrasmall</numIndex>
+                                    <numIndex index="0">
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:extrasmall
+                                    </numIndex>
                                     <numIndex index="1">0</numIndex>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:small</numIndex>
+                                    <numIndex index="0">
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:small
+                                    </numIndex>
                                     <numIndex index="1">sm</numIndex>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:medium</numIndex>
+                                    <numIndex index="0">
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:medium
+                                    </numIndex>
                                     <numIndex index="1">md</numIndex>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:large</numIndex>
+                                    <numIndex index="0">
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:large
+                                    </numIndex>
                                     <numIndex index="1">lg</numIndex>
                                 </numIndex>
                                 <numIndex index="5" type="array">
-                                    <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:extralarge</numIndex>
+                                    <numIndex index="0">
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:extralarge
+                                    </numIndex>
                                     <numIndex index="1">xl</numIndex>
                                 </numIndex>
                             </items>
                         </config>
-                    </TCEforms>
-                </columnsBreakpoint>
-                <customColumn1 type="array">
-                    <TCEforms type="array">
-                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.customClassColumn1</label>
+                    </columnsBreakpoint>
+                    <customColumn1 type="array">
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.customClassColumn1
+                        </label>
                         <config type="array">
                             <type>input</type>
                             <eval>trim</eval>
                             <size>100</size>
                         </config>
-                    </TCEforms>
-                </customColumn1>
-                <customColumn2 type="array">
-                    <TCEforms type="array">
-                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.customClassColumn2</label>
+                    </customColumn1>
+                    <customColumn2 type="array">
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:tileUnit.customClassColumn2
+                        </label>
                         <config type="array">
                             <type>input</type>
                             <eval>trim</eval>
                             <size>100</size>
                         </config>
-                    </TCEforms>
-                </customColumn2>
-            </el>
-        </ROOT>
-    </sDEF>
-</sheets>
+                    </customColumn2>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
 </T3DataStructure>

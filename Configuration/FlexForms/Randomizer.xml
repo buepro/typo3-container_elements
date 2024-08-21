@@ -6,39 +6,35 @@
     <sheets>
         <sDEF>
             <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:options</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:options</sheetTitle>
                 <type>array</type>
                 <el type="array">
                     <count type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:randomizer.count</label>
-                            <config type="array">
-                                <type>input</type>
-                                <default>1</default>
-                                <size>5</size>
-                                <eval>int</eval>
-                                <range>
-                                    <lower>1</lower>
-                                </range>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:randomizer.count
+                        </label>
+                        <config type="array">
+                            <type>input</type>
+                            <default>1</default>
+                            <size>5</size>
+                            <eval>int</eval>
+                            <range>
+                                <lower>1</lower>
+                            </range>
+                        </config>
                     </count>
                     <shuffle type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:randomizer.shuffle</label>
-                            <config type="array">
-                                <type>check</type>
-                                <default>1</default>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">0</numIndex>
-                                        <numIndex index="1">1</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:randomizer.shuffle
+                        </label>
+                        <config type="array">
+                            <type>check</type>
+                            <default>1</default>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">0</numIndex>
+                                    <numIndex index="1">1</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
                     </shuffle>
                 </el>
             </ROOT>

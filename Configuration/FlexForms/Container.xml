@@ -6,113 +6,118 @@
     <sheets>
         <sDEF>
             <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
                 <type>array</type>
                 <el type="array">
                     <containerClass type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class</label>
-                            <config type="array">
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>30</size>
-                                <valuePicker>
-                                    <mode>append</mode>
-                                    <items type="array">
-                                        <numIndex index="0" type="array">
-                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.content</numIndex>
-                                            <numIndex index="1">container </numIndex>
+                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class
+                        </label>
+                        <config type="array">
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <size>30</size>
+                            <valuePicker>
+                                <mode>append</mode>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.content
                                         </numIndex>
-                                        <numIndex index="1" type="array">
-                                            <numIndex index="0">LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardGroup</numIndex>
-                                            <numIndex index="1">card-group </numIndex>
+                                        <numIndex index="1">container </numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.class.cardGroup
                                         </numIndex>
-                                    </items>
-                                </valuePicker>
-                            </config>
-                        </TCEforms>
+                                        <numIndex index="1">card-group </numIndex>
+                                    </numIndex>
+                                </items>
+                            </valuePicker>
+                        </config>
                     </containerClass>
                     <containerAttribute type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.attribute</label>
-                            <config type="array">
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>30</size>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.attribute
+                        </label>
+                        <config type="array">
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <size>30</size>
+                        </config>
                     </containerAttribute>
                     <isContainerFluid type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.isContainerFluid</label>
-                            <config type="array">
-                                <type>check</type>
-                                <default>0</default>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.isContainerFluid
+                        </label>
+                        <config type="array">
+                            <type>check</type>
+                            <default>0</default>
+                        </config>
                     </isContainerFluid>
                     <wrapSection type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.wrapSection</label>
-                            <config type="array">
-                                <type>check</type>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.wrapSection
+                        </label>
+                        <config type="array">
+                            <type>check</type>
+                        </config>
                     </wrapSection>
                     <sectionClass type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.sectionClass</label>
-                            <config type="array">
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>30</size>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.sectionClass
+                        </label>
+                        <config type="array">
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <size>30</size>
+                        </config>
                     </sectionClass>
                 </el>
             </ROOT>
         </sDEF>
         <sAssets>
             <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets
+                </sheetTitle>
                 <type>array</type>
                 <el type="array">
                     <assets.jsLibraryUrl type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsLibraryUrl</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsLibraryUrl.description</description>
-                            <config type="array">
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>60</size>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsLibraryUrl
+                        </label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsLibraryUrl.description
+                        </description>
+                        <config type="array">
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <size>60</size>
+                        </config>
                     </assets.jsLibraryUrl>
                     <assets.jsCustomUrl type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsCustomUrl</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsCustomUrl.description</description>
-                            <config type="array">
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>60</size>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsCustomUrl
+                        </label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.jsCustomUrl.description
+                        </description>
+                        <config type="array">
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <size>60</size>
+                        </config>
                     </assets.jsCustomUrl>
                     <assets.styleUrl type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.styleUrl</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.styleUrl.description</description>
-                            <config type="array">
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>60</size>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.styleUrl
+                        </label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:container.assets.styleUrl.description
+                        </description>
+                        <config type="array">
+                            <type>input</type>
+                            <eval>trim</eval>
+                            <size>60</size>
+                        </config>
                     </assets.styleUrl>
                 </el>
             </ROOT>

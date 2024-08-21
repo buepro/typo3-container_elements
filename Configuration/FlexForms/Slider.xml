@@ -6,98 +6,101 @@
     <sheets>
         <sGeneral>
             <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:general</sheetTitle>
                 <type>array</type>
                 <el type="array">
                     <showPagination type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.showPagination</label>
-                            <config type="array">
-                                <type>check</type>
-                                <renderType>checkboxToggle</renderType>
-                                <default>0</default>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0"></numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.showPagination
+                        </label>
+                        <config type="array">
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <default>0</default>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0"></numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
                     </showPagination>
                     <showNavigation type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.showNavigation</label>
-                            <config type="array">
-                                <type>check</type>
-                                <renderType>checkboxToggle</renderType>
-                                <default>0</default>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0"></numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.showNavigation
+                        </label>
+                        <config type="array">
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <default>0</default>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0"></numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
                     </showNavigation>
                     <decoupleControls type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.decoupleControls</label>
-                            <config type="array">
-                                <type>check</type>
-                                <renderType>checkboxToggle</renderType>
-                                <default>0</default>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.decoupleControls
+                        </label>
+                        <config type="array">
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <default>0</default>
+                        </config>
                     </decoupleControls>
                     <slidesWrapperClasses type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses.description</description>
-                            <config type="array">
-                                <type>input</type>
-                                <default>ce-slides-wrapper swiper-wrapper</default>
-                                <eval>trim</eval>
-                                <size>50</size>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses
+                        </label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slidesWrapperClasses.description
+                        </description>
+                        <config type="array">
+                            <type>input</type>
+                            <default>ce-slides-wrapper swiper-wrapper</default>
+                            <eval>trim</eval>
+                            <size>50</size>
+                        </config>
                     </slidesWrapperClasses>
                     <slideDefaultClasses type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideDefaultClasses</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideDefaultClasses.description</description>
-                            <config type="array">
-                                <type>input</type>
-                                <default>ce-slide swiper-slide</default>
-                                <eval>trim</eval>
-                                <size>50</size>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideDefaultClasses
+                        </label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideDefaultClasses.description
+                        </description>
+                        <config type="array">
+                            <type>input</type>
+                            <default>ce-slide swiper-slide</default>
+                            <eval>trim</eval>
+                            <size>50</size>
+                        </config>
                     </slideDefaultClasses>
                     <slideClasses type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideClasses</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideClasses.description</description>
-                            <config type="array">
-                                <type>text</type>
-                                <renderType>t3editor</renderType>
-                                <cols>40</cols>
-                                <rows>10</rows>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideClasses
+                        </label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.slideClasses.description
+                        </description>
+                        <config type="array">
+                            <type>text</type>
+                            <renderType>t3editor</renderType>
+                            <cols>40</cols>
+                            <rows>10</rows>
+                        </config>
                     </slideClasses>
                     <config type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config</label>
-                            <description>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config.description</description>
-                            <config type="array">
-                                <type>text</type>
-                                <renderType>t3editor</renderType>
-                                <cols>40</cols>
-                                <rows>10</rows>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config</label>
+                        <description>
+                            LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:slider.config.description
+                        </description>
+                        <config type="array">
+                            <type>text</type>
+                            <renderType>t3editor</renderType>
+                            <cols>40</cols>
+                            <rows>10</rows>
+                        </config>
                     </config>
                 </el>
             </ROOT>
