@@ -17,11 +17,6 @@
                             <type>check</type>
                             <renderType>checkboxToggle</renderType>
                             <default>0</default>
-                            <items type="array">
-                                <numIndex index="0" type="array">
-                                    <numIndex index="0"></numIndex>
-                                </numIndex>
-                            </items>
                         </config>
                     </showPagination>
                     <showNavigation type="array">
@@ -32,11 +27,6 @@
                             <type>check</type>
                             <renderType>checkboxToggle</renderType>
                             <default>0</default>
-                            <items type="array">
-                                <numIndex index="0" type="array">
-                                    <numIndex index="0"></numIndex>
-                                </numIndex>
-                            </items>
                         </config>
                     </showNavigation>
                     <decoupleControls type="array">

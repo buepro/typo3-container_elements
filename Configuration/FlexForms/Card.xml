@@ -25,28 +25,28 @@
                             <default>h3</default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">H1</numIndex>
-                                    <numIndex index="1">h1</numIndex>
+                                    <label>H1</label>
+                                    <value>h1</value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">H2</numIndex>
-                                    <numIndex index="1">h2</numIndex>
+                                    <label>H2</label>
+                                    <value>h2</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">H3</numIndex>
-                                    <numIndex index="1">h3</numIndex>
+                                    <label>H3</label>
+                                    <value>h3</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">H4</numIndex>
-                                    <numIndex index="1">h4</numIndex>
+                                    <label>H4</label>
+                                    <value>h4</value>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">H5</numIndex>
-                                    <numIndex index="1">h5</numIndex>
+                                    <label>H5</label>
+                                    <value>h5</value>
                                 </numIndex>
                                 <numIndex index="5" type="array">
-                                    <numIndex index="0">H6</numIndex>
-                                    <numIndex index="1">h6</numIndex>
+                                    <label>H6</label>
+                                    <value>h6</value>
                                 </numIndex>
                             </items>
                         </config>
@@ -60,34 +60,34 @@
                             <default></default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:none
-                                    </numIndex>
-                                    <numIndex index="1"></numIndex>
+                                    </label>
+                                    <value></value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">H1</numIndex>
-                                    <numIndex index="1">h1</numIndex>
+                                    <label>H1</label>
+                                    <value>h1</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">H2</numIndex>
-                                    <numIndex index="1">h2</numIndex>
+                                    <label>H2</label>
+                                    <value>h2</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">H3</numIndex>
-                                    <numIndex index="1">h3</numIndex>
+                                    <label>H3</label>
+                                    <value>h3</value>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">H4</numIndex>
-                                    <numIndex index="1">h4</numIndex>
+                                    <label>H4</label>
+                                    <value>h4</value>
                                 </numIndex>
                                 <numIndex index="5" type="array">
-                                    <numIndex index="0">H5</numIndex>
-                                    <numIndex index="1">h5</numIndex>
+                                    <label>H5</label>
+                                    <value>h5</value>
                                 </numIndex>
                                 <numIndex index="6" type="array">
-                                    <numIndex index="0">H6</numIndex>
-                                    <numIndex index="1">h6</numIndex>
+                                    <label>H6</label>
+                                    <value>h6</value>
                                 </numIndex>
                             </items>
                         </config>
@@ -101,28 +101,28 @@
                             <default></default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:default
-                                    </numIndex>
-                                    <numIndex index="1"></numIndex>
+                                    </label>
+                                    <value></value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:left
-                                    </numIndex>
-                                    <numIndex index="1">left</numIndex>
+                                    </label>
+                                    <value>left</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:center
-                                    </numIndex>
-                                    <numIndex index="1">center</numIndex>
+                                    </label>
+                                    <value>center</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:right
-                                    </numIndex>
-                                    <numIndex index="1">right</numIndex>
+                                    </label>
+                                    <value>right</value>
                                 </numIndex>
                             </items>
                         </config>
@@ -153,22 +153,22 @@
                             <default></default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:none
-                                    </numIndex>
-                                    <numIndex index="1"></numIndex>
+                                    </label>
+                                    <value></value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:header
-                                    </numIndex>
-                                    <numIndex index="1">header</numIndex>
+                                    </label>
+                                    <value>header</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:footer
-                                    </numIndex>
-                                    <numIndex index="1">footer</numIndex>
+                                    </label>
+                                    <value>footer</value>
                                 </numIndex>
                             </items>
                         </config>
@@ -284,34 +284,34 @@
                             <default>top</default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:top
-                                    </numIndex>
-                                    <numIndex index="1">top</numIndex>
+                                    </label>
+                                    <value>top</value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:bottom
-                                    </numIndex>
-                                    <numIndex index="1">bottom</numIndex>
+                                    </label>
+                                    <value>bottom</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:left
-                                    </numIndex>
-                                    <numIndex index="1">left</numIndex>
+                                    </label>
+                                    <value>left</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:right
-                                    </numIndex>
-                                    <numIndex index="1">right</numIndex>
+                                    </label>
+                                    <value>right</value>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:below
-                                    </numIndex>
-                                    <numIndex index="1">below</numIndex>
+                                    </label>
+                                    <value>below</value>
                                 </numIndex>
                             </items>
                         </config>

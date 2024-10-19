@@ -20,22 +20,22 @@
                             <default>11</default>
                             <items type="array">
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">33% | 67%</numIndex>
-                                    <numIndex index="1">12</numIndex>
+                                    <label>33% | 67%</label>
+                                    <value>12</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">50% | 50%</numIndex>
-                                    <numIndex index="1">11</numIndex>
+                                    <label>50% | 50%</label>
+                                    <value>11</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">67% | 33%</numIndex>
-                                    <numIndex index="1">21</numIndex>
+                                    <label>67% | 33%</label>
+                                    <value>21</value>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:custom
-                                    </numIndex>
-                                    <numIndex index="1">0</numIndex>
+                                    </label>
+                                    <value>0</value>
                                 </numIndex>
                             </items>
                         </config>
@@ -48,34 +48,34 @@
                             <default>md</default>
                             <items type="array">
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:extrasmall
-                                    </numIndex>
-                                    <numIndex index="1">0</numIndex>
+                                    </label>
+                                    <value>0</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:small
-                                    </numIndex>
-                                    <numIndex index="1">sm</numIndex>
+                                    </label>
+                                    <value>sm</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:medium
-                                    </numIndex>
-                                    <numIndex index="1">md</numIndex>
+                                    </label>
+                                    <value>md</value>
                                 </numIndex>
                                 <numIndex index="4" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:large
-                                    </numIndex>
-                                    <numIndex index="1">lg</numIndex>
+                                    </label>
+                                    <value>lg</value>
                                 </numIndex>
                                 <numIndex index="5" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:extralarge
-                                    </numIndex>
-                                    <numIndex index="1">xl</numIndex>
+                                    </label>
+                                    <value>xl</value>
                                 </numIndex>
                             </items>
                         </config>

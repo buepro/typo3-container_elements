@@ -28,12 +28,6 @@
                         <config type="array">
                             <type>check</type>
                             <default>1</default>
-                            <items type="array">
-                                <numIndex index="0" type="array">
-                                    <numIndex index="0">0</numIndex>
-                                    <numIndex index="1">1</numIndex>
-                                </numIndex>
-                            </items>
                         </config>
                     </shuffle>
                 </el>

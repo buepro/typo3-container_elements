@@ -17,40 +17,40 @@
                             <default></default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:default
-                                    </numIndex>
-                                    <numIndex index="1"></numIndex>
+                                    </label>
+                                    <value></value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:primary
-                                    </numIndex>
-                                    <numIndex index="1">pp-tabs-primary</numIndex>
+                                    </label>
+                                    <value>pp-tabs-primary</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:secondary
-                                    </numIndex>
-                                    <numIndex index="1">pp-tabs-secondary</numIndex>
+                                    </label>
+                                    <value>pp-tabs-secondary</value>
                                 </numIndex>
                                 <numIndex index="3" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:complementary
-                                    </numIndex>
-                                    <numIndex index="1">pp-tabs-complementary</numIndex>
+                                    </label>
+                                    <value>pp-tabs-complementary</value>
                                 </numIndex>
                                 <numIndex index="11" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:custom
-                                    </numIndex>
-                                    <numIndex index="1">pp-tabs-custom</numIndex>
+                                    </label>
+                                    <value>pp-tabs-custom</value>
                                 </numIndex>
                                 <numIndex index="21" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:legacy
-                                    </numIndex>
-                                    <numIndex index="1">tab-v1</numIndex>
+                                    </label>
+                                    <value>tab-v1</value>
                                 </numIndex>
                             </items>
                         </config>
