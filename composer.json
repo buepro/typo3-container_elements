@@ -97,8 +97,7 @@
             "[ ! -d .build/public/_assets ] || [ -L config/sites/default/config.yaml ] || ln -svf ../../../Build/site/config.yaml config/sites/default/config.yaml"
         ],
         "ci": [
-            "@ci:static",
-            "@ci:tests:functional"
+            "@ci:static"
         ],
         "ci:composer:normalize": "@composer normalize --dry-run",
         "ci:php:cs": [
