@@ -82,7 +82,6 @@
             "dev-main": "6.0.x-dev"
         },
         "typo3/cms": {
-            "app-dir": ".build",
             "extension-key": "container_elements",
             "web-dir": ".build/public"
         }
