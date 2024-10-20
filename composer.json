@@ -29,7 +29,7 @@
     },
     "require": {
         "b13/container": "^3.0.0",
-        "buepro/typo3-pvh": "^3.0.0@dev",
+        "buepro/typo3-pvh": "^3.0.0",
         "typo3/cms-core": "^12.4.22 || ^13.4"
     },
     "require-dev": {
