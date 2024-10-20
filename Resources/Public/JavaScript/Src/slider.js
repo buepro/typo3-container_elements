@@ -3,6 +3,7 @@
         const config = {};
         const uid = slider.dataset.ceUid;
         const userConfig = JSON.parse(slider.dataset.ceConfig);
+
         if ( slider.dataset.ceShowPagination ) {
             config.pagination = {
                 el: '#ce-slider-pagination-' + uid,
@@ -15,6 +16,6 @@
                 prevEl: '#ce-slider-prev-' + uid
             };
         }
-        new Swiper('.ce-slider.swiper', Object.assign(config, userConfig));
+        new Swiper('#ce-slider-' + uid, Object.assign(config, userConfig));
     })
 }());
