@@ -57,7 +57,7 @@ class DataHandlerHook
         ) {
             // Set default pi_flexform values
             $formDataGroup = GeneralUtility::makeInstance(TcaDatabaseRecord::class);
-            $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class, $formDataGroup);
+            $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class);
             $formDataCompilerInput = [
                 'command' => 'new',
                 'tableName' => 'tt_content',
@@ -68,7 +68,7 @@ class DataHandlerHook
                     ],
                 ],
             ];
-            $formData = $formDataCompiler->compile($formDataCompilerInput);
+            $formData = $formDataCompiler->compile($formDataCompilerInput, $formDataGroup);
             $incomingFieldArray['pi_flexform'] = $formData['databaseRow']['pi_flexform'];
 
             // Set frame_class to `none` in case this element is nested into another container element

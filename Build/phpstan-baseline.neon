@@ -1,11 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method TYPO3\\\\CMS\\\\Backend\\\\Form\\\\FormDataCompiler\\:\\:compile\\(\\) invoked with 1 parameter, 2 required\\.$#"
-			count: 1
-			path: ../Classes/Hooks/DataHandlerHook.php
-
-		-
 			message: "#^Method TYPO3\\\\CMS\\\\Core\\\\Configuration\\\\FlexForm\\\\FlexFormTools\\:\\:flexArray2Xml\\(\\) invoked with 2 parameters, 1 required\\.$#"
 			count: 1
 			path: ../Classes/Updates/ClassesUpdate.php
