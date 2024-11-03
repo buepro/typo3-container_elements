@@ -59,6 +59,7 @@ class DataHandlerHook
             $formDataGroup = GeneralUtility::makeInstance(TcaDatabaseRecord::class);
             $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class);
             $formDataCompilerInput = [
+                'request' => $GLOBALS['TYPO3_REQUEST'],
                 'command' => 'new',
                 'tableName' => 'tt_content',
                 'vanillaUid' => $incomingFieldArray['pid'],
