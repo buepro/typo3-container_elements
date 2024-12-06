@@ -38,7 +38,6 @@ defined('TYPO3') or die('Access denied.');
             )
         )
         ->setIcon('container-elements-card')
-        ->setBackendTemplate('EXT:container_elements/Resources/Private/Templates/Backend/CeCard.html')
         ->setSaveAndCloseInNewContentElementWizard(true)
     );
 
