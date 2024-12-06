@@ -62,7 +62,7 @@ class DataHandlerHook
                 'request' => $GLOBALS['TYPO3_REQUEST'],
                 'command' => 'new',
                 'tableName' => 'tt_content',
-                'vanillaUid' => $incomingFieldArray['pid'],
+                'vanillaUid' => (int)$incomingFieldArray['pid'],
                 'defaultValues' => [
                     'tt_content' => [
                         'CType' => $incomingFieldArray['CType'],
