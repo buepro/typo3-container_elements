@@ -30,11 +30,10 @@
     "require": {
         "b13/container": "^3.0.0",
         "buepro/typo3-pvh": "^3.1.0",
-        "typo3/cms-core": "^12.4.22 || ^13.4"
+        "typo3/cms-core": "^13.4"
     },
     "require-dev": {
         "bk2k/bootstrap-package": "^15.0.0",
-        "buepro/typo3-pizpalue": "^17@dev",
         "ergebnis/composer-normalize": "^2.43.0",
         "friendsofphp/php-cs-fixer": "^3.62.0",
         "friendsoftypo3/phpstan-typo3": "^0.9.0",
