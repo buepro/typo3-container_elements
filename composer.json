@@ -44,10 +44,9 @@
         "phpstan/phpstan-deprecation-rules": "^1.2.0",
         "phpstan/phpstan-phpunit": "^1.4.0",
         "phpstan/phpstan-strict-rules": "^1.6.0",
-        "typo3/cms-base-distribution": "^12.4 || ^13.4",
-        "typo3/cms-core": "^12.4",
-        "typo3/cms-lowlevel": "^12.4 || ^13.4",
-        "typo3/cms-recycler": "^12.4 || ^13.4"
+        "typo3/cms-base-distribution": "^13.4",
+        "typo3/cms-lowlevel": "^13.4",
+        "typo3/cms-recycler": "^13.4"
     },
     "replace": {
         "typo3-ter/container-elements": "self.version"
@@ -79,7 +78,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "6.0.x-dev"
+            "dev-main": "7.0.x-dev"
         },
         "typo3/cms": {
             "extension-key": "container_elements",

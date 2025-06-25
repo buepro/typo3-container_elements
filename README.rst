@@ -6,10 +6,6 @@
    :alt: TYPO3 13
    :target: https://get.typo3.org/version/13
 
-.. image:: https://img.shields.io/badge/TYPO3-12-orange.svg
-   :alt: TYPO3 12
-   :target: https://get.typo3.org/version/12
-
 .. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/total.svg
    :alt: Total Downloads
    :target: https://packagist.org/packages/buepro/typo3-container-elements

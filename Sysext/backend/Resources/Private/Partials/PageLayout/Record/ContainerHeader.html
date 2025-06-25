@@ -2,7 +2,7 @@
 <f:comment>
     See .build/vendor/typo3/cms-backend/Resources/Private/Partials/PageLayout/RecordDefault/Header.html
 </f:comment>
-<div class="t3-page-ce-header {f:if(condition: '{allowEditContent} && {item.dragAndDropAllowed}', then: 't3-page-ce-header-draggable t3js-page-ce-draghandle')}">
+<div class="t3-page-ce-header t3js-page-ce-header" {f:if(condition: '{allowEditContent} && {item.dragAndDropAllowed}', then: 'draggable="true"')}>
     <div class="t3-page-ce-header-left">
         {item.icons -> f:format.raw()}
         <f:if condition="{item.siteLanguage.flagIdentifier}">
@@ -23,14 +23,14 @@
         <span>{item.contentTypeLabel}</span><span>{_title -> f:format.raw()}</span>
     </div>
     <div class="t3-page-ce-header-right">
-        <div class="btn-toolbar">
-            <div class="btn-group btn-group-sm">
-                <f:if condition="{item.editable} && {allowEditContent}">
-                    <a href="{item.editUrl}" class="btn btn-default btn-borderless" title="{f:translate(key:'LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:edit')}">
+        <f:if condition="{item.editable} && {allowEditContent}">
+            <div class="btn-toolbar">
+                <div class="btn-group btn-group-sm">
+                    <a href="{item.editUrl}" class="btn btn-sm btn-default btn-borderless" title="{f:translate(key:'LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:edit')}">
                         <core:icon identifier="actions-open" />
                     </a>
                     <f:if condition="{item.visibilityToggling}">
-                        <a class="btn btn-default btn-borderless" href="{item.visibilityToggleUrl}" title="{item.visibilityToggleTitle}">
+                        <a class="btn btn-sm btn-default btn-borderless" href="{item.visibilityToggleUrl}" title="{item.visibilityToggleTitle}">
                             <core:icon identifier="actions-edit-{item.visibilityToggleIconName}" />
                         </a>
                     </f:if>
@@ -46,18 +46,20 @@
                             <core:icon identifier="actions-edit-delete" size="small" />
                         </a>
                     </f:if>
-                    <button aria-haspopup="true"
-                            aria-controls="contentMenu0" aria-label="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_layout.xlf:advancedFunctions')}"
-                            class="btn btn-default btn-borderless btn-sm"
+                    <button type="button"
+                            aria-haspopup="true"
+                            aria-controls="contentMenu0"
+                            aria-label="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.contextMenu.open')}"
+                            class="btn btn-sm btn-default btn-borderless"
                             data-contextmenu-trigger="click"
-                            data-contextmenu-table="tt_content"
+                            data-contextmenu-table="{item.table}"
                             data-contextmenu-uid="{item.record.uid}">
                         <core:icon identifier="actions-menu-alternative" />
                     </button>
-                </f:if>
-                <a id="ce-toggler-{item.record.uid}" class="ce-toggler btn btn-default btn-borderless btn-sm" data-bs-toggle="collapse" href="#ce-collapse-{item.record.uid}" role="button" aria-expanded="true" aria-controls="ce-collapse-{item.record.uid}">{core:icon(identifier: 'actions-chevron-bar-up')}</a>
+                    <a id="ce-toggler-{item.record.uid}" class="ce-toggler btn btn-default btn-borderless btn-sm" data-bs-toggle="collapse" href="#ce-collapse-{item.record.uid}" role="button" aria-expanded="true" aria-controls="ce-collapse-{item.record.uid}">{core:icon(identifier: 'actions-chevron-bar-up')}</a>
+                </div>
             </div>
-        </div>
+        </f:if>
     </div>
 </div>
 <f:asset.css identifier="ce-sysext-backend-layoutmodule" href="EXT:container_elements/Resources/Public/Sysext/backend/Css/LayoutModule/collapsible-content-element.css" />
