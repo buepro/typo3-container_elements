@@ -22,6 +22,11 @@
 TYPO3 extension ``container_elements``
 ======================================
 
+    **MAINTAINER WANTED**
+
+    Unfortunately I am missing the time to further care this package.
+    Please get in touch to take over.
+
 This extension provides elements to further structure the website content area by using the
 `extension container <https://extensions.typo3.org/extension/container/>`__ and the
 `bootstrap framework <https://getbootstrap.com/>`__. Currently the following elements are available: container,
