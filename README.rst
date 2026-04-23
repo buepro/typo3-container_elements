@@ -1,22 +1,11 @@
-.. image:: https://poser.pugx.org/buepro/typo3-container-elements/v/stable.svg
-   :alt: Latest Stable Version
-   :target: https://extensions.typo3.org/extension/container-elements/
+.. raw:: html
 
-.. image:: https://img.shields.io/badge/TYPO3-13-orange.svg
-   :alt: TYPO3 13
-   :target: https://get.typo3.org/version/13
-
-.. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/total.svg
-   :alt: Total Downloads
-   :target: https://packagist.org/packages/buepro/typo3-container-elements
-
-.. image:: https://poser.pugx.org/buepro/typo3-container-elements/d/monthly
-   :alt: Monthly Downloads
-   :target: https://packagist.org/packages/buepro/typo3-container-elements
-
-.. image:: https://github.com/buepro/typo3-container_elements/workflows/CI/badge.svg
-   :alt: Continuous Integration Status
-   :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
+   <div style="display: flex;">
+      <img src="https://poser.pugx.org/buepro/typo3-container-elements/v/stable.svg" />
+      <img src="https://img.shields.io/badge/TYPO3-13-orange.svg" />
+      <img src="https://poser.pugx.org/buepro/typo3-container-elements/d/total.svg" />
+      <img src="https://poser.pugx.org/buepro/typo3-container-elements/d/monthly" />
+   </div>
 
 ======================================
 TYPO3 extension ``container_elements``
