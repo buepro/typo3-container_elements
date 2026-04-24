@@ -22,7 +22,7 @@ This extension provides elements to further structure the website content area b
 columns, grid, register, accordion, tile unit, card, randomizer and slider. A demo can be found at
 `pizpalue.buechler.pro <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__.
 
-:Repository:  https://github.com/buepro/typo3-container_elements
+:Repository:  https://codeberg.org/buepro/typo3-container_elements
 :Read online: https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/
 :TER:         https://extensions.typo3.org/extension/container_elements
 

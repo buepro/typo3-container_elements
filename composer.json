@@ -23,8 +23,8 @@
     ],
     "homepage": "https://extensions.typo3.org/extension/container_elements",
     "support": {
-        "issues": "https://github.com/buepro/typo3-container_elements/issues",
-        "source": "https://github.com/buepro/typo3-container_elements",
+        "issues": "https://codeberg.org/buepro/typo3-container_elements/issues",
+        "source": "https://codeberg.org/buepro/typo3-container_elements",
         "docs": "https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/"
     },
     "require": {

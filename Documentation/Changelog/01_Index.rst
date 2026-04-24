@@ -7,7 +7,7 @@
 Changelog
 =========
 
-The project changes can as well be looked up at `Github <https://github.com/buepro/typo3-container_elements/commits/main>`__.
+The project changes can as well be looked up at `Codeberg <https://codeberg.org/buepro/typo3-container_elements/commits/main>`__.
 
 Releases
 ========

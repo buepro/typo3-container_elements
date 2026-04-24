@@ -16,9 +16,6 @@
    :alt: Monthly Downloads
    :target: https://packagist.org/packages/buepro/typo3-container-elements
 
-.. image:: https://github.com/buepro/typo3-container_elements/workflows/CI/badge.svg
-   :alt: Continuous Integration Status
-   :target: https://github.com/buepro/typo3-container_elements/actions?query=workflow%3ACI
 
 .. _introduction:
 
