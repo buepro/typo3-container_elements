@@ -28,24 +28,24 @@
         "docs": "https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/"
     },
     "require": {
-        "b13/container": "^3.0.0",
-        "buepro/typo3-pvh": "^3.1.0",
-        "typo3/cms-core": "^13.4"
+        "b13/container": "^3.2.3",
+        "buepro/typo3-pvh": "^4.0.0@dev",
+        "typo3/cms-core": "^14.3"
     },
     "require-dev": {
-        "bk2k/bootstrap-package": "^15.0.0",
+        "bk2k/bootstrap-package": "^16.0.99@dev",
         "ergebnis/composer-normalize": "^2.43.0",
-        "friendsofphp/php-cs-fixer": "^3.62.0",
-        "friendsoftypo3/phpstan-typo3": "^0.9.0",
-        "overtrue/phplint": "^9.4.1",
-        "phpspec/prophecy-phpunit": "^2.2.0",
-        "phpstan/phpstan": "^1.11.10",
-        "phpstan/phpstan-deprecation-rules": "^1.2.0",
-        "phpstan/phpstan-phpunit": "^1.4.0",
-        "phpstan/phpstan-strict-rules": "^1.6.0",
-        "typo3/cms-base-distribution": "^13.4",
-        "typo3/cms-lowlevel": "^13.4",
-        "typo3/cms-recycler": "^13.4"
+        "friendsofphp/php-cs-fixer": "^3.9.0",
+        "overtrue/phplint": "^9.6.0",
+        "phpspec/prophecy-phpunit": "^2.4.0",
+        "phpstan/phpstan": "^2.1.10",
+        "phpstan/phpstan-deprecation-rules": "^2.0.0",
+        "phpstan/phpstan-phpunit": "^2.0.0",
+        "phpstan/phpstan-strict-rules": "^2.0.0",
+        "typo3/cms-base-distribution": "^14.3",
+        "typo3/cms-lowlevel": "^14.3",
+        "typo3/cms-recycler": "^14.3",
+        "typo3/testing-framework": "^9.0"
     },
     "replace": {
         "typo3-ter/container-elements": "self.version"
@@ -77,10 +77,14 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "7.1.x-dev"
+            "dev-main": "8.0.x-dev"
         },
         "typo3/cms": {
             "extension-key": "container_elements",
+            "Package": {
+                "providesPackages": {}
+            },
+            "version": "8.0.0-dev",
             "web-dir": ".build/public"
         }
     },

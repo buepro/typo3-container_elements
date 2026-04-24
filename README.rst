@@ -2,7 +2,7 @@
 
    <div style="display: flex;">
       <img src="https://poser.pugx.org/buepro/typo3-container-elements/v/stable.svg" />
-      <img src="https://img.shields.io/badge/TYPO3-13-orange.svg" />
+      <img src="https://img.shields.io/badge/TYPO3-14-orange.svg" />
       <img src="https://poser.pugx.org/buepro/typo3-container-elements/d/total.svg" />
       <img src="https://poser.pugx.org/buepro/typo3-container-elements/d/monthly" />
    </div>
