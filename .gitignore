@@ -6,7 +6,8 @@ Documentation-GENERATED-temp/
 var/
 
 # Files
+*.cache
+/.ddev/docker-compose.mount.yaml
 /composer.lock
 /composer-dev.json
 /composer-dev.lock
-*.cache
