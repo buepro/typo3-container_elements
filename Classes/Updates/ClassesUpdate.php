@@ -16,15 +16,16 @@ use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Install\Attribute\UpgradeWizard;
-use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
-use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
+use TYPO3\CMS\Core\Attribute\UpgradeWizard;
+use TYPO3\CMS\Core\Database\Connection;
+use TYPO3\CMS\Core\Upgrades\DatabaseUpdatedPrerequisite;
+use TYPO3\CMS\Core\Upgrades\UpgradeWizardInterface;
 
 #[UpgradeWizard('ceClassesUpdate')]
 class ClassesUpdate implements UpgradeWizardInterface
 {
     /**
-     * @var array
+     * @var array<string, array>
      */
     private $classFields = [
         'ce_accordion' => [],
@@ -51,7 +52,7 @@ class ClassesUpdate implements UpgradeWizardInterface
     ];
 
     /**
-     * @var string[]
+     * @var array<string, string>
      */
     private $replacementClasses = [
         'no-gutters' => 'g-0',
@@ -123,14 +124,14 @@ class ClassesUpdate implements UpgradeWizardInterface
         foreach ($this->classFields as $type => $unused) {
             $typeConstraints[] = $queryBuilder->expr()->eq(
                 'CType',
-                $queryBuilder->createNamedParameter($type, \PDO::PARAM_STR)
+                $queryBuilder->createNamedParameter($type, Connection::PARAM_STR)
             );
         }
         $classConstraints = [];
         foreach ($this->replacementClasses as $oldClass => $newClass) {
             $classConstraints[] = $queryBuilder->expr()->like(
                 'pi_flexform',
-                $queryBuilder->createNamedParameter('%' . $oldClass . '%', \PDO::PARAM_STR)
+                $queryBuilder->createNamedParameter('%' . $oldClass . '%', Connection::PARAM_STR)
             );
         }
         return $queryBuilder->expr()->and(
@@ -168,7 +169,7 @@ class ClassesUpdate implements UpgradeWizardInterface
                 ->where(
                     $queryBuilder->expr()->eq(
                         'uid',
-                        $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
+                        $queryBuilder->createNamedParameter($record['uid'], Connection::PARAM_INT)
                     )
                 )
                 ->set('pi_flexform', $this->addNewClassesToDs($record['CType'], $record['pi_flexform']));
@@ -187,7 +188,9 @@ class ClassesUpdate implements UpgradeWizardInterface
             throw new \LogicException('Required flexform data is not an array', 1660323185);
         }
         foreach ($this->classFields[$cType] as $sheetName => $fieldNames) {
+            assert(is_iterable($fieldNames));
             foreach ($fieldNames as $fieldName) {
+                assert(is_string($sheetName) && is_string($fieldName));
                 $path = 'data/' . $sheetName . '/lDEF/' . $fieldName . '/vDEF';
                 if (!ArrayUtility::isValidPath($flexformData, $path)) {
                     continue;
@@ -206,9 +209,7 @@ class ClassesUpdate implements UpgradeWizardInterface
                 }
             }
         }
-        /** @todo For TYPO3 v13 change to `return $this->flexFormTools->flexArray2Xml($flexformData);` */
-        /** @extensionScannerIgnoreLine */
-        return $this->flexFormTools->flexArray2Xml($flexformData, true);
+        return $this->flexFormTools->flexArray2Xml($flexformData);
     }
 
     private function addNewClasses(string $classes): string

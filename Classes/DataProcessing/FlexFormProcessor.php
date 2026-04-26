@@ -68,7 +68,7 @@ class FlexFormProcessor implements DataProcessorInterface
         if ($fieldName === '') {
             $fieldName = 'pi_flexform';
         }
-        if (!isset($processedData['data'][$fieldName])) {
+        if (!is_array($processedData['data']) || !isset($processedData['data'][$fieldName])) {
             return $processedData;
         }
 

@@ -31,7 +31,7 @@ class CustomConditionFunctionsProvider implements ExpressionFunctionProviderInte
         return new ExpressionFunction(
             'ceExtensionConfiguration',
             static fn () => null,
-            static function ($arguments, $constantKey) {
+            static function ($arguments, int|string $constantKey) {
                 $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
                     \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
                 );

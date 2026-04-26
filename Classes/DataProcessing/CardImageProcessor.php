@@ -31,7 +31,11 @@ class CardImageProcessor extends \TYPO3\CMS\Frontend\DataProcessing\FilesProcess
         array $processorConfiguration,
         array $processedData
     ): array {
-        if (!$this->isContainerElement($processedData)) {
+        if (
+            !$this->isContainerElement($processedData) ||
+            !is_array($processedData['data']) ||
+            !is_array($processedData['data']['pi_flexform'])
+        ) {
             return $processedData;
         }
         /** @extensionScannerIgnoreLine */

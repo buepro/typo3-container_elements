@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace Buepro\ContainerElements\DataProcessing;
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -37,16 +38,21 @@ class GridClassesProcessor implements DataProcessorInterface
         if (
             !$this->isContainerElement($processedData) ||
             !isset($processedData['children_101']) ||
+            !is_array($processedData['children_101']) ||
             count($processedData['children_101']) < 1
         ) {
             return $processedData;
         }
+        $piFlexform = ArrayUtility::getValueByPath($processedData, 'data/pi_flexform');
+        $piFlexform = is_array($piFlexform) ? $piFlexform : [];
         $config = array_merge([
             'elementDefaultClasses' => 'col',
             'elementClasses' => '',
-        ], $processedData['data']['pi_flexform'] ?? []);
+        ], $piFlexform);
+        assert(is_string($config['elementClasses']));
         $elementClasses = GeneralUtility::trimExplode(',', str_replace(["\r\n", "\n", "\r"], ',', $config['elementClasses']));
         foreach ($processedData['children_101'] as $key => &$child) {
+            assert(is_array($child));
             $child['ce_grid_classes'] = $config['elementDefaultClasses'];
             if (isset($elementClasses[$key]) && $elementClasses[$key] !== '') {
                 $child['ce_grid_classes'] = $elementClasses[$key];

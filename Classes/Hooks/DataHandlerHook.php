@@ -13,6 +13,7 @@ namespace Buepro\ContainerElements\Hooks;
 use TYPO3\CMS\Backend\Form\FormDataCompiler;
 use TYPO3\CMS\Backend\Form\FormDataGroup\TcaDatabaseRecord;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
+use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class DataHandlerHook
@@ -58,11 +59,12 @@ class DataHandlerHook
             // Set default pi_flexform values
             $formDataGroup = GeneralUtility::makeInstance(TcaDatabaseRecord::class);
             $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class);
+            assert(is_numeric($incomingFieldArray['pid']));
             $formDataCompilerInput = [
                 'request' => $GLOBALS['TYPO3_REQUEST'],
                 'command' => 'new',
                 'tableName' => 'tt_content',
-                'vanillaUid' => (int)$incomingFieldArray['pid'],
+                'vanillaUid' => intval($incomingFieldArray['pid']),
                 'defaultValues' => [
                     'tt_content' => [
                         'CType' => $incomingFieldArray['CType'],
@@ -70,7 +72,7 @@ class DataHandlerHook
                 ],
             ];
             $formData = $formDataCompiler->compile($formDataCompilerInput, $formDataGroup);
-            $incomingFieldArray['pi_flexform'] = $formData['databaseRow']['pi_flexform'];
+            $incomingFieldArray['pi_flexform'] = ArrayUtility::getValueByPath($formData, 'databaseRow/pi_flexform');
 
             // Set frame_class to `none` in case this element is nested into another container element
             if (($incomingFieldArray['tx_container_parent'] ?? 0) !== 0) {
