@@ -1,33 +1,33 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{ceCardImages.0 -> f:variable(name: '_image')}
-<f:if condition="{_image}">
-    {f:variable(name: '_imageClasses', value: 'card-img')}
+{ceCardImages.0 -> f:variable(name: 'cvImage')}
+<f:if condition="{cvImage}">
+    {f:variable(name: 'cvImageClasses', value: 'card-img')}
     <f:if condition="{data.pi_flexform.imagePosition} == 'top' || {data.pi_flexform.imagePosition} == 'bottom'">
-        {f:variable(name: '_imageClasses', value: 'card-img-{data.pi_flexform.imagePosition}')}
+        {f:variable(name: 'cvImageClasses', value: 'card-img-{data.pi_flexform.imagePosition}')}
     </f:if>
     <f:if condition="{data.pi_flexform.imageClasses}">
-        {f:variable(name: '_imageClasses', value: '{_imageClasses} {data.pi_flexform.imageClasses}')}
+        {f:variable(name: 'cvImageClasses', value: '{cvImageClasses} {data.pi_flexform.imageClasses}')}
     </f:if>
     <f:if condition="{data.pi_flexform.imageWrapClasses}">
         <f:then>
             <div class="{data.pi_flexform.imageWrapClasses}">
-                <f:image class="{_imageClasses}" treatIdAsReference="1" image="{_image}" crop="{_image.properties.crop}"
-                         title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
+                <f:image class="{cvImageClasses}" treatIdAsReference="1" image="{cvImage}" crop="{cvImage.properties.crop}"
+                         title="{cvImage.title}" alt="{cvImage.alternative}" width="{data.pi_flexform.imageWidth}"/>
             </div>
         </f:then>
         <f:else>
-            <f:image class="{_imageClasses}" treatIdAsReference="1" image="{_image}" crop="{_image.properties.crop}"
-                     title="{_image.title}" alt="{_image.alternative}" width="{data.pi_flexform.imageWidth}"/>
+            <f:image class="{cvImageClasses}" treatIdAsReference="1" image="{cvImage}" crop="{cvImage.properties.crop}"
+                     title="{cvImage.title}" alt="{cvImage.alternative}" width="{data.pi_flexform.imageWidth}"/>
         </f:else>
     </f:if>
 </f:if>
 <f:if condition="{children_201}">
-    {f:variable(name:'_imageWrapClasses', value: 'cec-image-wrap')}
-    {f:variable(name:'_imageWrapClasses', value: '{_imageWrapClasses} {data.pi_flexform.imageWrapClasses}')
+    {f:variable(name:'cvImageWrapClasses', value: 'cec-image-wrap')}
+    {f:variable(name:'cvImageWrapClasses', value: '{cvImageWrapClasses} {data.pi_flexform.imageWrapClasses}')
         -> f:if(condition: data.pi_flexform.imageWrapClasses)}
-    <div class="{_imageWrapClasses}">
+    <div class="{cvImageWrapClasses}">
         <f:for each="{children_201}" as="record">
             {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
         </f:for>

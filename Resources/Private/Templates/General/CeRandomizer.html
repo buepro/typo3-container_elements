@@ -4,11 +4,11 @@
 
 <f:layout name="Default" />
 <f:section name="Main">
-    {f:variable(name: '_config', value: data.pi_flexform)}
-    {f:variable(name: '_config', value: '{count: 1, shuffle: 1}') -> f:if(condition: '{_config as integer} == 0')}
-    {children_101 -> pvh:iterator.random(count: _config.count, shuffle: _config.shuffle, as: '_records')}
-    <f:for each="{_records}" as="_record">
-        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+    {f:variable(name: 'cvConfig', value: data.pi_flexform)}
+    {f:variable(name: 'cvConfig', value: '{count: 1, shuffle: 1}') -> f:if(condition: '{cvConfig as integer} == 0')}
+    {children_101 -> pvh:iterator.random(count: cvConfig.count, shuffle: cvConfig.shuffle, as: 'cvRecords')}
+    <f:for each="{cvRecords}" as="cvRecord">
+        {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: cvRecord)}
     </f:for>
 </f:section>
 </html>

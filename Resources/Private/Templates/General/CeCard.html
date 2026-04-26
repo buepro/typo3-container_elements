@@ -18,11 +18,11 @@
 </f:section>
 
 <f:section name="Internal">
-    {f:variable(name: '_cardClasses', value: ' {data.pi_flexform.cardClasses}') -> f:if(condition: data.pi_flexform.cardClasses)}
-    {f:variable(name: '_borderClasses', value: ' {data.pi_flexform.borderClasses}') -> f:if(condition: data.pi_flexform.borderClasses)}
-    <div class="ce-card cec-{data.pi_flexform.imagePosition} card{_cardClasses}">
+    {f:variable(name: 'cvCardClasses', value: ' {data.pi_flexform.cardClasses}') -> f:if(condition: data.pi_flexform.cardClasses)}
+    {f:variable(name: 'cvBorderClasses', value: ' {data.pi_flexform.borderClasses}') -> f:if(condition: data.pi_flexform.borderClasses)}
+    <div class="ce-card cec-{data.pi_flexform.imagePosition} card{cvCardClasses}">
         <f:if condition="{data.pi_flexform.borderType} == 'header'">
-            <div class="card-header{_borderClasses}">
+            <div class="card-header{cvBorderClasses}">
                 <f:format.html>{data.pi_flexform.borderText}</f:format.html>
             </div>
         </f:if>
@@ -36,7 +36,7 @@
             <f:render partial="CeCard/Stack" arguments="{_all}" />
         </f:if>
         <f:if condition="{data.pi_flexform.borderType} == 'footer'">
-            <div class="card-footer{_borderClasses}">
+            <div class="card-footer{cvBorderClasses}">
                 <f:format.html>{data.pi_flexform.borderText}</f:format.html>
             </div>
         </f:if>

@@ -1,4 +1,6 @@
 base: 'https://container-elements.ddev.site'
+dependencies:
+  - bootstrap-package/full
 languages:
   -
     title: English

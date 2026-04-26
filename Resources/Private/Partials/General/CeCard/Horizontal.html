@@ -2,24 +2,24 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
-{f:variable(name: '_textColumnClasses', value: 'col-md-8')}
-{f:variable(name: '_textColumnClasses', value: data.pi_flexform.textColumnClasses) -> f:if(condition: data.pi_flexform.textColumnClasses)}
-{f:variable(name: '_imageColumnClasses', value: 'col-md-4')}
-{f:variable(name: '_imageColumnClasses', value: data.pi_flexform.imageColumnClasses) -> f:if(condition: data.pi_flexform.imageColumnClasses)}
+{f:variable(name: 'cvTextColumnClasses', value: 'col-md-8')}
+{f:variable(name: 'cvTextColumnClasses', value: data.pi_flexform.textColumnClasses) -> f:if(condition: data.pi_flexform.textColumnClasses)}
+{f:variable(name: 'cvImageColumnClasses', value: 'col-md-4')}
+{f:variable(name: 'cvImageColumnClasses', value: data.pi_flexform.imageColumnClasses) -> f:if(condition: data.pi_flexform.imageColumnClasses)}
 <div class="row no-gutters g-0">
     <f:if condition="{data.pi_flexform.imagePosition} == left">
-        <div class="{_imageColumnClasses} cec-image-col">
+        <div class="{cvImageColumnClasses} cec-image-col">
             <f:render partial="CeCard/Parts/Image" arguments="{_all}" />
         </div>
-        <div class="{_textColumnClasses} cec-content-col">
+        <div class="{cvTextColumnClasses} cec-content-col">
             <f:render partial="CeCard/Parts/Body" arguments="{_all}" />
         </div>
     </f:if>
     <f:if condition="{data.pi_flexform.imagePosition} == right">
-        <div class="{_textColumnClasses} cec-content-col">
+        <div class="{cvTextColumnClasses} cec-content-col">
             <f:render partial="CeCard/Parts/Body" arguments="{_all}" />
         </div>
-        <div class="{_imageColumnClasses} cec-image-col">
+        <div class="{cvImageColumnClasses} cec-image-col">
             <f:render partial="CeCard/Parts/Image" arguments="{_all}" />
         </div>
     </f:if>

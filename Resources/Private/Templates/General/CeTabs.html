@@ -10,8 +10,8 @@
         <nav class="tab-navigation">
             <div class="nav nav-tabs" id="tab-{data.uid}" role="tablist">
                 <f:for each="{children_101}" as="record" iteration="iterator">
-                    {f:variable(name: '_selected', value: 'false')}
-                    {f:variable(name: '_selected', value: 'true') -> f:if(condition:'{iterator.index}==0')}
+                    {f:variable(name: 'cvSelected', value: 'false')}
+                    {f:variable(name: 'cvSelected', value: 'true') -> f:if(condition:'{iterator.index}==0')}
                     <button class="nav-link{f:if(condition:'{iterator.index}==0',then:' active')}"
                             id="tab-{record.uid}"
                             data-bs-toggle="tab"
@@ -19,7 +19,7 @@
                             type="button"
                             role="tab"
                             aria-controls="tab-content-{record.uid}"
-                            aria-selected="{_selected}"
+                            aria-selected="{cvSelected}"
                     >
                         <span>{record.header}</span>
                     </button>
