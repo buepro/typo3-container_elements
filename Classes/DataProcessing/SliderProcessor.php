@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace Buepro\ContainerElements\DataProcessing;
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -37,6 +38,7 @@ class SliderProcessor implements DataProcessorInterface
         if (
             !$this->isContainerElement($processedData) ||
             !isset($processedData['children_101']) ||
+            !is_array($processedData['children_101']) ||
             count($processedData['children_101']) < 1
         ) {
             return $processedData;
@@ -47,12 +49,17 @@ class SliderProcessor implements DataProcessorInterface
 
     private function setClassesForChildren(array $processedData): array
     {
+        $piFlexform = ArrayUtility::getValueByPath($processedData, 'data/pi_flexform');
+        $piFlexform = is_array($piFlexform) ? $piFlexform : [];
         $config = array_merge([
             'slideDefaultClasses' => 'ce-slide swiper-slide',
             'slideClasses' => '',
-        ], $processedData['data']['pi_flexform'] ?? []);
+        ], $piFlexform);
+        assert(is_string($config['slideClasses']));
         $slideClasses = GeneralUtility::trimExplode(',', str_replace(["\r\n", "\n", "\r"], ',', $config['slideClasses']));
+        assert(is_array($processedData['children_101']));
         foreach ($processedData['children_101'] as $key => &$child) {
+            assert(is_array($child));
             $child['ce_slide_classes'] = $config['slideDefaultClasses'];
             if (isset($slideClasses[$key]) && $slideClasses[$key] !== '') {
                 $child['ce_slide_classes'] = $slideClasses[$key];
@@ -64,8 +71,10 @@ class SliderProcessor implements DataProcessorInterface
 
     private function setSliderConfig(array $processedData): array
     {
+        /** @var array<string, array<string, array>> $processedData */
         $config = $processedData['data']['pi_flexform']['config'] ?? '{}';
         try {
+            assert(is_string($config));
             $decoded = json_decode($config, true, 512, JSON_THROW_ON_ERROR);
             $config = json_encode($decoded, JSON_FORCE_OBJECT);
         } catch (\JsonException $e) {

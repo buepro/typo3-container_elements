@@ -13,11 +13,19 @@ trait ProcessedDataTrait
 {
     protected function isContainerElement(array $processedData): bool
     {
-        return substr($processedData['data']['CType'] ?? '', 0, 3) === 'ce_';
+        return substr($this->getCType($processedData), 0, 3) === 'ce_';
     }
 
     protected function isColumnElement(array $processedData): bool
     {
-        return substr($processedData['data']['CType'] ?? '', 0, 10) === 'ce_columns';
+        return substr($this->getCType($processedData), 0, 10) === 'ce_columns';
+    }
+
+    private function getCType(array $processedData): string
+    {
+        if (!is_array($processedData['data']) || !isset($processedData['data']['CType']) || !is_string($processedData['data']['CType'])) {
+            return '';
+        }
+        return $processedData['data']['CType'];
     }
 }

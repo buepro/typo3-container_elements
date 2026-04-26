@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace Buepro\ContainerElements\DataProcessing;
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -37,6 +38,7 @@ class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessor
         array $processorConfiguration,
         array $processedData
     ): array {
+        /** @var array<string, array> $processedData */
         if (!$this->isContainerElement($processedData)) {
             return $processedData;
         }
@@ -52,8 +54,11 @@ class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessor
         if ($this->isColumnElement($processedData)) {
             $renderEmptyColumns = $this->renderEmptyColumns();
             $columnCount = $childrenCount;
-            if ($renderEmptyColumns) {
-                $columnCount = (int)substr($processedData['data']['CType'] ?? '', 10, 1);
+            if (
+                $renderEmptyColumns &&
+                is_string($CType = ArrayUtility::getValueByPath($processedData, 'data/CType'))
+            ) {
+                $columnCount = (int)substr($CType, 10, 1);
             }
             $processedData[$variableName]['columnCount'] = $columnCount;
             $processedData[$variableName]['renderEmptyColumns'] = $renderEmptyColumns;

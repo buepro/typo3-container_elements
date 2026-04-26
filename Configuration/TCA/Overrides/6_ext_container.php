@@ -7,6 +7,15 @@
  * LICENSE file that was distributed with this source code.
  */
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
+
+/*
+ * This file is part of the composer package buepro/typo3-container-elements.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 defined('TYPO3') or die('Access denied.');
 
 (static function (): void {
@@ -23,7 +32,9 @@ defined('TYPO3') or die('Access denied.');
      */
     if ((bool) ($containerElementsConfiguration['collapsibleContentElements'] ?? false)) {
         $backendPartialsPath = 'EXT:container_elements/Sysext/backend/Resources/Private/Partials';
-        foreach ($GLOBALS['TCA']['tt_content']['containerConfiguration'] as &$config) {
+        assert(is_array($containerConfiguration = ArrayUtility::getValueByPath($GLOBALS, 'TCA/tt_content/containerConfiguration')));
+        foreach ($containerConfiguration as &$config) {
+            /** @var array<gridPartialPaths, list<string>> $config */
             if (!isset(array_flip($config['gridPartialPaths'])[$backendPartialsPath])) {
                 $config['gridPartialPaths'][] = $backendPartialsPath;
             }
