@@ -18,9 +18,9 @@
         -> f:format.stripTags()
         -> pvh:format.trim()
         -> f:format.crop(maxCharacters: 80)
-        -> f:variable(name: '_title')}
+        -> f:variable(name: 'cvTitle')}
     <div id="ce-header-title-{item.record.uid}" class="ce-header-title t3-page-ce-header-title">
-        <span>{item.contentTypeLabel}</span><span>{_title -> f:format.raw()}</span>
+        <span>{item.contentTypeLabel}</span><span>{cvTitle -> f:format.raw()}</span>
     </div>
     <div class="t3-page-ce-header-right">
         <f:if condition="{item.editable} && {allowEditContent}">

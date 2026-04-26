@@ -4,27 +4,27 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-    {f:variable(name: '_activeItemIndex', value: 1)}
-    {f:variable(name: '_activeItemIndex', value: data.pi_flexform.activeItemIndex) -> f:if(condition: '{data.pi_flexform.activeItemIndex} > -1')}
-    {f:if(condition: data.pi_flexform.headerLayout, then: data.pi_flexform.headerLayout, else: '4') -> f:variable(name: '_headingLayout')}
+    {f:variable(name: 'cvActiveItemIndex', value: 1)}
+    {f:variable(name: 'cvActiveItemIndex', value: data.pi_flexform.activeItemIndex) -> f:if(condition: '{data.pi_flexform.activeItemIndex} > -1')}
+    {f:if(condition: data.pi_flexform.headerLayout, then: data.pi_flexform.headerLayout, else: '4') -> f:variable(name: 'cvHeadingLayout')}
     <div class="accordion {f:if(condition:'{data.pi_flexform.style}', then:'{data.pi_flexform.style}')}"
          id="accordion-{data.uid}">
         <f:for each="{children_101}" as="record" iteration="iterator">
             <div class="accordion-item">
-                <h{_headingLayout} class="accordion-header" id="accordion-heading-{record.uid}">
-                    {f:variable(name: '_expanded', value: 'false')}
-                    {f:variable(name: '_expanded', value: 'true') -> f:if(condition:'{iterator.cycle} == {_activeItemIndex}')}
-                    <button class="accordion-button{f:if(condition:'{iterator.cycle} != {_activeItemIndex}', then:' collapsed')}" type="button"
+                <h{cvHeadingLayout} class="accordion-header" id="accordion-heading-{record.uid}">
+                    {f:variable(name: 'cvExpanded', value: 'false')}
+                    {f:variable(name: 'cvExpanded', value: 'true') -> f:if(condition:'{iterator.cycle} == {cvActiveItemIndex}')}
+                    <button class="accordion-button{f:if(condition:'{iterator.cycle} != {cvActiveItemIndex}', then:' collapsed')}" type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#accordion-collapse-{record.uid}"
-                            aria-expanded="{_expanded}"
+                            aria-expanded="{cvExpanded}"
                             aria-controls="accordion-collapse-{record.uid}"
                     >
                         {record.header}
                     </button>
-                </h{_headingLayout}>
+                </h{cvHeadingLayout}>
                 <div id="accordion-collapse-{record.uid}"
-                     class="accordion-collapse collapse{f:if(condition:'{iterator.cycle} == {_activeItemIndex}', then:' show')}"
+                     class="accordion-collapse collapse{f:if(condition:'{iterator.cycle} == {cvActiveItemIndex}', then:' show')}"
                      aria-labelledby="accordion-heading-{record.uid}"
                      data-bs-parent="#accordion-{data.uid}">
                     <div class="ce-accordion-body accordion-body">

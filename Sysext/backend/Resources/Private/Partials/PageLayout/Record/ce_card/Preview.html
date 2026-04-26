@@ -1,14 +1,14 @@
 <html xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers" data-namespace-typo3-fluid="true">
-{pvh:transform.flexform(data: item.record.pi_flexform, as: '_pi_flexform_transformed')}
+{pvh:transform.flexform(data: item.record.pi_flexform, as: 'cv_pi_flexform_transformed')}
 <div id="ce-collapse-{item.record.uid}" class="ce-collapse collapse show" data-ce-id="{item.record.uid}">
-    {f:variable(name: '_title', value: _pi_flexform_transformed.titleText)}
-    {_pi_flexform_transformed.bodyText -> f:format.stripTags() -> f:format.crop(maxCharacters: 300, append: '...') -> f:variable(name: '_text')}
-    <f:if condition="{_title} || {_text}">
+    {f:variable(name: 'cvTitle', value: cv_pi_flexform_transformed.titleText)}
+    {cv_pi_flexform_transformed.bodyText -> f:format.stripTags() -> f:format.crop(maxCharacters: 300, append: '...') -> f:variable(name: 'cvText')}
+    <f:if condition="{cvTitle} || {cvText}">
         <div class="tx-containerelements-preview">
             <div class="t3-ctype-identifier">
-                <f:if condition="{_title}"><strong>{_title}</strong><br /></f:if>
+                <f:if condition="{cvTitle}"><strong>{cvTitle}</strong><br /></f:if>
             </div>
-            <f:if condition="{_text}"><span class="exampleContent">{_text}</span></f:if>
+            <f:if condition="{cvText}"><span class="exampleContent">{cvText}</span></f:if>
         </div>
     </f:if>
     {item.preview -> f:format.raw()}
