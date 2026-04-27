@@ -34,6 +34,7 @@
     },
     "require-dev": {
         "bk2k/bootstrap-package": "^16.0.99@dev",
+        "buepro/typo3-ci": "^0.1.0@dev",
         "ergebnis/composer-normalize": "^2.43.0",
         "friendsofphp/php-cs-fixer": "^3.9.0",
         "overtrue/phplint": "^9.6.0",
