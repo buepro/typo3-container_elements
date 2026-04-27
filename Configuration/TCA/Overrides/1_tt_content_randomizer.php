@@ -8,6 +8,15 @@ declare(strict_types = 1);
  * LICENSE file that was distributed with this source code.
  */
 
+use Buepro\ContainerElements\Utility\TcaUtility;
+
+/*
+ * This file is part of the composer package buepro/typo3-container-elements.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 defined('TYPO3') or die('Access denied.');
 
 (static function (): void {
@@ -37,9 +46,8 @@ defined('TYPO3') or die('Access denied.');
     /**
      * Add flexForm
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-        '*',
-        'FILE:EXT:container_elements/Configuration/FlexForms/Randomizer.xml',
-        'ce_randomizer'
+    TcaUtility::setPiFlexForm(
+        'ce_randomizer',
+        'FILE:EXT:container_elements/Configuration/FlexForms/Randomizer.xml'
     );
 })();
