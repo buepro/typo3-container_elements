@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace Buepro\ContainerElements\DataProcessing;
 
-use TYPO3\CMS\Core\Service\FlexFormService;
+use \TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -47,7 +47,7 @@ class FlexFormProcessor implements DataProcessorInterface
      */
     public function __construct()
     {
-        $this->flexFormService = GeneralUtility::makeInstance(FlexFormService::class);
+        $this->flexFormService = GeneralUtility::makeInstance(FlexFormTools::class);
     }
 
     /**
