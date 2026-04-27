@@ -62,12 +62,19 @@ return (new PhpCsFixer\Config())
         'native_function_casing' => true,
         'self_accessor' => true,
         'no_short_bool_cast' => true,
-        'no_unneeded_control_parentheses' => true
+        'no_unneeded_control_parentheses' => true,
+        'trailing_comma_in_multiline' => [
+            'elements' => [
+                'arrays',
+            ],
+        ],
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->exclude('.build')
             ->exclude('config')
+            ->exclude('Build/node_modules')
+            ->exclude('Contrib')
             ->exclude('var')
             ->in(__DIR__)
     );

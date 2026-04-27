@@ -33,17 +33,17 @@ defined('TYPO3') or die('Access denied.');
                     [
                         [
                             'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column1',
-                            'colPos' => 101
+                            'colPos' => 101,
                         ],
                         [
                             'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column2',
-                            'colPos' => 102
+                            'colPos' => 102,
                         ],
                         [
                             'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:columns.column3',
-                            'colPos' => 103
+                            'colPos' => 103,
                         ],
-                    ]
+                    ],
                 ]
             )
         )
