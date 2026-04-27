@@ -1,6 +1,13 @@
 <?php
 declare(strict_types = 1);
 
+/*
+ * This file is part of the composer package buepro/typo3-container-elements.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 
 /*
@@ -26,14 +33,14 @@ defined('TYPO3') or die('Access denied.');
                     [
                         [
                             'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.content',
-                            'colPos' => 101
+                            'colPos' => 101,
                         ],
 
                     ],
                     [
                         [
                             'name' => 'LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:card.imageContent',
-                            'colPos' => 201
+                            'colPos' => 201,
                         ],
                     ],
                 ]
@@ -47,7 +54,7 @@ defined('TYPO3') or die('Access denied.');
      * Add flexForm
      */
     ArrayUtility::setValueByPath(
-        $GLOBALS, 
+        $GLOBALS,
         'TCA/tt_content/types/ce_card/columnsOverrides/pi_flexform/config/ds',
         'FILE:EXT:container_elements/Configuration/FlexForms/Card.xml'
     );

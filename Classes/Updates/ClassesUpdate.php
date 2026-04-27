@@ -10,16 +10,16 @@ declare(strict_types = 1);
 
 namespace Buepro\ContainerElements\Updates;
 
+use TYPO3\CMS\Core\Attribute\UpgradeWizard;
 use TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools;
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
-use TYPO3\CMS\Core\Utility\ArrayUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Attribute\UpgradeWizard;
-use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Upgrades\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Core\Upgrades\UpgradeWizardInterface;
+use TYPO3\CMS\Core\Utility\ArrayUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 #[UpgradeWizard('ceClassesUpdate')]
 class ClassesUpdate implements UpgradeWizardInterface
@@ -31,7 +31,7 @@ class ClassesUpdate implements UpgradeWizardInterface
         'ce_accordion' => [],
         'ce_card' => [
             'customSheet' => ['cardWrapClasses', 'cardClasses', 'bodyClasses', 'borderClasses', 'titleClasses',
-                'imageWrapClasses', 'imageClasses', 'textColumnClasses', 'imageColumnClasses']
+                'imageWrapClasses', 'imageClasses', 'textColumnClasses', 'imageColumnClasses'],
         ],
         'ce_columns2' => [
             'sCustom' => ['row.class', 'columns.1.class', 'columns.2.class'],
@@ -113,7 +113,7 @@ class ClassesUpdate implements UpgradeWizardInterface
     public function getPrerequisites(): array
     {
         return [
-            DatabaseUpdatedPrerequisite::class
+            DatabaseUpdatedPrerequisite::class,
         ];
     }
 

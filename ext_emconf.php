@@ -23,12 +23,12 @@ $EM_CONF[$_EXTKEY] = [
             'pvh'           => '4.0.0-4.99.99',
         ],
         'conflicts' => [
-            'pizpalue'      => '0.0.0-16.99.99'
+            'pizpalue'      => '0.0.0-16.99.99',
         ],
     ],
     'autoload' => [
         'psr-4' => [
-            'Buepro\\ContainerElements\\' => 'Classes'
+            'Buepro\\ContainerElements\\' => 'Classes',
         ],
     ],
 ];
