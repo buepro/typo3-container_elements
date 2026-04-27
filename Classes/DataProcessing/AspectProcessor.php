@@ -43,7 +43,7 @@ class AspectProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessor
             return $processedData;
         }
         $variableName = $cObj->stdWrapValue('as', $processorConfiguration);
-        if ($variableName === '') {
+        if (!is_string($variableName) || $variableName === '') {
             $variableName = 'ceAspect';
         }
         $childrenCount = $this->getChildrenCount($processedData);
