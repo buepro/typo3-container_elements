@@ -1,6 +1,8 @@
 <?php
 declare(strict_types = 1);
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
+
 /*
  * This file is part of the composer package buepro/typo3-container-elements.
  *
@@ -37,9 +39,9 @@ defined('TYPO3') or die('Access denied.');
     /**
      * Add flexForm
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-        '*',
-        'FILE:EXT:container_elements/Configuration/FlexForms/Randomizer.xml',
-        'ce_randomizer'
+    ArrayUtility::setValueByPath(
+        $GLOBALS, 
+        'TCA/tt_content/types/ce_randomizer/columnsOverrides/pi_flexform/config/ds',
+        'FILE:EXT:container_elements/Configuration/FlexForms/Randomizer.xml'
     );
 })();

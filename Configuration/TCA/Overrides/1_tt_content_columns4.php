@@ -1,6 +1,8 @@
 <?php
 declare(strict_types = 1);
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
+
 /*
  * This file is part of the composer package buepro/typo3-container-elements.
  *
@@ -49,9 +51,9 @@ defined('TYPO3') or die('Access denied.');
     /**
      * Add flexForm
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-        '*',
-        'FILE:EXT:container_elements/Configuration/FlexForms/Columns4.xml',
-        'ce_columns4'
+    ArrayUtility::setValueByPath(
+        $GLOBALS, 
+        'TCA/tt_content/types/ce_columns4/columnsOverrides/pi_flexform/config/ds',
+        'FILE:EXT:container_elements/Configuration/FlexForms/Columns4.xml'
     );
 })();
