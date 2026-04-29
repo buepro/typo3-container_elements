@@ -45,10 +45,12 @@ defined('TYPO3') or die('Access denied.');
 
     /**
      * Add flexForm
+     *
+     * @var array<string, array<string, array<string, array>>> $GLOBALS
      */
-    ArrayUtility::setValueByPath(
-        $GLOBALS,
-        'TCA/tt_content/types/ce_slider/columnsOverrides/pi_flexform/config/ds',
+    $GLOBALS['TCA']['tt_content']['types'] = ArrayUtility::setValueByPath(
+        $GLOBALS['TCA']['tt_content']['types'],
+        'ce_slider/columnsOverrides/pi_flexform/config/ds',
         'FILE:EXT:container_elements/Configuration/FlexForms/Slider.xml'
     );
 })();
