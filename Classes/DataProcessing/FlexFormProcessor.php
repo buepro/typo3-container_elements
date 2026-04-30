@@ -38,16 +38,16 @@ class FlexFormProcessor implements DataProcessorInterface
     use ProcessedDataTrait;
 
     /**
-     * @var FlexFormService
+     * @var FlexFormTools
      */
-    protected $flexFormService;
+    protected $flexFormTools;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->flexFormService = GeneralUtility::makeInstance(FlexFormTools::class);
+        $this->flexFormTools = GeneralUtility::makeInstance(FlexFormTools::class);
     }
 
     /**
@@ -77,7 +77,7 @@ class FlexFormProcessor implements DataProcessorInterface
         if (!is_string($originalValue)) {
             return $processedData;
         }
-        $flexformData = $this->flexFormService->convertFlexFormContentToArray($originalValue);
+        $flexformData = $this->flexFormTools->convertFlexFormContentToArray($originalValue);
 
         // Set the target variable
         $targetVariableName = (string) $cObj->stdWrapValue('as', $processorConfiguration);
