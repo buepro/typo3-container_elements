@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * This file is part of the composer package buepro/typo3-container-elements.
@@ -22,13 +22,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 defined('TYPO3') or die('Access denied.');
 
 (static function (): void {
-    $typeList = 'ce_container,ce_columns2,ce_columns3,ce_columns4,ce_tabs,ce_accordion,ce_tile_unit,ce_card,ce_grid,ce_randomizer,ce_slider';
     /** @var array<string, array> $tcaTypes */
     $tcaTypes = ArrayUtility::getValueByPath($GLOBALS, 'TCA/tt_content/types');
     // Remove header field
-    foreach (GeneralUtility::trimExplode(',', $typeList, true) as $type) {
+    foreach (['ce_container', 'ce_columns2', 'ce_columns3', 'ce_columns4', 'ce_tabs', 'ce_accordion', 'ce_tile_unit', 'ce_card', 'ce_grid', 'ce_randomizer', 'ce_slider'] as $type) {
         assert(is_string($showitem = $tcaTypes[$type]['showitem']));
-        $showitem = GeneralUtility::trimExplode(',', $showitem, true);
+        $showitem = is_string($showitem) ? GeneralUtility::trimExplode(',', $showitem, true) : $showitem ?? [];
         $showitem = array_filter($showitem, function ($item): bool {
             return strpos($item, 'header') !== 0;
         });
