@@ -27,12 +27,15 @@ defined('TYPO3') or die('Access denied.');
     // Remove header field
     $types = ['ce_container', 'ce_columns2', 'ce_columns3', 'ce_columns4', 'ce_tabs', 'ce_accordion', 'ce_tile_unit', 'ce_card', 'ce_grid', 'ce_randomizer', 'ce_slider'];
     foreach ($types as $type) {
-        assert(is_string($showitem = $tcaTypes[$type]['showitem']));
-        $showitem = GeneralUtility::trimExplode(',', $showitem, true);
-        $showitem = array_filter($showitem, function ($item): bool {
+        $tcaShowitem = $tcaTypes[$type]['showitem'];
+        if (!is_string($tcaShowitem)) {
+            continue;
+        }
+        $showitemArray = GeneralUtility::trimExplode(',', $tcaShowitem, true);
+        $showitemArray = array_filter($showitemArray, function ($item): bool {
             return strpos($item, 'header') !== 0;
         });
-        $tcaTypes[$type]['showitem'] = implode(', ', $showitem);
+        $tcaTypes[$type]['showitem'] = implode(', ', $showitemArray);
     }
     // Add headers palette and container options (pi_flexform)
     ExtensionManagementUtility::addToAllTCAtypes(

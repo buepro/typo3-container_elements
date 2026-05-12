@@ -32,13 +32,15 @@ defined('TYPO3') or die('Access denied.');
      */
     if ((bool) ($containerElementsConfiguration['collapsibleContentElements'] ?? false)) {
         $backendPartialsPath = 'EXT:container_elements/Sysext/backend/Resources/Private/Partials';
-        assert(is_array($containerConfiguration = ArrayUtility::getValueByPath($GLOBALS, 'TCA/tt_content/containerConfiguration')));
-        foreach ($containerConfiguration as &$config) {
-            /** @var array<gridPartialPaths, list<string>> $config */
-            if (!isset(array_flip($config['gridPartialPaths'])[$backendPartialsPath])) {
-                $config['gridPartialPaths'][] = $backendPartialsPath;
+        $containerConfiguration = ArrayUtility::getValueByPath($GLOBALS, 'TCA/tt_content/containerConfiguration');
+        if (is_array($containerConfiguration)) {
+            foreach ($containerConfiguration as &$config) {
+                /** @var array<gridPartialPaths, list<string>> $config */
+                if (!isset(array_flip($config['gridPartialPaths'])[$backendPartialsPath])) {
+                    $config['gridPartialPaths'][] = $backendPartialsPath;
+                }
             }
+            unset($config);
         }
-        unset($config);
     }
 })();
