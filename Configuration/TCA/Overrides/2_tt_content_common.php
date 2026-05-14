@@ -33,9 +33,10 @@ defined('TYPO3') or die('Access denied.');
         }
         $showitemArray = GeneralUtility::trimExplode(',', $tcaShowitem, true);
         $showitemArray = array_filter($showitemArray, function ($item): bool {
-            return strpos($item, 'header') !== 0;
+            return $item !== 'header' && !str_starts_with($item, 'header;');
         });
-        $tcaTypes[$type]['showitem'] = implode(', ', $showitemArray);
+        /** @var array<string, array<string, array<string, array<string, array>>>>  $GLOBALS */
+        $GLOBALS['TCA']['tt_content']['types'][$type]['showitem'] = implode(',', $showitemArray);
     }
     // Add headers palette and container options (pi_flexform)
     ExtensionManagementUtility::addToAllTCAtypes(
